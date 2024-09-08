@@ -1,0 +1,309 @@
+# ==================================================
+# Available Placeholders:
+# - %balance% -> Player's balance for default Virtual Shop currency.
+# - %sell_multiplier% -> Player's sell multiplier (set in VirtualShop settings.yml).
+# - https://nightexpress.gitbook.io/excellentshop/utility/placeholders#internal-placeholders -> Placeholders of: Shop, Virtual Shop, Static/Rotating Shop.
+# - PlaceholderAPI -> Any of them. Enable PlaceholderAPI for GUIs in the plugin config.
+# ==================================================
+
+Title: ' &f&l✪ &8| <gradient:#36175E>&lTOP 10</gradient:#9768D1> &8| &cTop 10 monthly'
+Size: 54
+Use_Mini_Message: false
+Inventory_Type: CHEST
+# ==================== GUI CONTENT ====================
+# You can freely edit items in this section as you wish (add, remove, modify items).
+# The following values are available as button Types:
+# CLOSE
+# PAGE_NEXT
+# PAGE_PREVIOUS
+# RETURN
+# SELL_ALL
+# ==================== ITEM OPTIONS ====================
+# > Item: Item to display. Please check: https://github.com/nulli0n/nightcore-spigot/wiki/ItemStack-Options
+# > Priority: Button priority. Better values will override other item(s) in the same slot(s).
+# > Slots: Button slots. From [0] to [Size - 1]. Split with commas.
+# > Click_Commands: Execute custom commands on click. PlaceholderAPI available here.
+#     Available click types: LEFT, RIGHT, SHIFT_LEFT, SHIFT_RIGHT, DROP_KEY, SWAP_KEY, NUMBER_1, NUMBER_2, NUMBER_3, NUMBER_4, NUMBER_5, NUMBER_6, NUMBER_7, NUMBER_8, NUMBER_9
+#     Use prefix 'player:' to run command by a player.
+#     Click_Commands:
+#       LEFT:
+#       - say Hello
+#       - give %player_name% diamond 1
+#       - player: menu open shops
+# ==================================================
+Content:
+  81f89e64-ff25-4d32-b3f4-1091cf085d51:
+    Item:
+      Material: PLAYER_HEAD
+      Name: ' &4■ &c&lTop #1 Monthly &7➛ &f&l%ajlb_lb_vault_eco_balance_1_monthly_name%'
+      Lore:
+      - '#515251&m                                           '
+      - '&r'
+      - ' &6ð &aAmount money &7➛ &2$&f%ajlb_lb_vault_eco_balance_1_monthly_value%'
+      - ' &6ð &aJoining date &7➛ &f%parseother_{ajlb_lb_vault_eco_balance_1_monthly_name}_{player_last_join_date}%'
+      - ' &6ð &aPlaying time &7➛ &f%parseother_{ajlb_lb_vault_eco_balance_1_monthly_name}_{statistic_time_played}%'
+      - '&r'
+      - '#515251&m                                           '
+      SkinURL: 88991697469653c9af8352fdf18d0cc9c67763cfe66175c1556aed33246c7
+    Slots: '14'
+    Type: NONE
+    Priority: 5
+  81f89e64-ff25-4d32-b3f4-1091cf085d52:
+    Item:
+      Material: PLAYER_HEAD
+      Name: ' &4■ &6&lTop #2 Monthly &7➛ &f&l%ajlb_lb_vault_eco_balance_2_monthly_name%'
+      Lore:
+      - '#515251&m                                           '
+      - '&r'
+      - ' &6ð &aAmount money &7➛ &2$&f%ajlb_lb_vault_eco_balance_2_monthly_value%'
+      - ' &6ð &aJoining date &7➛ &f%parseother_{ajlb_lb_vault_eco_balance_2_monthly_name}_{player_last_join_date}%'
+      - ' &6ð &aPlaying time &7➛ &f%parseother_{ajlb_lb_vault_eco_balance_2_monthly_name}_{statistic_time_played}%'
+      - '&r'
+      - '#515251&m                                           '
+      SkinURL: 5496c162d7c9e1bc8cf363f1bfa6f4b2ee5dec6226c228f52eb65d96a4635c
+    Slots: '22'
+    Type: NONE
+    Priority: 5
+  81f89e64-ff25-4d32-b3f4-1091cf085d53:
+    Item:
+      Material: PLAYER_HEAD
+      Name: ' &4■ &6&lTop #3 Monthly &7➛ &f&l%ajlb_lb_vault_eco_balance_3_monthly_name%'
+      Lore:
+      - '#515251&m                                           '
+      - '&r'
+      - ' &6ð &aAmount money &7➛ &2$&f%ajlb_lb_vault_eco_balance_3_monthly_value%'
+      - ' &6ð &aJoining date &7➛ &f%parseother_{ajlb_lb_vault_eco_balance_3_monthly_name}_{player_last_join_date}%'
+      - ' &6ð &aPlaying time &7➛ &f%parseother_{ajlb_lb_vault_eco_balance_3_monthly_name}_{statistic_time_played}%'
+      - '&r'
+      - '#515251&m                                           '
+      SkinURL: c4226f2eb64abc86b38b61d1497764cba03d178afc33b7b8023cf48b49311
+    Slots: '23'
+    Type: NONE
+    Priority: 5
+  81f89e64-ff25-4d32-b3f4-1091cf085d54:
+    Item:
+      Material: PLAYER_HEAD
+      Name: ' &4■ &6&lTop #4 Monthly &7➛ &f&l%ajlb_lb_vault_eco_balance_4_monthly_name%'
+      Lore:
+      - '#515251&m                                           '
+      - '&r'
+      - ' &6ð &aAmount money &7➛ &2$&f%ajlb_lb_vault_eco_balance_4_monthly_value%'
+      - ' &6ð &aJoining date &7➛ &f%parseother_{ajlb_lb_vault_eco_balance_4_monthly_name}_{player_last_join_date}%'
+      - ' &6ð &aPlaying time &7➛ &f%parseother_{ajlb_lb_vault_eco_balance_4_monthly_name}_{statistic_time_played}%'
+      - '&r'
+      - '#515251&m                                           '
+      SkinURL: f920ecce1c8cde5dbca5938c5384f714e55bee4cca866b7283b95d69eed3d2c
+    Slots: '24'
+    Type: NONE
+    Priority: 5
+  81f89e64-ff25-4d32-b3f4-1091cf085d55:
+    Item:
+      Material: PLAYER_HEAD
+      Name: ' &4■ &6&lTop #5 Monthly &7➛ &f&l%ajlb_lb_vault_eco_balance_5_monthly_name%'
+      Lore:
+      - '#515251&m                                           '
+      - '&r'
+      - ' &6ð &aAmount money &7➛ &2$&f%ajlb_lb_vault_eco_balance_5_monthly_value%'
+      - ' &6ð &aJoining date &7➛ &f%parseother_{ajlb_lb_vault_eco_balance_5_monthly_name}_{player_last_join_date}%'
+      - ' &6ð &aPlaying time &7➛ &f%parseother_{ajlb_lb_vault_eco_balance_5_monthly_name}_{statistic_time_played}%'
+      - '&r'
+      - '#515251&m                                           '
+      SkinURL: a2c142af59f29eb35ab29c6a45e33635dcfc2a956dbd4d2e5572b0d38891b354
+    Slots: '30'
+    Type: NONE
+    Priority: 5
+  81f89e64-ff25-4d32-b3f4-1091cf085d56:
+    Item:
+      Material: PLAYER_HEAD
+      Name: ' &4■ &6&lTop #6 Monthly &7➛ &f&l%ajlb_lb_vault_eco_balance_6_monthly_name%'
+      Lore:
+      - '#515251&m                                           '
+      - '&r'
+      - ' &6ð &aAmount money &7➛ &2$&f%ajlb_lb_vault_eco_balance_6_monthly_value%'
+      - ' &6ð &aJoining date &7➛ &f%parseother_{ajlb_lb_vault_eco_balance_6_monthly_name}_{player_last_join_date}%'
+      - ' &6ð &aPlaying time &7➛ &f%parseother_{ajlb_lb_vault_eco_balance_6_monthly_name}_{statistic_time_played}%'
+      - '&r'
+      - '#515251&m                                           '
+      SkinURL: 24ddb03aa8c584168c63ece337aefb281774377db72337297de258b4cca6fba4
+    Slots: '31'
+    Type: NONE
+    Priority: 5
+  81f89e64-ff25-4d32-b3f4-1091cf085d57:
+    Item:
+      Material: PLAYER_HEAD
+      Name: ' &4■ &6&lTop #7 Monthly &7➛ &f&l%ajlb_lb_vault_eco_balance_7_monthly_name%'
+      Lore:
+      - '#515251&m                                           '
+      - '&r'
+      - ' &6ð &aAmount money &7➛ &2$&f%ajlb_lb_vault_eco_balance_7_monthly_value%'
+      - ' &6ð &aJoining date &7➛ &f%parseother_{ajlb_lb_vault_eco_balance_7_monthly_name}_{player_last_join_date}%'
+      - ' &6ð &aPlaying time &7➛ &f%parseother_{ajlb_lb_vault_eco_balance_7_monthly_name}_{statistic_time_played}%'
+      - '&r'
+      - '#515251&m                                           '
+      SkinURL: d7de70b88368ce23a1ac6d1c4ad9131480f2ee205fd4a85ab2417af7f6bd90
+    Slots: '32'
+    Type: NONE
+    Priority: 5
+  81f89e64-ff25-4d32-b3f4-1091cf085d58:
+    Item:
+      Material: PLAYER_HEAD
+      Name: ' &4■ &6&lTop #8 Monthly &7➛ &f&l%ajlb_lb_vault_eco_balance_8_monthly_name%'
+      Lore:
+      - '#515251&m                                           '
+      - '&r'
+      - ' &6ð &aAmount money &7➛ &2$&f%ajlb_lb_vault_eco_balance_8_monthly_value%'
+      - ' &6ð &aJoining date &7➛ &f%parseother_{ajlb_lb_vault_eco_balance_8_monthly_name}_{player_last_join_date}%'
+      - ' &6ð &aPlaying time &7➛ &f%parseother_{ajlb_lb_vault_eco_balance_8_monthly_name}_{statistic_time_played}%'
+      - '&r'
+      - '#515251&m                                           '
+      SkinURL: 42647ae47b6b51f5a45eb3dcafa9b88f288ede9cebdb52a159e3110e6b8118e
+    Slots: '33'
+    Type: NONE
+    Priority: 5
+  81f89e64-ff25-4d32-b3f4-1091cf085d59:
+    Item:
+      Material: PLAYER_HEAD
+      Name: ' &4■ &6&lTop #9 Monthly &7➛ &f&l%ajlb_lb_vault_eco_balance_9_monthly_name%'
+      Lore:
+      - '#515251&m                                           '
+      - '&r'
+      - ' &6ð &aAmount money &7➛ &2$&f%ajlb_lb_vault_eco_balance_9_monthly_value%'
+      - ' &6ð &aJoining date &7➛ &f%parseother_{ajlb_lb_vault_eco_balance_9_monthly_name}_{player_last_join_date}%'
+      - ' &6ð &aPlaying time &7➛ &f%parseother_{ajlb_lb_vault_eco_balance_9_monthly_name}_{statistic_time_played}%'
+      - '&r'
+      - '#515251&m                                           '
+      SkinURL: dae461a4434196d37296ad5adf6d9d5744a0415dc61c475a6dfa6285814052
+    Slots: '34'
+    Type: NONE
+    Priority: 5
+  8e0bd8ad-6902-4b7d-8370-434c9324eaf1:
+    Item:
+      Material: PLAYER_HEAD
+      Name: ' &4• &6Top 10 General'
+      Lore:
+      - ' &2✔ &aClick, to see the &6Top 10 General'
+      SkinURL: 78a3324c77fdccd597774304bbda15517ea2359de53897aed09528d1c6ec9
+    Slots: '9'
+    Type: NONE
+    Priority: 5
+    Click_Actions:
+      LEFT:
+      - adminshop open top10 %player_name%
+  8e0bd8ad-6902-4b7d-8370-434c9324eaf2:
+    Item:
+      Material: PLAYER_HEAD
+      Name: ' &4• &cTop 10 monthly!'
+      Lore:
+      - ' &2✔ &fYou now see the &cTop 10 monthly'
+      SkinURL: 116afb385724783947a6052ca2758f9c937cb8130c0eac1a3f068dc55495393
+    Slots: '18'
+    Type: NONE
+    Priority: 5
+  8e0bd8ad-6902-4b7d-8370-434c9324eaf3:
+    Item:
+      Material: PLAYER_HEAD
+      Name: ' &6• &eTop 10 weekly!'
+      Lore:
+      - ' &2✔ &fYou now see the &eTop 10 monthly'
+      SkinURL: 4e97da85a91474beb58f99a9f8dd17754e5da0c16c41c4183431d3b48a234e
+    Slots: '27'
+    Type: NONE
+    Priority: 5
+    Click_Actions:
+      LEFT:
+      - adminshop open top10weekly %player_name%
+  8e0bd8ad-6902-4b7d-8370-434c9324eaf4:
+    Item:
+      Material: PLAYER_HEAD
+      Name: ' &2• &aTop 10 daily!'
+      Lore:
+      - ' &2✔ &aClick, to see the Top 10 daily.'
+      SkinURL: 69c5f5d046bdee6c3996d5c4deab28b39cd0fa2d934cc2733f149d6bcbdf8ca
+    Slots: '36'
+    Type: NONE
+    Priority: 5
+    Click_Actions:
+      LEFT:
+      - adminshop open top10daily %player_name%
+  8e0bd8ad-6902-4b7d-8370-434c9324eaf5:
+    Item:
+      Material: PLAYER_HEAD
+      Name: '&4↓ &cGo back to categories &4↓'
+      SkinURL: 1e573e99b8a5af8a7d745b776564dc727defdef070257630aa36cdb49b7cf8b
+    Slots: '49'
+    Type: NONE
+    Priority: 5
+    Click_Actions:
+      LEFT:
+      - adminshop open %player_name%
+  8e0bd8ad-6902-4b7d-8370-434c9324ea01:
+    Item:
+      Material: BEACON
+      Unbreakable: true
+      Item_Flags:
+      - HIDE_UNBREAKABLE
+      Name: ' &f&l✪ &8| <gradient:#36175E>&lTOP 10 MONEY!</gradient:#9768D1>'
+      Lore:
+      - '#515251&m                                          '
+      - '   &dCheck out the server &fTOP 10'
+      - '    &dand see who is the richest'
+      - '       &dplayer on the server!'
+      - ''
+      - ' &2«&a«&f« &eYou see now &cMonthly!&e! &f»&a»&2»'
+      - ''
+      - '#515251&m                                          '
+    Slots: '4'
+    Type: NONE
+    Priority: 5
+  8e0bd8ad-6902-4b7d-8370-434c9324ea02:
+    Item:
+      Material: SUNFLOWER
+      Name: '&6✪ &8| <gradient:#36175E>YOUR BALANCE</gradient:#9768D1>'
+      Lore:
+      - '#515251&m                                             '
+      - ' &f&l✶ &dYou have &2$&f%vault_eco_balance_commas% &dof money'
+      - '     &dto spend in the server shop.'
+      - ''
+      - '#515251&m                                             '
+    Slots: '52'
+    Type: NONE
+    Priority: 5
+  ee007428-921f-4c1d-94fa-e85casd03bd92:
+    Item:
+      Material: GRAY_STAINED_GLASS_PANE
+      Name: '&r '
+    Slots: 11,12,13,15,16,17,20,21,25,26,29,35,38,39,40,41,42,43,44
+    Type: NONE
+    Priority: 0
+  ee007428-921f-4c1d-94fa-e85ce403bd92:
+    Item:
+      Material: MAGENTA_STAINED_GLASS_PANE
+      Name: '&r '
+    Slots: 0,1,2,6,7,8,45,46,47,48,50,51,53
+    Type: NONE
+    Priority: 1
+  41120691-e9ec-4adb-b84c-6c662ca3dec2:
+    Item:
+      Material: PURPLE_STAINED_GLASS_PANE
+      Name: '&r '
+    Slots: 3,5
+    Type: NONE
+    Priority: 1
+  41120691-e9ec-4adb-b84c-6c662asdec2:
+    Item:
+      Material: WHITE_STAINED_GLASS_PANE
+      Name: '&r '
+    Slots: 10,19,28,37
+    Type: NONE
+    Priority: 1
+Settings:
+  # GUI title.
+  Title: <black>%shop_name%</black>
+  # GUI size. Must be multiply of 9.
+  # Useful for 'CHEST' Inventory Type only.
+  Size: 54
+  # GUI type.
+  # https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/event/inventory/InventoryType.html
+  Inventory_Type: CHEST
+  # Sets GUI auto-refresh interval (in seconds). Set this to 0 to disable.
+  Auto_Refresh: 0

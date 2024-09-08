@@ -1,0 +1,185 @@
+# ==================================================
+# Available Placeholders:
+# - %balance% -> Player's balance for default Virtual Shop currency.
+# - %sell_multiplier% -> Player's sell multiplier (set in VirtualShop settings.yml).
+# - https://nightexpress.gitbook.io/excellentshop/utility/placeholders#internal-placeholders -> Placeholders of: Shop, Virtual Shop, Static/Rotating Shop.
+# - PlaceholderAPI -> Any of them. Enable PlaceholderAPI for GUIs in the plugin config.
+# ==================================================
+
+Title: ' &2⛏ <gradient:#36175E>BUILDING BLOCKS</gradient:#9768D1> &8| &fSelect:'
+Size: 27
+Use_Mini_Message: false
+Inventory_Type: CHEST
+# ==================== GUI CONTENT ====================
+# You can freely edit items in this section as you wish (add, remove, modify items).
+# The following values are available as button Types:
+# CLOSE
+# PAGE_NEXT
+# PAGE_PREVIOUS
+# RETURN
+# SELL_ALL
+# ==================== ITEM OPTIONS ====================
+# > Item: Item to display. Please check: https://github.com/nulli0n/nightcore-spigot/wiki/ItemStack-Options
+# > Priority: Button priority. Better values will override other item(s) in the same slot(s).
+# > Slots: Button slots. From [0] to [Size - 1]. Split with commas.
+# > Click_Commands: Execute custom commands on click. PlaceholderAPI available here.
+#     Available click types: LEFT, RIGHT, SHIFT_LEFT, SHIFT_RIGHT, DROP_KEY, SWAP_KEY, NUMBER_1, NUMBER_2, NUMBER_3, NUMBER_4, NUMBER_5, NUMBER_6, NUMBER_7, NUMBER_8, NUMBER_9
+#     Use prefix 'player:' to run command by a player.
+#     Click_Commands:
+#       LEFT:
+#       - say Hello
+#       - give %player_name% diamond 1
+#       - player: menu open shops
+# ==================================================
+Content:
+  93dca684-31c0-4d4b-a49e-afd34f2410a9:
+    Item:
+      Material: STONE_BRICKS
+      Name: ' &2⛏ &8Bricks &8| &f( &a52 &7blocks &f)'
+      Lore:
+      - '#515251&m                                           '
+      - ' &7This category contains different'
+      - '           &7types of bricks!'
+      - ''
+      - '       &7⇦&a⇦&2⇦ &aClick to select! &2⇨&a⇨&7⇨'
+      - '#515251&m                                           '
+    Slots: '15'
+    Type: NEXT
+  11d15ed9-583c-4f65-a59d-0a4a41b8e19b:
+    Item:
+      Material: SAND
+      Name: ' &2⛏ &eSand blocks &8| &f( &a22 &7blocks &f)'
+      Lore:
+      - '#515251&m                                           '
+      - ' &7This category contains different'
+      - '        &7types of sand blocks!'
+      - ''
+      - '       &7⇦&a⇦&2⇦ &aClick to select! &2⇨&a⇨&7⇨'
+      - '#515251&m                                           '
+    Slots: '14'
+    Type: NONE
+  81f89e64-ff25-4d32-b3f4-1091cf085d58:
+    Item:
+      Material: PLAYER_HEAD
+      Name: '       &2⛏ <gradient:#36175E>BUILDING BLOCKS</gradient:#9768D1> &2⛏'
+      Lore:
+      - '#515251&m                                           '
+      - '    &7Buy building blocks to build'
+      - '    &7up your amazing structure!'
+      - '#515251&m                                           '
+      SkinURL: c95d37993e594082678472bf9d86823413c250d4332a2c7d8c52de4976b362
+    Slots: '4'
+    Type: NONE
+  27711ff8-6d3c-4124-8f7e-9c169818e1bf:
+    Item:
+      Material: SUNFLOWER
+      Name: '&e✪ &8| <gradient:#36175E>YOUR BALANCE</gradient:#9768D1>'
+      Lore:
+      - '#515251&m                                           '
+      - ' &f&l✶ &dYou have &2$&f%vault_eco_balance_commas% &dof money'
+      - '    &dto spend in the server shop.'
+      - ''
+      - '#515251&m                                           '
+    Slots: '25'
+    Type: NONE
+  41120691-e9ec-4adb-b84c-6c662ca3dec2:
+    Item:
+      Material: PURPLE_STAINED_GLASS_PANE
+      Name: '&r '
+    Slots: 3,5
+    Type: NONE
+  c249211d-cb34-44ff-b170-7de50e984e63:
+    Item:
+      Material: PRISMARINE
+      Name: ' &2⛏ &6Copper &7& &bPrismarine &8| &f( &a42 &7blocks &f)'
+      Lore:
+      - '#515251&m                                           '
+      - ' &7This category contains different'
+      - ' &7types of copper and prismarine'
+      - '                 &7blocks!'
+      - ''
+      - '       &7⇦&a⇦&2⇦ &aClick to select! &2⇨&a⇨&7⇨'
+      - '#515251&m                                           '
+    Slots: '16'
+    Type: NONE
+    Click_Actions:
+      LEFT:
+      - player: markt blocksprismarine
+  ee007428-921f-4c1d-94fa-e85ce403bd92:
+    Item:
+      Material: MAGENTA_STAINED_GLASS_PANE
+      Name: '&r '
+    Slots: 0,1,2,6,7,8,9,17,18,19,20,21,23,24,26
+    Type: NONE
+  ec25c5b8-726c-4c0b-8dbd-1c7c05effae9:
+    Item:
+      Material: OAK_LOG
+      Name: ' &2⛏ &6Wooden blocks &8| &f( &a176 &7blocks &f)'
+      Lore:
+      - '#515251&m                                           '
+      - ' &7This category contains different'
+      - '       &7types of wooden blocks!'
+      - ''
+      - '       &7⇦&a⇦&2⇦ &aClick to select! &2⇨&a⇨&7⇨'
+      - '#515251&m                                           '
+    Slots: '12'
+    Type: NONE
+    Click_Actions:
+      LEFT:
+      - adminshop open blockslog %player_name%
+  61c90d0d-935e-4646-94dc-3abf0b258b42:
+    Item:
+      Material: STONE
+      Name: ' &2⛏ &7Stone blocks &8| &f( &a28 &7blocks &f)'
+      Lore:
+      - '#515251&m                                           '
+      - ' &7This category contains different'
+      - '        &7types of stone blocks!'
+      - ''
+      - '       &7⇦&a⇦&2⇦ &aClick to select! &2⇨&a⇨&7⇨'
+      - '#515251&m                                           '
+    Slots: '11'
+    Type: NONE
+    Click_Actions:
+      LEFT:
+      - vshop open blocksstone %player_name%
+  8e0bd8ad-6902-4b7d-8370-434c9324eaf2:
+    Item:
+      Material: GRASS_BLOCK
+      Name: ' &2⛏ &aBasic blocks &8| &f( &a54 &7blocks &f)'
+      Lore:
+      - '#515251&m                                           '
+      - '   &7This category contains basic'
+      - '          &7building blocks!'
+      - ''
+      - '       &7⇦&a⇦&2⇦ &aClick to select! &2⇨&a⇨&7⇨'
+      - '#515251&m                                           '
+    Slots: '10'
+    Type: NONE
+    Click_Actions:
+      LEFT:
+      - adminshop open blocksbasic %player_name%
+  8e0bd8ad-6902-4b7d-8370-434c9324eaf3:
+    Item:
+      Material: PLAYER_HEAD
+      Name: '&4↓ &cGo back to categories &4↓'
+      SkinURL: 1e573e99b8a5af8a7d745b776564dc727defdef070257630aa36cdb49b7cf8b
+    Slots: '22'
+    Type: RETURN
+  0c58b293-aea9-4d8c-af88-423fa4b8dcbc:
+    Item:
+      Material: WHITE_STAINED_GLASS_PANE
+      Name: '&r '
+    Slots: '13'
+    Type: NONE
+Settings:
+  # GUI title.
+  Title: <black>%shop_name%</black>
+  # GUI size. Must be multiply of 9.
+  # Useful for 'CHEST' Inventory Type only.
+  Size: 54
+  # GUI type.
+  # https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/event/inventory/InventoryType.html
+  Inventory_Type: CHEST
+  # Sets GUI auto-refresh interval (in seconds). Set this to 0 to disable.
+  Auto_Refresh: 0

@@ -1,0 +1,76 @@
+# ==================================================
+# Available Placeholders:
+# - %balance% -> Player's balance for default Virtual Shop currency.
+# - %sell_multiplier% -> Player's sell multiplier (set in VirtualShop settings.yml).
+# - https://nightexpress.gitbook.io/excellentshop/utility/placeholders#internal-placeholders -> Placeholders of: Shop, Virtual Shop, Static/Rotating Shop.
+# - PlaceholderAPI -> Any of them. Enable PlaceholderAPI for GUIs in the plugin config.
+# ==================================================
+
+# ==================== GUI CONTENT ====================
+# You can freely edit items in this section as you wish (add, remove, modify items).
+# The following values are available as button Types:
+# CLOSE
+# PAGE_NEXT
+# PAGE_PREVIOUS
+# RETURN
+# SELL_ALL
+# ==================== ITEM OPTIONS ====================
+# > Item: Item to display. Please check: https://github.com/nulli0n/nightcore-spigot/wiki/ItemStack-Options
+# > Priority: Button priority. Better values will override other item(s) in the same slot(s).
+# > Slots: Button slots. From [0] to [Size - 1]. Split with commas.
+# > Click_Commands: Execute custom commands on click. PlaceholderAPI available here.
+#     Available click types: LEFT, RIGHT, SHIFT_LEFT, SHIFT_RIGHT, DROP_KEY, SWAP_KEY, NUMBER_1, NUMBER_2, NUMBER_3, NUMBER_4, NUMBER_5, NUMBER_6, NUMBER_7, NUMBER_8, NUMBER_9
+#     Use prefix 'player:' to run command by a player.
+#     Click_Commands:
+#       LEFT:
+#       - say Hello
+#       - give %player_name% diamond 1
+#       - player: menu open shops
+# ==================================================
+Content:
+  page_next:
+    Priority: 5
+    Slots: 50
+    Type: PAGE_NEXT
+    Item:
+      Material: PLAYER_HEAD
+      Name: '#e3fbf9(→) &lNext Page'
+      SkinURL: 682ad1b9cb4dd21259c0d75aa315ff389c3cef752be3949338164bac84a96e
+  
+  page_previous:
+    Priority: 5
+    Slots: 48
+    Type: PAGE_PREVIOUS
+    Item:
+      Material: PLAYER_HEAD
+      Name: '#e3fbf9(←) &lPrevious Page'
+      SkinURL: 37aee9a75bf0df7897183015cca0b2a7d755c63388ff01752d5f4419fc645
+  
+  info:
+    Item:
+      Material: PLAYER_HEAD
+      Name: '#ffeea2&lRotation Info'
+      Lore:
+      - '#d4d9d8Next rotation in: #ffeea2%shop_next_rotation_in%'
+      SkinURL: b46ddb7fa2417a9b887d7d50935dedcaf45fe90ac6fb41788f8aa4f5e846d5df
+    Slots: 4
+  
+  return:
+    Priority: 5
+    Slots: 49
+    Type: CLOSE
+    Item:
+      Material: PLAYER_HEAD
+      Name: '#FF5733(✕) &lClose'
+      SkinURL: beb588b21a6f98ad1ff4e085c552dcb050efc9cab427f46048f18fc803475f7
+Settings:
+  # GUI title.
+  Title: Traveller Shop
+  # GUI size. Must be multiply of 9.
+  # Useful for 'CHEST' Inventory Type only.
+  Size: 54
+  # GUI type.
+  # https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/event/inventory/InventoryType.html
+  Inventory_Type: CHEST
+  # Sets GUI auto-refresh interval (in seconds). Set this to 0 to disable.
+  Auto_Refresh: 0

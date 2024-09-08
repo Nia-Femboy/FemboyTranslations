@@ -1,0 +1,103 @@
+# ==================================================
+# Available Placeholders:
+# - %balance% -> Player's balance for default Virtual Shop currency.
+# - %sell_multiplier% -> Player's sell multiplier (set in VirtualShop settings.yml).
+# - https://nightexpress.gitbook.io/excellentshop/utility/placeholders#internal-placeholders -> Placeholders of: Shop, Virtual Shop, Static/Rotating Shop.
+# - PlaceholderAPI -> Any of them. Enable PlaceholderAPI for GUIs in the plugin config.
+# ==================================================
+
+Title: ' &2⛏ &eSand blocks:'
+Size: 54
+Use_Mini_Message: false
+Inventory_Type: CHEST
+# ==================== GUI CONTENT ====================
+# You can freely edit items in this section as you wish (add, remove, modify items).
+# The following values are available as button Types:
+# CLOSE
+# PAGE_NEXT
+# PAGE_PREVIOUS
+# RETURN
+# SELL_ALL
+# ==================== ITEM OPTIONS ====================
+# > Item: Item to display. Please check: https://github.com/nulli0n/nightcore-spigot/wiki/ItemStack-Options
+# > Priority: Button priority. Better values will override other item(s) in the same slot(s).
+# > Slots: Button slots. From [0] to [Size - 1]. Split with commas.
+# > Click_Commands: Execute custom commands on click. PlaceholderAPI available here.
+#     Available click types: LEFT, RIGHT, SHIFT_LEFT, SHIFT_RIGHT, DROP_KEY, SWAP_KEY, NUMBER_1, NUMBER_2, NUMBER_3, NUMBER_4, NUMBER_5, NUMBER_6, NUMBER_7, NUMBER_8, NUMBER_9
+#     Use prefix 'player:' to run command by a player.
+#     Click_Commands:
+#       LEFT:
+#       - say Hello
+#       - give %player_name% diamond 1
+#       - player: menu open shops
+# ==================================================
+Content:
+  ee007428-921f-4c1d-94fa-e85casd03bd92:
+    Item:
+      Material: GRAY_STAINED_GLASS_PANE
+      Name: '&r '
+    Slots: 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44
+    Type: NONE
+    Priority: -1
+  ee007428-921f-4c1d-94fa-e85ce403bd92:
+    Item:
+      Material: MAGENTA_STAINED_GLASS_PANE
+      Name: '&r '
+    Slots: 0,1,2,6,7,8,45,46,47,48,50,51,53
+    Type: NONE
+    Priority: -1
+  41120691-e9ec-4adb-b84c-6c662ca3dec2:
+    Item:
+      Material: PURPLE_STAINED_GLASS_PANE
+      Name: '&r '
+    Slots: 3,5
+    Type: NONE
+    Priority: -1
+  81f89e64-ff25-4d32-b3f4-1091cf085d58:
+    Item:
+      Material: PLAYER_HEAD
+      Name: '       &2⛏ <gradient:#36175E>BUILDING BLOCKS</gradient:#9768D1> &2⛏'
+      Lore:
+      - '#515251&m                                           '
+      - '    &7Buy building blocks to build'
+      - '    &7up your amazing structure!'
+      - '#515251&m                                           '
+      SkinURL: c95d37993e594082678472bf9d86823413c250d4332a2c7d8c52de4976b362
+    Slots: '4'
+    Type: NONE
+    Priority: 5
+  27711ff8-6d3c-4124-8f7e-9c169818e1bf:
+    Item:
+      Material: SUNFLOWER
+      Name: '&e✪ &8| <gradient:#36175E>YOUR BALANCE</gradient:#9768D1>'
+      Lore:
+      - '#515251&m                                           '
+      - ' &f&l✶ &dYou have &2$&f%vault_eco_balance_commas% &dof money'
+      - '    &dto spend in the server shop.'
+      - ''
+      - '#515251&m                                           '
+    Slots: '52'
+    Type: NONE
+    Priority: 5
+  8e0bd8ad-6902-4b7d-8370-434c9324eaf3:
+    Item:
+      Material: PLAYER_HEAD
+      Name: '&6↓ &eGo back to categories &6↓'
+      SkinURL: 1e573e99b8a5af8a7d745b776564dc727defdef070257630aa36cdb49b7cf8b
+    Slots: '49'
+    Type: NONE
+    Priority: 5
+    Click_Actions:
+      LEFT:
+      - adminshop open blocks %player_name%
+Settings:
+  # GUI title.
+  Title: <black>%shop_name%</black>
+  # GUI size. Must be multiply of 9.
+  # Useful for 'CHEST' Inventory Type only.
+  Size: 54
+  # GUI type.
+  # https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/event/inventory/InventoryType.html
+  Inventory_Type: CHEST
+  # Sets GUI auto-refresh interval (in seconds). Set this to 0 to disable.
+  Auto_Refresh: 0
