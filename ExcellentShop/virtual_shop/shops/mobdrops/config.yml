@@ -1,0 +1,31 @@
+Name: ' &6♆ <gradient:#36175E>MOB DROPS</gradient:#9768D1> &8| &f( &a24 &7items &f)'
+Pages: 1
+Permission_Required: true
+Transaction_Allowed:
+  SELL: true
+  BUY: true
+Citizens:
+  Attached_NPC: ''
+Description:
+- '&x&5&1&5&2&5&1&m                                                    '
+- ' &f&l✶ <gradient:#36175E>DESCRIPTION</gradient:#9768D1> &f➛ &7Buy or sell mob loot'
+- '     &7to make some good cash!'
+- ''
+- ' &f&l✶ <gradient:#36175E>INFORMATION:</gradient:#9768D1>'
+- '   &a➥ &fBuying price range: &2$&f2.50 &7- &2$&f7,500'
+- '   &a➥ &fSelling price range: &2$&f0.11 - &2$&f2.10'
+- '   &a➥ &fAccess for ranks: &a&lFOR ALL'
+- ''
+- ' &f&l✶ <gradient:#36175E>THIS CATEGORY CONTAINS:</gradient:#9768D1>'
+- '   &a➥ &6Rotten flesh&7, &6Bone&7, &6Arrow&7,'
+- '   &a➥ &6Gunpowder&7, &6Phantom membrane&7,'
+- '   &a➥ &6Slime ball and moree..'
+- ''
+- ''
+- '    &7⇦&a⇦&2⇦ &eClick to see the category! &2⇨&a⇨&7⇨'
+- '&x&5&1&5&2&5&1&m                                                    '
+Icon:
+  Material: PLAYER_HEAD
+  SkinURL: 75443a1e1bd49183c25335c11f583639485cd05141b7ac7fc11965d081de40cb
+Layout:
+  Name: mobdrops

@@ -1,0 +1,30 @@
+Name: ' &b✿ <gradient:#36175E>MISCELLANEOUS</gradient:#9768D1> &8| &f( &a73 &7items &f)'
+Pages: 3
+Permission_Required: true
+Transaction_Allowed:
+  SELL: true
+  BUY: true
+Citizens:
+  Attached_NPC: ''
+Description:
+- '&x&5&1&5&2&5&1&m                                                    '
+- ' &f&l✶ <gradient:#36175E>DESCRIPTION</gradient:#9768D1> &f➛ &7Buy miscellaneous'
+- '     &7items for decorations and more!'
+- ''
+- ' &f&l✶ <gradient:#36175E>INFORMATION:</gradient:#9768D1>'
+- '   &a➥ &fBuying price range: &2$&f15 &7- &2$&f100,000'
+- '   &a➥ &fSelling price range: &2$&f0.66 - &2$&f15'
+- '   &a➥ &fAccess for ranks: &a&lFOR ALL'
+- ''
+- ' &f&l✶ <gradient:#36175E>THIS CATEGORY CONTAINS:</gradient:#9768D1>'
+- '   &a➥ &6Beacons&7, &6Elytra&7, &6Horse armors'
+- '   &a➥ &6Spyglass&7, &6Name tag and moree..'
+- ''
+- ''
+- '    &7⇦&a⇦&2⇦ &eClick to see the category! &2⇨&a⇨&7⇨'
+- '&x&5&1&5&2&5&1&m                                                    '
+Icon:
+  Material: PLAYER_HEAD
+  SkinURL: de4baa04ba6c1c6baccd9972858dcbbf8a61d773871931319fb3f9b905b46651
+Layout:
+  Name: misc

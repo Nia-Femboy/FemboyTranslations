@@ -1,0 +1,19 @@
+Name: ' &2⛏ &aBasic blocks &8| &f( &a54 &7blocks &f)'
+Pages: 2
+Permission_Required: false
+Transaction_Allowed:
+  SELL: true
+  BUY: true
+Citizens:
+  Attached_NPC: ''
+Description:
+- '#515251&m                                           '
+- '   &7This category contains basic'
+- '          &7building blocks!'
+- ''
+- '       &7⇦&a⇦&2⇦ &aClick to select! &2⇨&a⇨&7⇨'
+- '#515251&m                                           '
+Layout:
+  Name: blocksbasic
+Icon:
+  Material: GRASS_BLOCK

@@ -1,0 +1,30 @@
+Name: ' &f&l✪ &8| &x&6&a&b&f&6&a&lT&x&7&1&c&1&7&1&lO&x&7&8&c&4&7&8&lP&x&8&0&c&7&7&f&l &x&8&7&c&a&8&6&l1&x&8&f&c&d&8&d&l0&x&9&6&d&0&9&4&l &x&9&e&d&3&9&b&lM&x&a&5&d&6&a&2&lO&x&a&d&d&9&a&9&lN&x&b&4&d&c&b&0&lE&x&b&c&d&f&b&7&lY&x&c&3&e&2&b&e&l!'
+Pages: 1
+Permission_Required: true
+Transaction_Allowed:
+  SELL: false
+  BUY: false
+Citizens:
+  Attached_NPC: ''
+Description:
+- '&x&5&1&5&2&5&1&m                                                    '
+- ''
+- ' &f♦ &aCheck out the server &fTOP 10'
+- '   &aand see who is the richest'
+- '   &aplayer on the server!'
+- ''
+- '  &c✡ &eCheck the &6Top 10 general &ehere!'
+- '      &4• &cTop 10 monthly!'
+- '      &6• &eTop 10 weekly!'
+- '      &2• &aTop 10 daily!'
+- ''
+- ' &2✔ &a&nClick to check more!'
+- ''
+- '&x&5&1&5&2&5&1&m                                                    '
+Icon:
+  Material: BEACON
+  Item_Flags:
+  - HIDE_UNBREAKABLE
+  Unbreakable: true
+Layout:
+  Name: top10monthly

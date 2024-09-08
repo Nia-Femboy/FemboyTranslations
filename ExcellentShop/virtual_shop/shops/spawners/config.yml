@@ -1,0 +1,31 @@
+Name: ' &8☯ <gradient:#36175E>SPAWNERS</gradient:#9768D1> &8| &f( &a74 &7spawners &f)'
+Pages: 3
+Permission_Required: true
+Transaction_Allowed:
+  SELL: true
+  BUY: true
+Citizens:
+  Attached_NPC: ''
+Description:
+- '&x&5&1&5&2&5&1&m                                                    '
+- ' &f&l✶ <gradient:#36175E>DESCRIPTION</gradient:#9768D1> &f➛ &7Buy the best money'
+- '     &7making economy standard here!'
+- ''
+- ' &f&l✶ <gradient:#36175E>INFORMATION:</gradient:#9768D1>'
+- '   &a➥ &fBuying price range: &2$&f2,000 &7- &2$&f150,000'
+- '   &a➥ &fSelling price range: &cDisabled'
+- '   &a➥ &fAccess for ranks: &a&lFOR ALL'
+- ''
+- ' &f&l✶ <gradient:#36175E>THIS CATEGORY CONTAINS:</gradient:#9768D1>'
+- '   &a➥ &6Page 1: &aPassive mob spawners'
+- '   &a➥ &6Page 2: &eNeutral mob spawners'
+- '   &a➥ &6Page 3: &cHostile mob spawners'
+- ''
+- ''
+- '    &7⇦&a⇦&2⇦ &eClick to see the category! &2⇨&a⇨&7⇨'
+- '&x&5&1&5&2&5&1&m                                                    '
+Icon:
+  Material: PLAYER_HEAD
+  SkinURL: 80af5f572f1e5425bef927528076f7b0b755fd2bf5297acdce57a65bdb88b9c8
+Layout:
+  Name: spawners

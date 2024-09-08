@@ -1,0 +1,19 @@
+Name: ' &2⛏ &7Stone blocks &8| &f( &a28 &7blocks &f)'
+Pages: 1
+Permission_Required: true
+Transaction_Allowed:
+  SELL: true
+  BUY: true
+Citizens:
+  Attached_NPC: ''
+Description:
+- '&x&5&1&5&2&5&1&m                                           '
+- ' &7This category contains different'
+- '        &7types of stone blocks!'
+- ''
+- '       &7⇦&a⇦&2⇦ &aClick to select! &2⇨&a⇨&7⇨'
+- '&x&5&1&5&2&5&1&m                                           '
+Layout:
+  Name: blocksstone
+Icon:
+  Material: STONE

@@ -1,0 +1,30 @@
+Name: ' &4⚡ <gradient:#36175E>REDSTONE</gradient:#9768D1> &8| &f( &a51 &7items &f)'
+Pages: 2
+Permission_Required: true
+Transaction_Allowed:
+  SELL: true
+  BUY: true
+Citizens:
+  Attached_NPC: ''
+Description:
+- '&x&5&1&5&2&5&1&m                                                    '
+- ' &f&l✶ <gradient:#36175E>DESCRIPTION</gradient:#9768D1> &f➛ &7Buy redstone equipment'
+- '     &7to use for any situation!'
+- ''
+- ' &f&l✶ <gradient:#36175E>INFORMATION:</gradient:#9768D1>'
+- '   &a➥ &fBuying price range: &2$&f8.50 &7- &2$&f50'
+- '   &a➥ &fSelling price range: &2$&f0.11 - &2$&f0.90'
+- '   &a➥ &fAccess for ranks: &a&lFOR ALL'
+- ''
+- ' &f&l✶ <gradient:#36175E>THIS CATEGORY CONTAINS:</gradient:#9768D1>'
+- '   &a➥ &6Pistons&7, &6Lamp&7, &6Dropper'
+- '   &a➥ &6Hoppers&7, &6Boats and moree..'
+- ''
+- ''
+- '    &7⇦&a⇦&2⇦ &eClick to see the category! &2⇨&a⇨&7⇨'
+- '&x&5&1&5&2&5&1&m                                                    '
+Icon:
+  Material: PLAYER_HEAD
+  SkinURL: 2ab526245b0f59f3fd88962217195c76e7588129b9f65463a83a23fd607f9f54
+Layout:
+  Name: redstone

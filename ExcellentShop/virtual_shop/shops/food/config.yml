@@ -1,0 +1,30 @@
+Name: ' &2☄ <gradient:#36175E>FOOD</gradient:#9768D1> &8| &f( &a39 &7items &f)'
+Pages: 2
+Permission_Required: true
+Transaction_Allowed:
+  SELL: true
+  BUY: true
+Citizens:
+  Attached_NPC: ''
+Description:
+- '&x&5&1&5&2&5&1&m                                                    '
+- ' &f&l✶ <gradient:#36175E>DESCRIPTION</gradient:#9768D1> &f➛ &7Buy or sell your food'
+- '     &7to make decent cash!'
+- ''
+- ' &f&l✶ <gradient:#36175E>INFORMATION:</gradient:#9768D1>'
+- '   &a➥ &fBuying price range: &2$&f10 &7- &2$&f10,000'
+- '   &a➥ &fSelling price range: &2$&f0.09 - &2$&f20'
+- '   &a➥ &fAccess for ranks: &a&lFOR ALL'
+- ''
+- ' &f&l✶ <gradient:#36175E>THIS CATEGORY CONTAINS:</gradient:#9768D1>'
+- '   &a➥ &6Potato&7, &6Carrot&7, &6Beetroot&7,'
+- '   &a➥ &6Cookie&7, &6Apples and moree..'
+- ''
+- ''
+- '    &7⇦&a⇦&2⇦ &eClick to see the category! &2⇨&a⇨&7⇨'
+- '&x&5&1&5&2&5&1&m                                                    '
+Icon:
+  Material: PLAYER_HEAD
+  SkinURL: ca9c8753780ebc39c351da8efd91bce90bd8cca7b511f93e78df75f6615c79a6
+Layout:
+  Name: food

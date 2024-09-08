@@ -1,0 +1,30 @@
+Name: ' &7⌘ <gradient:#36175E>FARMING</gradient:#9768D1> &8| &f( &a35 &7Items &f)'
+Pages: 2
+Permission_Required: true
+Transaction_Allowed:
+  SELL: true
+  BUY: true
+Citizens:
+  Attached_NPC: ''
+Description:
+- '&x&5&1&5&2&5&1&m                                                    '
+- ' &f&l✶ <gradient:#36175E>BESCHREIBUNG</gradient:#9768D1> &f➛ &7Kaufe oder Verkaufe'
+- '     &7Farming Items!'
+- ''
+- ' &f&l✶ <gradient:#36175E>INFORMATION:</gradient:#9768D1>'
+- '   &a➥ &fVerkaufspreise: &2$&f1 &7- &2$&f7,995'
+- '   &a➥ &fAnkaufspreise: &2$&f0.01 - &2$&f4,710'
+- '   &a➥ &fZugang: &a&lFür alle'
+- ''
+- ' &f&l✶ <gradient:#36175E>In diesem Markt:</gradient:#9768D1>'
+- '   &a➥ &6Samen&7, &6Zuckerrohre&7, &6Kakteen'
+- '   &a➥ &6Bambus&7, &6Chorus und mehr...'
+- ''
+- ''
+- ' &7⇦&a⇦&2⇦ &eKlicke um den Markt zu öffnen!! &2⇨&a⇨&7⇨'
+- '&x&5&1&5&2&5&1&m                                                    '
+Icon:
+  Material: PLAYER_HEAD
+  SkinURL: 8d1b4abfd34ee2a1e3795e2bb28cedaf941616913479ba2d5b7bfa1b216128c0
+Layout:
+  Name: farming

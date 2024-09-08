@@ -1,0 +1,31 @@
+Name: ' &e❂ <gradient:#36175E>MOB EGGS</gradient:#9768D1> &8| &f( &a71 &7eggs &f)'
+Pages: 3
+Permission_Required: true
+Transaction_Allowed:
+  SELL: true
+  BUY: true
+Citizens:
+  Attached_NPC: ''
+Description:
+- '&x&5&1&5&2&5&1&m                                                    '
+- ' &f&l✶ <gradient:#36175E>DESCRIPTION</gradient:#9768D1> &f➛ &7Buy legendary mob'
+- '     &7eggs for spawners!'
+- ''
+- ' &f&l✶ <gradient:#36175E>INFORMATION:</gradient:#9768D1>'
+- '   &a➥ &fBuying price range: &2$&f200 &7- &2$&f15,000'
+- '   &a➥ &fSelling price range: &cDisabled'
+- '   &a➥ &fAccess for ranks: &a&lFOR ALL'
+- ''
+- ' &f&l✶ <gradient:#36175E>THIS CATEGORY CONTAINS:</gradient:#9768D1>'
+- '   &a➥ &6Page 1: &aPassive mobs'
+- '   &a➥ &6Page 2: &eNeutral mobs'
+- '   &a➥ &6Page 3: &cHostile mobs'
+- ''
+- ''
+- '    &7⇦&a⇦&2⇦ &eClick to see the category! &2⇨&a⇨&7⇨'
+- '&x&5&1&5&2&5&1&m                                                    '
+Icon:
+  Material: PLAYER_HEAD
+  SkinURL: 93f9eeda3ba23fe1423c4036e7dd0a74461dff96badc5b2f2b9faa7cc16f382f
+Layout:
+  Name: mobeggs

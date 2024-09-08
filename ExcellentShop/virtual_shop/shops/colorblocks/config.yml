@@ -1,0 +1,30 @@
+Name: ' &d❁ <gradient:#36175E>COLOR BLOCKS</gradient:#9768D1> &8| &f( &a160 &7blocks &f)'
+Pages: 5
+Permission_Required: true
+Transaction_Allowed:
+  SELL: true
+  BUY: true
+Citizens:
+  Attached_NPC: ''
+Description:
+- '#515251&m                                                    '
+- ' &f&l✶ <gradient:#36175E>DESCRIPTION</gradient:#9768D1> &f➛ &7Buy many colorful'
+- '     &7blocks to use for your hause!'
+- ''
+- ' &f&l✶ <gradient:#36175E>INFORMATION:</gradient:#9768D1>'
+- '   &a➥ &fBuying price range: &2$&f15 &7- &2$&f24'
+- '   &a➥ &fSelling price range: &2$&f0.11 - &2$&f1.70'
+- '   &a➥ &fAccess for ranks: &a&lFOR ALL'
+- ''
+- ' &f&l✶ <gradient:#36175E>THIS CATEGORY CONTAINS:</gradient:#9768D1>'
+- '   &a➥ &6This category contains different'
+- '   &a➥ &6types of color blocks.'
+- ''
+- ''
+- '    &7⇦&a⇦&2⇦ &eClick to see the category! &2⇨&a⇨&7⇨'
+- '#515251&m                                                    '
+Icon:
+  Material: PLAYER_HEAD
+  SkinURL: 83d0b3218924f006bbf67fab094f00f58e0d6f99bb807be66c4354229ff56f83
+Layout:
+  Name: colorblocks

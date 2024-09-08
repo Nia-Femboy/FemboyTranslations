@@ -1,0 +1,31 @@
+Name: ' &5✉ <gradient:#36175E>ENCHANTED</gradient:#9768D1> &8| &f( &a35 &7books &f)'
+Pages: 1
+Permission_Required: true
+Transaction_Allowed:
+  SELL: true
+  BUY: true
+Citizens:
+  Attached_NPC: ''
+Description:
+- '&x&5&1&5&2&5&1&m                                                    '
+- ' &f&l✶ <gradient:#36175E>DESCRIPTION</gradient:#9768D1> &f➛ &7Buy enchanted books'
+- '     &7with which you enchant items!'
+- ''
+- ' &f&l✶ <gradient:#36175E>INFORMATION:</gradient:#9768D1>'
+- '   &a➥ &fBuying price range: &2$&f1,500 &7- &2$&f15,000'
+- '   &a➥ &fSelling price range: &cDisabled'
+- '   &a➥ &fAccess for ranks: &a&lFOR ALL'
+- ''
+- ' &f&l✶ <gradient:#36175E>THIS CATEGORY CONTAINS:</gradient:#9768D1>'
+- '   &a➥ &6Enchanted books for armor&7,'
+- '   &a➥ &6swords&7, &6tools&7, &6bows&7, &6fishing'
+- '   &a➥ &6rods and trident.'
+- ''
+- ''
+- '    &7⇦&a⇦&2⇦ &eClick to see the category! &2⇨&a⇨&7⇨'
+- '&x&5&1&5&2&5&1&m                                                    '
+Icon:
+  Material: PLAYER_HEAD
+  SkinURL: b62651879d870499da50e34036800ddffd52f3e4e1993c5fc0fc825d03446d8b
+Layout:
+  Name: enchanted2

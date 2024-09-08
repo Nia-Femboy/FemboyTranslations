@@ -1,0 +1,30 @@
+Name: ' &e⚘ <gradient:#36175E>DECORATIONS</gradient:#9768D1> &8| &f( &a101 &7items &f)'
+Pages: 4
+Permission_Required: true
+Transaction_Allowed:
+  SELL: true
+  BUY: true
+Citizens:
+  Attached_NPC: ''
+Description:
+- '&x&5&1&5&2&5&1&m                                                    '
+- ' &f&l✶ <gradient:#36175E>DESCRIPTION</gradient:#9768D1> &f➛ &7Buy decorations with'
+- '     &7which to decorate your places!'
+- ''
+- ' &f&l✶ <gradient:#36175E>INFORMATION:</gradient:#9768D1>'
+- '   &a➥ &fBuying price range: &2$&f7.50 &7- &2$&f450'
+- '   &a➥ &fSelling price range: &2$&f0.02 - &2$&f0.88'
+- '   &a➥ &fAccess for ranks: &a&lFOR ALL'
+- ''
+- ' &f&l✶ <gradient:#36175E>THIS CATEGORY CONTAINS:</gradient:#9768D1>'
+- '   &a➥ &6Saplings, Grass, Flowers,'
+- '   &a➥ &6Green plants and moree..'
+- ''
+- ''
+- '    &7⇦&a⇦&2⇦ &eClick to see the category! &2⇨&a⇨&7⇨'
+- '&x&5&1&5&2&5&1&m                                                    '
+Icon:
+  Material: PLAYER_HEAD
+  SkinURL: b90f227b77cc6567594860ff282efebdb073ce0f05b81f9e7295fd0e1e275eec
+Layout:
+  Name: decorations

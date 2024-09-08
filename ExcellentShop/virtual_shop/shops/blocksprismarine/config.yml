@@ -1,0 +1,20 @@
+Name: ' &2⛏ &6Copper &7& &bPrismarine blocks &8| &f( &a45 &7blocks &f)'
+Pages: 2
+Permission_Required: true
+Transaction_Allowed:
+  SELL: true
+  BUY: true
+Citizens:
+  Attached_NPC: ''
+Description:
+- '&x&5&1&5&2&5&1&m                                           '
+- ' &7This category contains different'
+- ' &7types of copper and prismarine'
+- '                 &7blocks!'
+- ''
+- '       &7⇦&a⇦&2⇦ &aClick to select! &2⇨&a⇨&7⇨'
+- '&x&5&1&5&2&5&1&m                                           '
+Icon:
+  Material: PRISMARINE
+Layout:
+  Name: blocksprismarine

@@ -1,0 +1,31 @@
+Name: ' &2⛏ <gradient:#36175E>BUILDING BLOCKS</gradient:#9768D1> &8| &f( &a333 &7blocks &f)'
+Pages: 1
+Permission_Required: true
+Transaction_Allowed:
+  SELL: true
+  BUY: true
+Citizens:
+  Attached_NPC: ''
+Description:
+- '#515251&m                                                    '
+- ' &f&l✶ <gradient:#36175E>DESCRIPTION</gradient:#9768D1> &f➛ &7Buy building blocks to'
+- '     &7build up your amazing structure!'
+- ''
+- ' &f&l✶ <gradient:#36175E>INFORMATION:</gradient:#9768D1>'
+- '   &a➥ &fBuying price range: &2$&f5 &7- &2$&f7,200'
+- '   &a➥ &fSelling price range: &2$&f0.02 - &2$&f2.13'
+- '   &a➥ &fAccess for ranks: &a&lFOR ALL'
+- ''
+- ' &f&l✶ <gradient:#36175E>THIS CATEGORY CONTAINS:</gradient:#9768D1>'
+- '   &a➥ &6This category is divided'
+- '   &a➥ &6into 6 other categories'
+- '   &a➥ &6with building blocks.'
+- ''
+- ''
+- '    &7⇦&a⇦&2⇦ &eClick to see the category! &2⇨&a⇨&7⇨'
+- '#515251&m                                                    '
+Layout:
+  Name: blocks
+Icon:
+  Material: PLAYER_HEAD
+  SkinURL: c95d37993e594082678472bf9d86823413c250d4332a2c7d8c52de4976b362

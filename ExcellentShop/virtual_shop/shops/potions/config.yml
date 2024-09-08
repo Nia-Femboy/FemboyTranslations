@@ -1,0 +1,30 @@
+Name: ' &5 <gradient:#36175E>POTIONS</gradient:#9768D1> &8| &f( &a111 &7potions &f)'
+Pages: 6
+Permission_Required: true
+Transaction_Allowed:
+  SELL: true
+  BUY: true
+Citizens:
+  Attached_NPC: ''
+Description:
+- '&x&5&1&5&2&5&1&m                                                    '
+- ' &f&l✶ <gradient:#36175E>DESCRIPTION</gradient:#9768D1> &f➛ &7Buy potions in'
+- '     &7every possible type!'
+- ''
+- ' &f&l✶ <gradient:#36175E>INFORMATION:</gradient:#9768D1>'
+- '   &a➥ &fBuying price range: &2$&f250 &7- &2$&f1,650'
+- '   &a➥ &fSelling price range: &cDisabled'
+- '   &a➥ &fAccess for ranks: &a&lFOR ALL'
+- ''
+- ' &f&l✶ <gradient:#36175E>THIS CATEGORY CONTAINS:</gradient:#9768D1>'
+- '   &a➥ &6Potions&7, &6Splash potions&7, &6Lingering'
+- '   &a➥ &6potions with effects.'
+- ''
+- ''
+- '    &7⇦&a⇦&2⇦ &eClick to see the category! &2⇨&a⇨&7⇨'
+- '&x&5&1&5&2&5&1&m                                                    '
+Icon:
+  Material: PLAYER_HEAD
+  SkinURL: 50327fb34319f89ac5ab48b4d79251f13f067ebea7da5f88b75f479a7389924e
+Layout:
+  Name: potions

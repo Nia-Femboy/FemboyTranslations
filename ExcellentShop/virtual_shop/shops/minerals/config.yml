@@ -1,0 +1,30 @@
+Name: ' &b✦ <gradient:#36175E>MINERALIEN</gradient:#9768D1> &8| &f( &a54 &7Mineralien &f)'
+Pages: 2
+Permission_Required: false
+Transaction_Allowed:
+  SELL: true
+  BUY: true
+Citizens:
+  Attached_NPC: ''
+Description:
+- '&x&5&1&5&2&5&1&m                                                    '
+- ' &f&l✶ <gradient:#36175E>BESCHREIBUNG</gradient:#9768D1> &f➛ &7Kaufe oder'
+- '     &7Verkaufe Mineralien für Geld!'
+- ''
+- ' &f&l✶ <gradient:#36175E>INFORMATION:</gradient:#9768D1>'
+- '   &a➥ &fVerkaufspreise: &2$&f1 &7- &2$&f7,995'
+- '   &a➥ &fAnkaufspreise: &2$&f0.01 - &2$&f4,710'
+- '   &a➥ &fZugang: &a&lFür alle'
+- ''
+- ' &f&l✶ <gradient:#36175E>In diesem Markt:</gradient:#9768D1>'
+- '   &a➥ &6Mineralien&7, &6Mineralienblöcke'
+- '   &a➥ &6Erze&7, &6Amethysten und mehr...'
+- ''
+- ''
+- ' &7⇦&a⇦&2⇦ &eKlicke um den Markt zu öffnen! &2⇨&a⇨&7⇨'
+- '&x&5&1&5&2&5&1&m                                                    '
+Layout:
+  Name: minerals
+Icon:
+  Material: PLAYER_HEAD
+  SkinURL: 4caf5ca4c51b7ec090e74bb150b07a23db50d5b9b79eda6a718bba1040b3ef18

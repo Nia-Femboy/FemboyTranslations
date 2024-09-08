@@ -1,0 +1,29 @@
+Name: ' &d✾ <gradient:#36175E>DYES</gradient:#9768D1> &8| &f( &a16 &7dyes &f)'
+Pages: 1
+Permission_Required: true
+Transaction_Allowed:
+  SELL: true
+  BUY: true
+Citizens:
+  Attached_NPC: ''
+Description:
+- '&x&5&1&5&2&5&1&m                                                    '
+- ' &f&l✶ <gradient:#36175E>DESCRIPTION</gradient:#9768D1> &f➛ &7Buy dyes with which to'
+- '     &7paint various items!'
+- ''
+- ' &f&l✶ <gradient:#36175E>INFORMATION:</gradient:#9768D1>'
+- '   &a➥ &fBuying price range: &2$&f5'
+- '   &a➥ &fSelling price range: &2$&f0.06'
+- '   &a➥ &fAccess for ranks: &a&lFOR ALL'
+- ''
+- ' &f&l✶ <gradient:#36175E>THIS CATEGORY CONTAINS:</gradient:#9768D1>'
+- '   &a➥ &6Colored dyes &d:DD'
+- ''
+- ''
+- '    &7⇦&a⇦&2⇦ &eClick to see the category! &2⇨&a⇨&7⇨'
+- '&x&5&1&5&2&5&1&m                                                    '
+Icon:
+  Material: PLAYER_HEAD
+  SkinURL: 6a1474d891d2a647ee1aa79b58944a56e7b83abd9b7cc134e420c1b3a7c4998
+Layout:
+  Name: dyes

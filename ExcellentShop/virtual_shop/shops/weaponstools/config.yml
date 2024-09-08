@@ -1,0 +1,30 @@
+Name: ' &c⚔ <gradient:#36175E>WEAPONS AND TOOLS</gradient:#9768D1> &8| &f( &a97 &7items &f)'
+Pages: 5
+Permission_Required: true
+Transaction_Allowed:
+  SELL: true
+  BUY: true
+Citizens:
+  Attached_NPC: ''
+Description:
+- '#515251&m                                                    '
+- ' &f&l✶ <gradient:#36175E>DESCRIPTION</gradient:#9768D1> &f➛ &7Buy the weapons and'
+- '     &7tools you need!'
+- ''
+- ' &f&l✶ <gradient:#36175E>INFORMATION:</gradient:#9768D1>'
+- '   &a➥ &fBuying price range: &2$&f10 &7- &2$&f900'
+- '   &a➥ &fSelling price range: &2$&f0.33'
+- '   &a➥ &fAccess for ranks: &a&lFOR ALL'
+- ''
+- ' &f&l✶ <gradient:#36175E>THIS CATEGORY CONTAINS:</gradient:#9768D1>'
+- '   &a➥ &6Pickaxes&7, &6Axes&7, &6Shovels'
+- '   &a➥ &6Armors&7, &6Effects arrows and moree..'
+- ''
+- ''
+- '    &7⇦&a⇦&2⇦ &eClick to see the category! &2⇨&a⇨&7⇨'
+- '#515251&m                                                    '
+Icon:
+  Material: PLAYER_HEAD
+  SkinURL: 8d862024108c785bc0ef7199ec77c402dbbfcc624e9f41f83d8aed8b39fd13
+Layout:
+  Name: weaponstools

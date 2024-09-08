@@ -1,0 +1,30 @@
+Name: ' &f&l✪ &8| <gradient:#36175E>&lTOP 10 MONEY!</gradient:#9768D1>'
+Pages: 1
+Permission_Required: true
+Transaction_Allowed:
+  SELL: false
+  BUY: false
+Citizens:
+  Attached_NPC: ''
+Description:
+- '#515251&m                                                    '
+- ''
+- ' &f♦ &dCheck out the server &fTOP 10'
+- '   &dand see who is the richest'
+- '   &dplayer on the server!'
+- ''
+- '  &c✡ &eCheck the &6Top 10 general &ehere!'
+- '      &4• &cTop 10 monthly!'
+- '      &6• &eTop 10 weekly!'
+- '      &2• &aTop 10 daily!'
+- ''
+- ' &2✔ &a&nClick to check more!'
+- ''
+- '#515251&m                                                    '
+Icon:
+  Material: BEACON
+  Unbreakable: true
+  Item_Flags:
+  - HIDE_UNBREAKABLE
+Layout:
+  Name: top10
