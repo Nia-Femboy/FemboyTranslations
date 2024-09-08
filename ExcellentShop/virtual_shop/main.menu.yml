@@ -1,0 +1,107 @@
+Title: '&3&lMARKT &8| &7Wähle eine Kategorie:'
+Size: 45
+Shops:
+  blocks: 11
+  colorblocks: 12
+  minerals: 13
+  food: 14
+  farming: 15
+  mobdrops: 19
+  weaponstools: 20
+  potions: 21
+  decorations: 22
+  dyes: 23
+  redstone: 24
+  misc: 25
+  enchanted: 30
+  mobeggs: 31
+  spawners: 32
+# ==================== GUI CONTENT ====================
+# You can freely edit items in this section as you wish (add, remove, modify items).
+# The following values are available as button Types:
+# CLOSE
+# ==================== ITEM OPTIONS ====================
+# > Item: Item to display. Please check: https://github.com/nulli0n/nightcore-spigot/wiki/ItemStack-Options
+# > Priority: Button priority. Better values will override other item(s) in the same slot(s).
+# > Slots: Button slots. From [0] to [Size - 1]. Split with commas.
+# > Click_Commands: Execute custom commands on click. PlaceholderAPI available here.
+#     Available click types: LEFT, RIGHT, SHIFT_LEFT, SHIFT_RIGHT, DROP_KEY, SWAP_KEY, NUMBER_1, NUMBER_2, NUMBER_3, NUMBER_4, NUMBER_5, NUMBER_6, NUMBER_7, NUMBER_8, NUMBER_9
+#     Use prefix 'player:' to run command by a player.
+#     Click_Commands:
+#       LEFT:
+#       - say Hello
+#       - give %player_name% diamond 1
+#       - player: menu open shops
+# ==================================================
+Content:
+  info:
+    Item:
+      Material: WRITABLE_BOOK
+      Unbreakable: true
+      Item_Flags:
+      - HIDE_UNBREAKABLE
+      Name: '&c✎ &8| <gradient:#36175E>INFORMATION:</gradient:#9768D1>'
+      Lore:
+      - '#515251&m                                                    '
+      - ''
+      - ' &f&l✶ &dThis is the server main shop,'
+      - '     &dhere you can buy or sell all'
+      - '     &dkinds of blocks and items!'
+      - ''
+      - ' &f&l✶ &2INFORMATION:'
+      - '   &a➥ &fDifficulty: &eMedium'
+      - '   &a➥ &fCurrently items: &61315 items'
+      - ''
+      - ' &a° &eDo you want to get more money?'
+      - '  &71. &fVote for our server &a/vote'
+      - '  &72. &fOpen and win in magic chests'
+      - '  &73. &fCreate your shopping center'
+      - ''
+      - ' &c♚ &6Be wise and become the richest.'
+      - ''
+      - '#515251&m                                                    '
+    Slots: 42
+    Type: NONE
+  balance:
+    Item:
+      Material: SUNFLOWER
+      Name: '&6✪ &8| <gradient:#36175E>YOUR BALANCE</gradient:#9768D1>'
+      Lore:
+      - '#515251&m                                             '
+      - ' &f&l✶ &dYou have &2$&f%vault_eco_balance_commas% &dof money'
+      - '     &dto spend in the server shop.'
+      - ''
+      - '#515251&m                                             '
+    Slots: 43
+    Type: NONE
+  glass1:
+    Item:
+      Material: PURPLE_STAINED_GLASS_PANE
+      Name: '&r '
+    Slots: 9,18,27,17,26,35,37
+    Type: NONE
+  glass2:
+    Item:
+      Material: MAGENTA_STAINED_GLASS_PANE
+      Name: '&r '
+    Slots: 0,1,2,3,4,5,6,7,8,10,16,28,34,36,38,39,40,41,44
+    Type: NONE
+  glass3:
+    Item:
+      Material: WHITE_STAINED_GLASS_PANE
+      Name: '&r '
+    Slots: 29,33
+    Type: NONE
+Inventory_Type: CHEST
+Use_Mini_Message: false
+Settings:
+  # GUI title.
+  Title: "&3&lMARKT &f| &8Wähle eine Kategorie:"
+  # GUI size. Must be multiply of 9.
+  # Useful for 'CHEST' Inventory Type only.
+  Size: 45
+  # GUI type.
+  # https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/event/inventory/InventoryType.html
+  Inventory_Type: CHEST
+  # Sets GUI auto-refresh interval (in seconds). Set this to 0 to disable.
+  Auto_Refresh: 0
