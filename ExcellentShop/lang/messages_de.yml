@@ -1,0 +1,1917 @@
+Command:
+  Currency:
+    Desc: Manage plugin currencies.
+    Usage: '[help]'
+    Give:
+      Desc: Give specified currency to a player.
+      Usage: <currency> <player> <amount>
+      Done: Given &ax%amount% %currency_name%&7 to &a%player_name%&7.
+    Take:
+      Desc: Take specified currency from a player.
+      Usage: <currency> <player> <amount>
+      Done: Took &ax%amount% %currency_name%&7 from &a%player_name%&7.
+    Create:
+      Desc: Create/replace a currency from/with the item in hand.
+      Usage: <name>
+      Done:
+        New: Created a new currency &a%currency_id%&7 as &a%item%&7.
+        Replace: Replaced item in the currency &a%currency_id%&7 with &a%item%&7.
+      Error:
+        Exist: Currency &c%currency_id%&7 is already exist and is not an Item Currency.
+    Error:
+      NoItem: <lred>You must hold an item to do that!</lred>
+  Argument:
+    Name:
+      Name: name
+      Currency: currency
+      Price: price
+Module:
+  Cmd:
+    Reload: Module &a%module% &7reloaded!
+  Command:
+    Reloaded: <lgray><lgreen>%name%</lgreen> reloaded!</lgray>
+    Reload:
+      Desc: Reload the module.
+Error:
+  Currency:
+    Invalid: '&cInvalid currency!'
+Editor:
+  Generic:
+    Enter:
+      Name: '&7Enter &a[Name]'
+      Amount: '&7Enter &a[Amount]'
+      Day: '&7Enter &aDay &7in &aEnglish'
+      Time: '&7Enter &aTime&7 like &a18:00:00'
+      Seconds: '&7Enter &aseconds &7amount'
+      Value: <lgray>Enter <lgreen>[Value]</lgreen></lgray>
+    Error:
+      Currency: '&cInvalid currency!'
+  Product:
+    Enter:
+      Price: '&7Enter new &aprice'
+      Currency: '&7Enter &acurrency id'
+      UniPrice: <lgray>Enter <lgreen>[Min] [Max]</lgreen></lgray>
+  VirtualEditorType:
+    SHOP_OBJECT:
+      Name: '%shop_name%'
+      Lore:
+      - '&6&l[?] Description:'
+      - '&7Pages: &f%shop_pages%'
+      - ' '
+      - '#55e136&l[>] Actions:'
+      - '#86de2aLeft-Click to &fEdit'
+      - '#86de2aShift-Right to &fDelete &7(No Undo)'
+    SHOP_CREATE:
+      Name: Create Shop
+      Lore:
+      - '&6&l[?] Description:'
+      - '&7Create a new virtual shop.'
+      - ' '
+      - '#55e136&l[>] Actions:'
+      - '#86de2aLeft-Click to &fCreate'
+    SHOP_CHANGE_NAME:
+      Name: Shop Name
+      Lore:
+      - '&b&l[?] Current:'
+      - '&a%shop_name%'
+      - ' '
+      - '&6&l[?] Description:'
+      - '&7Sets the shop display name. This'
+      - '&7name is used in GUIs, messages,'
+      - '&7etc.'
+      - ' '
+      - '#55e136&l[>] Actions:'
+      - '#86de2aLeft-Click to &fEdit'
+    SHOP_CHANGE_DESCRIPTION:
+      Name: Shop Description
+      Lore:
+      - '&b&l[?] Current:'
+      - '&a%shop_description%'
+      - ' '
+      - '&6&l[?] Description:'
+      - '&7Sets the shop description. It''s used'
+      - '&7mainly in GUIs.'
+      - ' '
+      - '#55e136&l[>] Actions:'
+      - '#86de2aLeft-Click to &fAdd Line'
+      - '#86de2aRight-Click to &fClear'
+    SHOP_CHANGE_PAGES:
+      Name: Pages Amount
+      Lore:
+      - '&b&l[?] Current:'
+      - '&a%shop_pages%'
+      - ' '
+      - '&6&l[?] Description:'
+      - '&7Sets how many pages the shop'
+      - '&7will have.'
+      - ' '
+      - '&e&l[!] Note:'
+      - '#FFC300Don''t forget to edit product''s pages'
+      - '#FFC300when decreasing this value.'
+      - ' '
+      - '#55e136&l[>] Actions:'
+      - '#86de2aLeft-Click to &fPlus Page'
+      - '#86de2aRight-Click to &fMinus Page'
+    SHOP_CHANGE_ICON:
+      Name: Shop Icon
+      Lore:
+      - '&b&l[?] Current:'
+      - '&a%shop_icon_type%'
+      - ' '
+      - '&6&l[?] Description:'
+      - '&7Sets an icon for the shop.'
+      - '&7This icon is displayed in GUIs.'
+      - ' '
+      - '&e&l[!] Note:'
+      - '#FFC300You don''t have to set name'
+      - '#FFC300and lore for it. Instead, use'
+      - '#FFC300shop Name and Description options.'
+      - ' '
+      - '#55e136&l[>] Actions:'
+      - '#86de2aDrag & Drop to &fReplace'
+    SHOP_CHANGE_DISCOUNTS:
+      Name: Discounts
+      Lore:
+      - '&6&l[?] Description:'
+      - '&7Create and manage shop discounts here!'
+      - ' '
+      - '#55e136&l[>] Actions:'
+      - '#86de2aLeft-Click to &fNavigate'
+    SHOP_CHANGE_PRODUCTS:
+      Name: Products
+      Lore:
+      - '&6&l[?] Description:'
+      - '&7Create and manage shop products here!'
+      - ' '
+      - '#55e136&l[>] Actions:'
+      - '#86de2aLeft-Click to &fNavigate'
+    SHOP_CHANGE_PERMISSION:
+      Name: Permission Requirement
+      Lore:
+      - '&b&l[?] Current:'
+      - '&aEnabled: &f%shop_permission_required%'
+      - '&aNode: &f%shop_permission_node%'
+      - ' '
+      - '&6&l[?] Description:'
+      - '&7Sets if players must have permission'
+      - '&7to be able to use this'
+      - '&7shop.'
+      - ' '
+      - '#55e136&l[>] Actions:'
+      - '#86de2aLeft-Click to &fToggle'
+    SHOP_CHANGE_TRANSACTIONS:
+      Name: Enabled Transactions
+      Lore:
+      - '&b&l[?] Current:'
+      - '&aBuying Enabled: &f%shop_buy_allowed%'
+      - '&aSelling Enabled: &f%shop_sell_allowed%'
+      - ' '
+      - '&6&l[?] Description:'
+      - '&7Enables specified transactions in the shop.'
+      - ' '
+      - '#55e136&l[>] Actions:'
+      - '#86de2aLeft-Click to &fToggle Buying'
+      - '#86de2aRight-Click to &fToggle Selling'
+    SHOP_CHANGE_CITIZENS_ID:
+      Name: Attached NPCs
+      Lore:
+      - '&b&l[?] Current:'
+      - '&a%shop_npc_ids%'
+      - ' '
+      - '&6&l[?] Description:'
+      - '&7A list of NPC Ids attached'
+      - '&7to this shop. These NPCs will'
+      - '&7open the shop GUI when you'
+      - '&7interact with them.'
+      - ' '
+      - '&c&l[!] Warning:'
+      - '#C70039You must have Citizens installed!'
+      - ' '
+      - '#55e136&l[>] Actions:'
+      - '#86de2aLeft-Click to &fAdd NPC'
+      - '#86de2aRight-Click to &fClear List'
+    SHOP_CHANGE_VIEW_DESIGN:
+      Name: Shop GUI Design
+      Lore:
+      - '&b&l[?] Current:'
+      - '&aTitle: &f%shop_view_title%'
+      - '&aSize: &f%shop_view_size%'
+      - ' '
+      - '&6&l[?] Description:'
+      - '&7Here you can set the GUI'
+      - '&7layout for this shop.'
+      - '&7Simply add/remove'
+      - '&7items as you want and you''re'
+      - '&7done!'
+      - ' '
+      - '&e&l[!] Note:'
+      - '#FFC300Press [Q] key on item to'
+      - '#FFC300change it''s Type. It''s useful to'
+      - '#FFC300create Page and Back buttons.'
+      - ' '
+      - '#55e136&l[>] Actions:'
+      - '#86de2aLeft-Click to &fNavigate'
+      - '#86de2aShift-Left to &fChange Title'
+      - '#86de2aShift-Right to &fChange Size'
+    DISCOUNT_OBJECT:
+      Name: Shop Discount
+      Lore:
+      - '&6&l[?] Description:'
+      - '&7Discount: &f%discount_amount%%'
+      - '&7Days: '
+      - '&7%discount_days%'
+      - '&7Times:'
+      - '&7'
+      - '&7%discount_times%'
+      - ' '
+      - '#55e136&l[>] Actions:'
+      - '#86de2aLeft-Click to &fEdit'
+      - '#86de2aShift-Right to &fDelete &7(No Undo)'
+    DISCOUNT_CREATE:
+      Name: Create Discount
+      Lore:
+      - '&6&l[?] Description:'
+      - '&7Create a new discount config for'
+      - '&7the shop.'
+      - ' '
+      - '#55e136&l[>] Actions:'
+      - '#86de2aLeft-Click to &fCreate'
+    DISCOUNT_CHANGE_DISCOUNT:
+      Name: Discount Amount
+      Lore:
+      - '&b&l[?] Current:'
+      - '&a%discount_amount%%'
+      - ' '
+      - '&6&l[?] Description:'
+      - '&7Sets the discount amount (in percent).'
+      - ' '
+      - '#55e136&l[>] Actions:'
+      - '#86de2aLeft-Click to &fEdit'
+    DISCOUNT_CHANGE_DURATION:
+      Name: Duration
+      Lore:
+      - '&b&l[?] Current:'
+      - '&a%discount_duration%'
+      - ' '
+      - '&6&l[?] Description:'
+      - '&7For how long this discount will'
+      - '&7have effect?'
+      - ' '
+      - '#55e136&l[>] Actions:'
+      - '#86de2aLeft-Click to &fEdit'
+    DISCOUNT_CHANGE_DAY:
+      Name: Activation Days
+      Lore:
+      - '&b&l[?] Current:'
+      - '&a%discount_days%'
+      - ' '
+      - '&6&l[?] Description:'
+      - '&7A list of days, when this'
+      - '&7discount will be activated.'
+      - ' '
+      - '&c&l[!] Warning:'
+      - '#C70039You have to set at least'
+      - '#C70039ONE day and time for the'
+      - '#C70039discount to work!'
+      - ' '
+      - '#55e136&l[>] Actions:'
+      - '#86de2aLeft-Click to &fAdd Day'
+      - '#86de2aRight-Click to &fClear'
+    DISCOUNT_CHANGE_TIME:
+      Name: Activation Times
+      Lore:
+      - '&b&l[?] Current:'
+      - '&a%discount_times%'
+      - ' '
+      - '&6&l[?] Description:'
+      - '&7A list of times, when this'
+      - '&7discount will be activated.'
+      - ' '
+      - '&c&l[!] Warning:'
+      - '#C70039You have to set at least'
+      - '#C70039ONE day and time for the'
+      - '#C70039discount to work!'
+      - ' '
+      - '#55e136&l[>] Actions:'
+      - '#86de2aLeft-Click to &fAdd Time'
+      - '#86de2aRight-Click to &fClear'
+    PRODUCT_OBJECT:
+      Name: '%product_preview_name%'
+      Lore:
+      - '#55e136&l[>] Actions:'
+      - '#86de2aShift-Left to &fEdit'
+      - '#86de2aShift-Right to &fRemove &7(No Undo)'
+    PRODUCT_CHANGE_PRICE:
+      Name: Price Manager
+      Lore:
+      - '&b&l[?] Current:'
+      - '&aBuy: &f%product_price_buy%'
+      - '&aSell: &f%product_price_sell%'
+      - ' '
+      - '&6&l[?] Description:'
+      - '&7Here you can change product price'
+      - '&7type and set prices.'
+      - ' '
+      - '#55e136&l[>] Actions:'
+      - '#86de2aLeft-Click to &fNavigate'
+      - '#86de2a[Q] Key to &fRefresh'
+    PRODUCT_CHANGE_CURRENCY:
+      Name: Product Currency
+      Lore:
+      - '&b&l[?] Current:'
+      - '&a%product_currency%'
+      - ' '
+      - '&6&l[?] Description:'
+      - '&7Sets the product currency.'
+      - ' '
+      - '#55e136&l[>] Actions:'
+      - '#86de2aLeft-Click to &fEdit'
+    PRODUCT_CHANGE_PREVIEW:
+      Name: Product Preview
+      Lore:
+      - '&b&l[?] Current:'
+      - '&a%product_preview_name%'
+      - ' '
+      - '&6&l[?] Description:'
+      - '&7Sets the item that will describe'
+      - '&7this product.'
+      - ' '
+      - '&e&l[!] Note:'
+      - '#FFC300If you want to add a'
+      - '#FFC300custom name or description, please do'
+      - '#FFC300it in this item name and'
+      - '#FFC300lore.'
+      - ' '
+      - '#55e136&l[>] Actions:'
+      - '#86de2aDrag & Drop to &fReplace'
+      - '#86de2aShift-Left to &fGet Item'
+    PRODUCT_CHANGE_ITEM:
+      Name: Actual Item
+      Lore:
+      - '&b&l[?] Current:'
+      - '&a%product_item_name%'
+      - ' '
+      - '&6&l[?] Description:'
+      - '&7Sets the actual item that player'
+      - '&7can buy or sell.'
+      - ' '
+      - '&e&l[!] Note:'
+      - '#FFC300Custom items are fully supported here.'
+      - ' '
+      - '&c&l[!] Warning:'
+      - '#C70039Products without ''Actual Item'' can not'
+      - '#C70039be sold!'
+      - ' '
+      - '#55e136&l[>] Actions:'
+      - '#86de2aDrag & Drop to &fReplace'
+      - '#86de2aRight-Click to &fDisable'
+      - '#86de2aShift-Left to &fGet Item'
+    PRODUCT_CHANGE_COMMANDS:
+      Name: Product Commands
+      Lore:
+      - '&b&l[?] Current:'
+      - '&a%product_commands%'
+      - ' '
+      - '&6&l[?] Description:'
+      - '&7A list of commands, that will'
+      - '&7be executed when player purchases this'
+      - '&7product.'
+      - ' '
+      - '#55e136&l[>] Actions:'
+      - '#86de2aLeft-Click to &fAdd Command'
+      - '#86de2aRight-Click to &fClear'
+    PRODUCT_CHANGE_DISCOUNT:
+      Name: Discounts Allowed
+      Lore:
+      - '&b&l[?] Current:'
+      - '&aAllowed: &f%product_discount_allowed%'
+      - ' '
+      - '&6&l[?] Description:'
+      - '&7Sets if the product price can'
+      - '&7be affected by the shop''s discounts.'
+      - ' '
+      - '#55e136&l[>] Actions:'
+      - '#86de2aLeft-Click to &fToggle'
+    PRODUCT_CHANGE_ITEM_META:
+      Name: Item Meta Enabled
+      Lore:
+      - '&b&l[?] Current:'
+      - '&aEnabled: &f%product_item_meta_enabled%'
+      - ' '
+      - '&6&l[?] Description:'
+      - '&7When enabled, the metadata (name, lore,'
+      - '&7etc) of the product item and'
+      - '&7item player wants to sell, must'
+      - '&7be the same.'
+      - ' '
+      - '&c&l[!] Warning:'
+      - '#C70039Enable this for custom items!'
+      - ' '
+      - '#55e136&l[>] Actions:'
+      - '#86de2aLeft-Click to &fToggle'
+    PRODUCT_CHANGE_STOCK_GLOBAL:
+      Name: Product Global Stock
+      Lore:
+      - '&b&l[?] Current:'
+      - '&aBuy Stock Initial: &f%product_stock_global_buy_amount_initial%'
+      - '&aBuy Restock Time: &f%product_stock_global_buy_restock_time%'
+      - '&aSell Stock Initial: &f%product_stock_global_sell_amount_initial%'
+      - '&aSell Restock Time: &f%product_stock_global_sell_restock_time%'
+      - ' '
+      - '&6&l[?] Description:'
+      - '&7Sets how many of the product'
+      - '&7the shop can store at all.'
+      - '&7Every time a player purchases/sells product,'
+      - '&7stock amount will be changed. When'
+      - '&7there is 0 items left, buying/selling'
+      - '&7will be unavailable until restock.'
+      - ' '
+      - '&e&l[!] Note:'
+      - '#FFC300You can set -1 for initial'
+      - '#FFC300amount to make it unlimited.'
+      - ' '
+      - '&e&l[!] Note:'
+      - '#FFC300You can set -1 for restock'
+      - '#FFC300time to make it never auto-restock.'
+      - ' '
+      - '#55e136&l[>] Actions:'
+      - '#86de2aLeft-Click to &fEdit Buy Initial'
+      - '#86de2aRight-Click to &fEdit Buy Restock'
+      - '#86de2aShift-Left to &fEdit Sell Initial'
+      - '#86de2aShift-Right to &fEdit Sell Restock'
+    PRODUCT_CHANGE_STOCK_PLAYER:
+      Name: Product Player Limits
+      Lore:
+      - '&b&l[?] Current:'
+      - '&aBuy Limit Amount: &f%product_stock_player_buy_amount_initial%'
+      - '&aBuy Cooldown: &f%product_stock_player_buy_restock_time%'
+      - '&aSell Limit Amount: &f%product_stock_player_sell_amount_initial%'
+      - '&aSell Cooldown: &f%product_stock_player_sell_restock_time%'
+      - ' '
+      - '&6&l[?] Description:'
+      - '&7Sets how many of the product'
+      - '&7a player can buy/sell until it''s'
+      - '&7refreshed by the cooldown.'
+      - '&7If the'
+      - '&7global stock amount is less than'
+      - '&7player current limit, the global stock'
+      - '&7amount will be used as max.'
+      - '&7possible.'
+      - ' '
+      - '&e&l[!] Note:'
+      - '#FFC300You can set -1 for limit'
+      - '#FFC300amount to make it unlimited.'
+      - ' '
+      - '&e&l[!] Note:'
+      - '#FFC300You can set -1 for cooldown'
+      - '#FFC300to make it never auto-refresh.'
+      - ' '
+      - '#55e136&l[>] Actions:'
+      - '#86de2aLeft-Click to &fEdit Buy Limit'
+      - '#86de2aRight-Click to &fEdit Buy Cooldown'
+      - '#86de2aShift-Left to &fEdit Sell Limit'
+      - '#86de2aShift-Right to &fEdit Sell Cooldown'
+    PRODUCT_FREE_SLOT:
+      Name: FREE SLOT
+      Lore:
+      - '&6&l[?] Description:'
+      - '&7Drop item on me to add'
+      - '&7it as a product!'
+    PRODUCT_RESERVED_SLOT:
+      Name: RESERVED SLOT
+      Lore:
+      - '&6&l[?] Description:'
+      - '&7This slot is already occuppied by'
+      - '&7a shop product.'
+    PRODUCT_CHANGE_PRICE_TYPE:
+      Name: Price Type
+      Lore:
+      - '&b&l[?] Current:'
+      - '&a%product_price_type%'
+      - ' '
+      - '&6&l[?] Description:'
+      - '&7Sets the product price type. Depends'
+      - '&7on a price type, this menu'
+      - '&7will have different settings.'
+      - ' '
+      - '&c&l[!] Warning:'
+      - '#C70039When changing price type, previous settings'
+      - '#C70039will be WIPED OUT!'
+      - ' '
+      - '#55e136&l[>] Actions:'
+      - '#86de2aLeft-Click to &fToggle'
+    PRODUCT_CHANGE_PRICE_FLAT_BUY:
+      Name: Buy Price
+      Lore:
+      - '&b&l[?] Current:'
+      - '&a%product_price_buy%'
+      - ' '
+      - '&6&l[?] Description:'
+      - '&7Sets the product buy price.'
+      - ' '
+      - '&e&l[!] Note:'
+      - '#FFC300When price is disabled (negative value),'
+      - '#FFC300players will be unable to buy'
+      - '#FFC300it.'
+      - ' '
+      - '#55e136&l[>] Actions:'
+      - '#86de2aLeft-Click to &fEdit'
+      - '#86de2aRight-Click to &fDisable'
+    PRODUCT_CHANGE_PRICE_FLAT_SELL:
+      Name: Sell Price
+      Lore:
+      - '&b&l[?] Current:'
+      - '&a%product_price_sell%'
+      - ' '
+      - '&6&l[?] Description:'
+      - '&7Sets the product sell price.'
+      - ' '
+      - '&e&l[!] Note:'
+      - '#FFC300When price is disabled (negative value),'
+      - '#FFC300players will be unable to sell'
+      - '#FFC300it.'
+      - ' '
+      - '#55e136&l[>] Actions:'
+      - '#86de2aLeft-Click to &fEdit'
+      - '#86de2aRight-Click to &fDisable'
+    PRODUCT_CHANGE_PRICE_FLOAT_BUY:
+      Name: Buy Price
+      Lore:
+      - '&b&l[?] Current:'
+      - '&aMin: &f%product_pricer_buy_min%'
+      - '&aMax: &f%product_pricer_buy_max%'
+      - ' '
+      - '&6&l[?] Description:'
+      - '&7Sets the product float buy price.'
+      - '&7The final buy price will be'
+      - '&7generated in a range of min.'
+      - '&7and max. values.'
+      - ' '
+      - '&e&l[!] Note:'
+      - '#FFC300When price is disabled (negative value),'
+      - '#FFC300players will be unable to buy'
+      - '#FFC300it.'
+      - ' '
+      - '#55e136&l[>] Actions:'
+      - '#86de2aLeft-Click to &fEdit Min'
+      - '#86de2aRight-Click to &fEdit Max'
+    PRODUCT_CHANGE_PRICE_FLOAT_SELL:
+      Name: Sell Price
+      Lore:
+      - '&b&l[?] Current:'
+      - '&aMin: &f%product_pricer_sell_min%'
+      - '&aMax: &f%product_pricer_sell_max%'
+      - ' '
+      - '&6&l[?] Description:'
+      - '&7Sets the product float sell price.'
+      - '&7The final sell price will be'
+      - '&7generated in a range of min.'
+      - '&7and max. values.'
+      - ' '
+      - '&e&l[!] Note:'
+      - '#FFC300When price is disabled (negative value),'
+      - '#FFC300players will be unable to sell'
+      - '#FFC300it.'
+      - ' '
+      - '#55e136&l[>] Actions:'
+      - '#86de2aLeft-Click to &fEdit Min'
+      - '#86de2aRight-Click to &fEdit Max'
+    PRODUCT_CHANGE_PRICE_FLOAT_REFRESH:
+      Name: Refresh Settings
+      Lore:
+      - '&b&l[?] Current:'
+      - '&aDays: &f%product_pricer_float_refresh_days%'
+      - '&aTimes: &f'
+      - '&a%product_pricer_float_refresh_times%'
+      - ' '
+      - '&6&l[?] Description:'
+      - '&7Sets conditions, when the product price'
+      - '&7will be refreshed. Until that, the'
+      - '&7previous generated price will be used.'
+      - ' '
+      - '&c&l[!] Warning:'
+      - '#C70039You have to provide at least'
+      - '#C70039ONE day and time for the'
+      - '#C70039float price feature to work.'
+      - ' '
+      - '#55e136&l[>] Actions:'
+      - '#86de2aLeft-Click to &fAdd Day'
+      - '#86de2aShift-Left to &fClear Days'
+      - '#86de2aRight-Click to &fAdd Time'
+      - '#86de2aShift-Right to &fClear Times'
+    PRODUCT_CHANGE_PRICE_DYNAMIC_BUY:
+      Name: Buy Price
+      Lore:
+      - '&b&l[?] Current:'
+      - '&aMin: &f%product_pricer_buy_min%'
+      - '&aMax: &f%product_pricer_buy_max%'
+      - ' '
+      - '&6&l[?] Description:'
+      - '&7Sets limit for the product buy'
+      - '&7price. The final buy price will'
+      - '&7never exceed the limit you set.'
+      - ' '
+      - '#55e136&l[>] Actions:'
+      - '#86de2aLeft-Click to &fEdit Min'
+      - '#86de2aRight-Click to &fEdit Max'
+    PRODUCT_CHANGE_PRICE_DYNAMIC_SELL:
+      Name: Sell Price
+      Lore:
+      - '&b&l[?] Current:'
+      - '&aMin: &f%product_pricer_sell_min%'
+      - '&aMax: &f%product_pricer_sell_max%'
+      - ' '
+      - '&6&l[?] Description:'
+      - '&7Sets limit for the product sell'
+      - '&7price. The final sell price will'
+      - '&7never exceed the limit you set.'
+      - ' '
+      - '#55e136&l[>] Actions:'
+      - '#86de2aLeft-Click to &fEdit Min'
+      - '#86de2aRight-Click to &fEdit Max'
+    PRODUCT_CHANGE_PRICE_DYNAMIC_INITIAL:
+      Name: Initial Price
+      Lore:
+      - '&b&l[?] Current:'
+      - '&aBuy: &f%product_pricer_dynamic_initial_buy%'
+      - '&aSell: &f%product_pricer_dynamic_initial_sell%'
+      - ' '
+      - '&6&l[?] Description:'
+      - '&7Sets initial price for the product.'
+      - '&7These values will be used as'
+      - '&7default ones, and to calculate further'
+      - '&7product price.'
+      - ' '
+      - '#55e136&l[>] Actions:'
+      - '#86de2aLeft-Click to &fEdit Buy'
+      - '#86de2aRight-Click to &fEdit Sell'
+    PRODUCT_CHANGE_PRICE_DYNAMIC_STEP:
+      Name: Price Step
+      Lore:
+      - '&b&l[?] Current:'
+      - '&aBuy: &f%product_pricer_dynamic_step_buy%'
+      - '&aSell: &f%product_pricer_dynamic_step_sell%'
+      - ' '
+      - '&6&l[?] Description:'
+      - '&7Sets price step for the product.'
+      - '&7The buy/sell price will be ajdusted'
+      - '&7at specified amount when this product'
+      - '&7is pruchased/sold.'
+      - ' '
+      - '&e&l[!] Note:'
+      - '#FFC300More purchases - Higher prices.'
+      - '#FFC300More'
+      - '#FFC300sales - Lower prices.'
+      - ' '
+      - '#55e136&l[>] Actions:'
+      - '#86de2aLeft-Click to &fEdit Buy'
+      - '#86de2aRight-Click to &fEdit Sell'
+  ChestEditorType:
+    PRODUCT_OBJECT:
+      Name: '%product_preview_name%'
+      Lore:
+      - '&x&5&5&e&1&3&6&l[>] Actions:'
+      - '&x&8&6&d&e&2&aLeft to &fEdit'
+      - '&x&8&6&d&e&2&aShift-Right to &fRemove &7(No Undo)'
+    PRODUCT_CHANGE_CURRENCY:
+      Name: Product Currency
+      Lore:
+      - '&b&l[?] Current:'
+      - '&a%product_currency%'
+      - ' '
+      - '&6&l[?] Description:'
+      - '&7Sets the product currency.'
+      - ' '
+      - '&x&5&5&e&1&3&6&l[>] Actions:'
+      - '&x&8&6&d&e&2&aLeft-Click to &fEdit'
+    PRODUCT_CHANGE_PRICE:
+      Name: Price Manager
+      Lore:
+      - '&b&l[?] Current:'
+      - '&aBuy: &f%product_price_buy%'
+      - '&aSell: &f%product_price_sell%'
+      - ' '
+      - '&6&l[?] Description:'
+      - '&7Here you can change product price'
+      - '&7type and set prices.'
+      - ' '
+      - '&x&5&5&e&1&3&6&l[>] Actions:'
+      - '&x&8&6&d&e&2&aLeft-Click to &fNavigate'
+      - '&x&8&6&d&e&2&a[Q] Key to &fRefresh'
+  GenericEditorType:
+    PRODUCT_FREE_SLOT:
+      Name: FREE SLOT
+      Lore:
+      - '&6&l[?] Description:'
+      - '&7Drop item on me to add'
+      - '&7it as a product!'
+    PRODUCT_RESERVED_SLOT:
+      Name: RESERVED SLOT
+      Lore:
+      - '&6&l[?] Description:'
+      - '&7This slot is already occuppied by'
+      - '&7a shop product.'
+    PRODUCT_CHANGE_PRICE_TYPE:
+      Name: Price Type
+      Lore:
+      - '&b&l[?] Current:'
+      - '&a%product_price_type%'
+      - ' '
+      - '&6&l[?] Description:'
+      - '&7Sets the product price type. Depends'
+      - '&7on a price type, this menu'
+      - '&7will have different settings.'
+      - ' '
+      - '&c&l[!] Warning:'
+      - '&x&c&7&0&0&3&9When changing price type, previous settings'
+      - '&x&c&7&0&0&3&9will be WIPED OUT!'
+      - ' '
+      - '&x&5&5&e&1&3&6&l[>] Actions:'
+      - '&x&8&6&d&e&2&aLeft-Click to &fToggle'
+    PRODUCT_CHANGE_PRICE_FLAT_BUY:
+      Name: Buy Price
+      Lore:
+      - '&b&l[?] Current:'
+      - '&a%product_price_buy%'
+      - ' '
+      - '&6&l[?] Description:'
+      - '&7Sets the product buy price.'
+      - ' '
+      - '&e&l[!] Note:'
+      - '&x&f&f&c&3&0&0When price is disabled (negative value),'
+      - '&x&f&f&c&3&0&0players will be unable to buy'
+      - '&x&f&f&c&3&0&0it.'
+      - ' '
+      - '&x&5&5&e&1&3&6&l[>] Actions:'
+      - '&x&8&6&d&e&2&aLeft-Click to &fEdit'
+      - '&x&8&6&d&e&2&aRight-Click to &fDisable'
+    PRODUCT_CHANGE_PRICE_FLAT_SELL:
+      Name: Sell Price
+      Lore:
+      - '&b&l[?] Current:'
+      - '&a%product_price_sell%'
+      - ' '
+      - '&6&l[?] Description:'
+      - '&7Sets the product sell price.'
+      - ' '
+      - '&e&l[!] Note:'
+      - '&x&f&f&c&3&0&0When price is disabled (negative value),'
+      - '&x&f&f&c&3&0&0players will be unable to sell'
+      - '&x&f&f&c&3&0&0it.'
+      - ' '
+      - '&x&5&5&e&1&3&6&l[>] Actions:'
+      - '&x&8&6&d&e&2&aLeft-Click to &fEdit'
+      - '&x&8&6&d&e&2&aRight-Click to &fDisable'
+    PRODUCT_CHANGE_PRICE_FLOAT_BUY:
+      Name: Buy Price
+      Lore:
+      - '&b&l[?] Current:'
+      - '&aMin: &f%product_pricer_buy_min%'
+      - '&aMax: &f%product_pricer_buy_max%'
+      - ' '
+      - '&6&l[?] Description:'
+      - '&7Sets the product float buy price.'
+      - '&7The final buy price will be'
+      - '&7generated in a range of min.'
+      - '&7and max. values.'
+      - ' '
+      - '&e&l[!] Note:'
+      - '&x&f&f&c&3&0&0When price is disabled (negative value),'
+      - '&x&f&f&c&3&0&0players will be unable to buy'
+      - '&x&f&f&c&3&0&0it.'
+      - ' '
+      - '&x&5&5&e&1&3&6&l[>] Actions:'
+      - '&x&8&6&d&e&2&aLeft-Click to &fEdit Min'
+      - '&x&8&6&d&e&2&aRight-Click to &fEdit Max'
+    PRODUCT_CHANGE_PRICE_FLOAT_SELL:
+      Name: Sell Price
+      Lore:
+      - '&b&l[?] Current:'
+      - '&aMin: &f%product_pricer_sell_min%'
+      - '&aMax: &f%product_pricer_sell_max%'
+      - ' '
+      - '&6&l[?] Description:'
+      - '&7Sets the product float sell price.'
+      - '&7The final sell price will be'
+      - '&7generated in a range of min.'
+      - '&7and max. values.'
+      - ' '
+      - '&e&l[!] Note:'
+      - '&x&f&f&c&3&0&0When price is disabled (negative value),'
+      - '&x&f&f&c&3&0&0players will be unable to sell'
+      - '&x&f&f&c&3&0&0it.'
+      - ' '
+      - '&x&5&5&e&1&3&6&l[>] Actions:'
+      - '&x&8&6&d&e&2&aLeft-Click to &fEdit Min'
+      - '&x&8&6&d&e&2&aRight-Click to &fEdit Max'
+    PRODUCT_CHANGE_PRICE_FLOAT_REFRESH:
+      Name: Refresh Settings
+      Lore:
+      - '&b&l[?] Current:'
+      - '&aDays: &f%product_pricer_float_refresh_days%'
+      - '&aTimes: &f'
+      - '&a%product_pricer_float_refresh_times%'
+      - ' '
+      - '&6&l[?] Description:'
+      - '&7Sets conditions, when the product price'
+      - '&7will be refreshed. Until that, the'
+      - '&7previous generated price will be used.'
+      - ' '
+      - '&c&l[!] Warning:'
+      - '&x&c&7&0&0&3&9You have to provide at least'
+      - '&x&c&7&0&0&3&9ONE day and time for the'
+      - '&x&c&7&0&0&3&9float price feature to work.'
+      - ' '
+      - '&x&5&5&e&1&3&6&l[>] Actions:'
+      - '&x&8&6&d&e&2&aLeft-Click to &fAdd Day'
+      - '&x&8&6&d&e&2&aShift-Left to &fClear Days'
+      - '&x&8&6&d&e&2&aRight-Click to &fAdd Time'
+      - '&x&8&6&d&e&2&aShift-Right to &fClear Times'
+    PRODUCT_CHANGE_PRICE_DYNAMIC_BUY:
+      Name: Buy Price
+      Lore:
+      - '&b&l[?] Current:'
+      - '&aMin: &f%product_pricer_buy_min%'
+      - '&aMax: &f%product_pricer_buy_max%'
+      - ' '
+      - '&6&l[?] Description:'
+      - '&7Sets limit for the product buy'
+      - '&7price. The final buy price will'
+      - '&7never exceed the limit you set.'
+      - ' '
+      - '&x&5&5&e&1&3&6&l[>] Actions:'
+      - '&x&8&6&d&e&2&aLeft-Click to &fEdit Min'
+      - '&x&8&6&d&e&2&aRight-Click to &fEdit Max'
+    PRODUCT_CHANGE_PRICE_DYNAMIC_SELL:
+      Name: Sell Price
+      Lore:
+      - '&b&l[?] Current:'
+      - '&aMin: &f%product_pricer_sell_min%'
+      - '&aMax: &f%product_pricer_sell_max%'
+      - ' '
+      - '&6&l[?] Description:'
+      - '&7Sets limit for the product sell'
+      - '&7price. The final sell price will'
+      - '&7never exceed the limit you set.'
+      - ' '
+      - '&x&5&5&e&1&3&6&l[>] Actions:'
+      - '&x&8&6&d&e&2&aLeft-Click to &fEdit Min'
+      - '&x&8&6&d&e&2&aRight-Click to &fEdit Max'
+    PRODUCT_CHANGE_PRICE_DYNAMIC_INITIAL:
+      Name: Initial Price
+      Lore:
+      - '&b&l[?] Current:'
+      - '&aBuy: &f%product_pricer_dynamic_initial_buy%'
+      - '&aSell: &f%product_pricer_dynamic_initial_sell%'
+      - ' '
+      - '&6&l[?] Description:'
+      - '&7Sets initial price for the product.'
+      - '&7These values will be used as'
+      - '&7default ones, and to calculate further'
+      - '&7product price.'
+      - ' '
+      - '&x&5&5&e&1&3&6&l[>] Actions:'
+      - '&x&8&6&d&e&2&aLeft-Click to &fEdit Buy'
+      - '&x&8&6&d&e&2&aRight-Click to &fEdit Sell'
+    PRODUCT_CHANGE_PRICE_DYNAMIC_STEP:
+      Name: Price Step
+      Lore:
+      - '&b&l[?] Current:'
+      - '&aBuy: &f%product_pricer_dynamic_step_buy%'
+      - '&aSell: &f%product_pricer_dynamic_step_sell%'
+      - ' '
+      - '&6&l[?] Description:'
+      - '&7Sets price step for the product.'
+      - '&7The buy/sell price will be ajdusted'
+      - '&7at specified amount when this product'
+      - '&7is pruchased/sold.'
+      - ' '
+      - '&e&l[!] Note:'
+      - '&x&f&f&c&3&0&0More purchases - Higher prices.'
+      - '&x&f&f&c&3&0&0More'
+      - '&x&f&f&c&3&0&0sales - Lower prices.'
+      - ' '
+      - '&x&5&5&e&1&3&6&l[>] Actions:'
+      - '&x&8&6&d&e&2&aLeft-Click to &fEdit Buy'
+      - '&x&8&6&d&e&2&aRight-Click to &fEdit Sell'
+  Price:
+    Float:
+      NoDays: No days set. Price won't refresh properly.
+      NoTimes: No times set. Price won't refresh properly.
+Shop:
+  Product:
+    Error:
+      Unbuyable: <! prefix:"false" !><gradient:#36175E>&lSHOP</gradient:#9768D1> &8» &cYou can not buy this item!
+      Unsellable: <! prefix:"false" !><gradient:#36175E>&lSHOP</gradient:#9768D1> &8» &cYou can not sell this item!
+      OutOfStock: <! prefix:"false" !><gradient:#36175E>&lSHOP</gradient:#9768D1> &8» &cThis product is out of stock!
+      OutOfSpace: <! prefix:"false" !><gradient:#36175E>&lSHOP</gradient:#9768D1> &8» &cThis shop is out of space!
+      OutOfFunds: <! prefix:"false" !><gradient:#36175E>&lSHOP</gradient:#9768D1> &8» &cThis shop is out of money!
+      FullStock: <! prefix:"false" !><gradient:#36175E>&lSHOP</gradient:#9768D1> &8» &cThis product is full of stock!
+      FullInventory: <! prefix:"false" !><gradient:#36175E>&lSHOP</gradient:#9768D1> &8» &cYou can't buy items while your inventory is full!
+      TooExpensive:
+      - <! type:"titles:20:60:20" !>&e⋆ &7〈 &cToo Expensive! &7〉 &e⋆\n&7You need %price%
+      NotEnoughItems:
+      - <! type:"titles:20:60:20" !>&e⋆ &7〈 &cNot Enough Items! &7〉 &e⋆\n&7You need %item% &8(&7x%amount%&8)
+      InvalidCartUI:
+      - <sound:"entity_villager_no">
+      - '<lred>Could not open purchase menu: Cart UI not found.</lred>'
+  Cart:
+    EnterAmount:
+    - <output:"titles:20:1200:20">
+    - <lgreen><b>< Custom Amount ></b></lgreen>
+    - <lgray>Enter your amount</lgray>
+VirtualShop:
+  Command:
+    Open:
+      Desc: Opens specified shop.
+      Usage: '[shop] [player]'
+      Done:
+        Others: <lgray>Opened <lyellow>%shop_name%</lyellow> shop for <lyellow>%player_name%</lyellow>.</lgray>
+    SellMenu:
+      Desc: Open Sell GUI.
+      Usage: ''
+      Done:
+        Others: <lgray>Opened sell menu for <lyellow>%player_name%</lyellow>.</lgray>
+    Argument:
+      Name:
+        Shop: shop
+    Editor:
+      Desc: Open VirtualShop editor.
+    Menu:
+      Desc: Opens Main Menu.
+      Done:
+        Others: <lgray>Opened shops menu for <lyellow>%player_name%</lyellow>.</lgray>
+    Shop:
+      Desc: Open specified shop or main menu.
+    SellAll:
+      Desc: Quickly sell all items in inventory.
+      Done:
+        Others: <lgray>Forced player <lyellow>%player_name%</lyellow> to sell all items.</lgray>
+    SellHand:
+      Desc: Quickly sell hand item.
+      Done:
+        Others: <lgray>Forced player <lyellow>%player_name%</lyellow> to sell hand item.</lgray>
+  MainMenu:
+    Error:
+      Disabled: <! prefix:"false" !><gradient:#36175E>&lSHOP</gradient:#9768D1> &8» &cMain shop menu is disabled!
+  Open:
+    Error:
+      BadWorld: <! prefix:"false" !><gradient:#36175E>&lSHOP</gradient:#9768D1> &8» &cShop is disabled in this world!
+      BadGamemode: <! prefix:"false" !><gradient:#36175E>&lSHOP</gradient:#9768D1> &8» &cYou can't use shop while in &e%type% &cgamemode!
+      InvalidShop: <! prefix:"false" !><gradient:#36175E>&lSHOP</gradient:#9768D1> &8» &cNo such shop!
+  Product:
+    Purchase:
+      Sell:
+      - <! type:"titles:20:60:20" !>&e⋆ &7〈 &a&lSuccessfully sold! &7〉 &e⋆\n&7You sold &f%item% &7for &a%price% &8(&7x%amount%&8)
+      Buy:
+      - <! type:"titles:20:60:20" !>
+      - '&e⋆ &7〈 &a&lSuccessfully boughtr! &7〉 &e⋆'
+      - '&7You bought &f%item% &7for &a%price% &8(&7x%amount%&8)'
+  SellMenu:
+    Sold:
+    - <! type:"titles:10:60:20" !>&e⋆ &7〈 &e&lItems Sold! &7〉 &e⋆
+    - '&7You sold your items!'
+    SaleResult:
+    - <output:"titles:15:60:15"><sound:"entity_experience_orb_pickup">
+    - <lgreen><b>Items Sold!</b></lgreen>
+    - <lgray>+%total%</lgray>
+    SaleDetails:
+    - <noprefix>
+    - ' '
+    - <lgreen><b>Sale Details:</b></lgreen>
+    - '%entry%'
+    - ' '
+    - '<lgray>Total: <lgreen>%total%</lgreen></lgray>'
+    - ' '
+    SaleEntry: '<lgray>x%amount% <white>%item%</white>: <lgreen>%price%</lgreen></lgray>'
+  Editor:
+    Enter:
+      Id: '&7Enter shop id...'
+      Description: '&7Enter &adescription&7...'
+      NpcId: '&7Enter Citizens id...'
+      Title: '&7Enter shop title...'
+      Amount: '&7Enter new amount...'
+      Name: '&7Enter shop &aname&7...'
+      Command: <lgray>Enter <lgreen>[Command]</lgreen></lgray>
+      Slots: <lgray>Enter <lgreen>[Slots] -> [1,2,5,etc]</lgreen></lgray>
+      Rank: <lgray>Enter <lgreen>[Rank Name]</lgreen></lgray>
+      Permission: <lgray>Enter <lgreen>[Permission Node]</lgreen></lgray>
+    Create:
+      Error:
+        Exist: '&cShop with such ID already exist!'
+    Product:
+      Enter:
+        Command: '&7Enter new command...'
+      NoRankRequirements: No ranks required!
+      NoPermissionRequirements: No permissions required!
+      Object:
+        Static2:
+          Name: <lyellow><b>%product_preview_name%</b></lyellow>
+          Lore:
+          - '<lyellow>● <lgray>Handler: </lgray>%product_handler%</lyellow>'
+          - '<lyellow>● <lgray>Currency: </lgray>%product_currency%</lyellow>'
+          - '<lyellow>● <lgray>Price Type: </lgray>%product_price_type%</lyellow>'
+          - '<lyellow>● <lgray>Buy: </lgray>%product_price_buy%</lyellow>'
+          - '<lyellow>● <lgray>Sell: </lgray>%product_price_sell%</lyellow>'
+          - ''
+          - <lgray>You can freely move this product</lgray>
+          - <lgray>between slots, pages, and shops!</lgray>
+          - ''
+          - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>edit</lyellow>.</lgray>
+          - <lyellow>[▶]</lyellow> <lgray>Right-Click to <lyellow>pick</lyellow>.</lgray>
+          - <lyellow>[▶]</lyellow> <lgray>[Q / Drop] Key to <lyellow>delete <lred>(no undo)</lred></lyellow>.</lgray>
+        Rotating2:
+          Name: <lyellow><b>%product_preview_name%</b></lyellow>
+          Lore:
+          - '<lyellow>● <lgray>Rotation Chance: </lgray>%product_rotation_chance%%</lyellow>'
+          - '<lyellow>● <lgray>Currency: </lgray>%product_currency%</lyellow>'
+          - '<lyellow>● <lgray>Buy Price: </lgray>%product_price_buy%</lyellow>'
+          - '<lyellow>● <lgray>Sell Price: </lgray>%product_price_sell%</lyellow>'
+          - ''
+          - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>edit</lyellow>.</lgray>
+          - <lyellow>[▶]</lyellow> <lgray>Right-Click to <lyellow>pick</lyellow>.</lgray>
+          - <lyellow>[▶]</lyellow> <lgray>[Q / Drop] Key to <lyellow>delete <lred>(no undo)</lred></lyellow>.</lgray>
+      FreeSlot:
+        Name: <lyellow><b><green><b>Free Slot</b></green></b></lyellow>
+        Lore:
+        - ''
+        - <lgray><green><b>ITEM PRODUCT:</b></green></lgray>
+        - <lgray>Click with item on cursor</lgray>
+        - <lgray>to create <green>item</green> product.</lgray>
+        - ''
+        - <lgray>Hold <white>Shift</white> to bypass</lgray>
+        - <lgray>custom item detection.</lgray>
+        - ''
+        - <lgray><lorange><b>COMMAND PRODUCT:</b></lorange></lgray>
+        - <lgray>Click with empty cursor to</lgray>
+        - <lgray>create <lorange>command</lorange> product.</lgray>
+      ReservedSlot:
+        Name: <lyellow><b><red><b>Reserved Slot</b></red></b></lyellow>
+        Lore:
+        - <lgray>This slot is occupied by a shop product.</lgray>
+      Item:
+        Name: <lyellow><b>Actual Item</b></lyellow>
+        Lore:
+        - <lgray>This is the item that:</lgray>
+        - <lyellow>● <lgray>Players gets on <green>purchase</green>.</lgray></lyellow>
+        - <lyellow>● <lgray>Players must have to <red>sell</red>.</lgray></lyellow>
+        - ''
+        - <lyellow>[▶]</lyellow> <lgray>Drag & Drop to <lyellow>replace</lyellow>.</lgray>
+        - <lyellow>[▶]</lyellow> <lgray>Right-Click to <lyellow>get a copy</lyellow>.</lgray>
+        - ''
+        - <lgray>(Hold <white>Shift</white> to bypass item detection)</lgray>
+      Preview:
+        Name: <lyellow><b>Preview Item</b></lyellow>
+        Lore:
+        - <lgray>This item is used purely as</lgray>
+        - <lgray>visual product representation.</lgray>
+        - ''
+        - <lgray>Feel free to <lyellow>rename</lyellow> it, add <lyellow>lore</lyellow> and <lyellow>enchants</lyellow>!</lgray>
+        - ''
+        - <lyellow>[▶]</lyellow> <lgray>Drag & Drop to <lyellow>replace</lyellow>.</lgray>
+        - <lyellow>[▶]</lyellow> <lgray>Right-Click to <lyellow>get a copy</lyellow>.</lgray>
+      RespectItemMeta:
+        Name: <lyellow><b>Respect Item Meta</b></lyellow>
+        Lore:
+        - '<lyellow>● <lgray>Enabled: </lgray>%product_item_meta_enabled%</lyellow>'
+        - ''
+        - <lgray>When <green>enabled</green>, players can sell only</lgray>
+        - <lgray>items with exact data as in <white>Actual Item</white>.</lgray>
+        - ''
+        - <lgray>When <red>disabled</red>, players can sell any</lgray>
+        - <lgray>item of the same type as <white>Actual Item</white>.</lgray>
+        - ''
+        - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>toggle</lyellow>.</lgray>
+      PriceManager:
+        Name: <lyellow><b>Price Manager</b></lyellow>
+        Lore:
+        - '<lyellow>● <lgray>Type: </lgray>%product_price_type%</lyellow>'
+        - '<lyellow>● <lgray>Currency: </lgray>%product_currency%</lyellow>'
+        - '<lyellow>● <lgray>Buy: </lgray>%product_price_buy%</lyellow>'
+        - '<lyellow>● <lgray>Sell: </lgray>%product_price_sell%</lyellow>'
+        - ''
+        - <lgray>Sets product currency and price.</lgray>
+        - ''
+        - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>edit</lyellow>.</lgray>
+        - <lyellow>[▶]</lyellow> <lgray>[Q / Drop] Key to <lyellow>refresh</lyellow>.</lgray>
+      RanksRequired:
+        Name: <lyellow><b>Required Ranks</b></lyellow>
+        Lore:
+        - <lgray>%product_allowed_ranks%</lgray>
+        - ''
+        - <lgray>Only players with listed ranks (groups)</lgray>
+        - <lgray>will have access to this product.</lgray>
+        - ''
+        - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>add rank</lyellow>.</lgray>
+        - <lyellow>[▶]</lyellow> <lgray>Right-Click to <lyellow>remove all & disable</lyellow>.</lgray>
+      PermissionsRequired:
+        Name: <lyellow><b>Required Permissions</b></lyellow>
+        Lore:
+        - <lgray>%product_required_permissions%</lgray>
+        - ''
+        - <lgray>Only players with listed permissions</lgray>
+        - <lgray>will have access to this product.</lgray>
+        - ''
+        - <lyellow>[▶]</lyellow> <lgray>Shift-Left to <lyellow>add permission</lyellow>.</lgray>
+        - <lyellow>[▶]</lyellow> <lgray>Shift-Right to <lyellow>remove all & disable</lyellow>.</lgray>
+      Commands:
+        Name: <lyellow><b>Commands</b></lyellow>
+        Lore:
+        - <lgray>%product_commands%</lgray>
+        - ''
+        - <lgray>Commands to run when product is purchased.</lgray>
+        - ''
+        - <lgray><lyellow><b>Placeholders:</b></lyellow></lgray>
+        - '<lyellow>● <lgray>%player_name%: </lgray>Player (buyer) name.</lyellow>'
+        - '<lyellow>● <lgray>PlaceholderAPI: </lgray>All of them.</lyellow>'
+        - ''
+        - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>add command</lyellow>.</lgray>
+        - <lyellow>[▶]</lyellow> <lgray>Right-Click to <lyellow>remove all</lyellow>.</lgray>
+      Rotation:
+        Chance:
+          Name: <lyellow><b>Weight</b></lyellow>
+          Lore:
+          - '<lyellow>● <lgray>Current: </lgray>%product_rotation_chance%%</lyellow>'
+          - ''
+          - <lgray>Greater the weight, greater the chance</lgray>
+          - <lgray>that this product will appear</lgray>
+          - <lgray>in shop rotations.</lgray>
+          - ''
+          - <lyellow>[▶]</lyellow> <lgray>Click to <lyellow>change</lyellow>.</lgray>
+        DayTimes:
+          Name: <lyellow><b>%name%</b></lyellow>
+          Lore:
+          - <lgray>%time%</lgray>
+          - ''
+          - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>add</lyellow>.</lgray>
+          - <lyellow>[▶]</lyellow> <lgray>Right-Click to <lyellow>remove all</lyellow>.</lgray>
+      Stock:
+        Category:
+          Name: <lyellow><b>Global & Player Stock</b></lyellow>
+          Lore:
+          - <lgray>Here you can set how many of the product</lgray>
+          - <lgray>is available for sale and purchase</lgray>
+          - <lgray>globally and per player.</lgray>
+          - ''
+          - <lyellow>[▶]</lyellow> <lgray>Click to <lyellow>navigate</lyellow>.</lgray>
+        Info:
+          Global:
+            Name: <lyellow><b>Global Stock</b></lyellow>
+            Lore:
+            - <lgray>Limits amount of the product available</lgray>
+            - <lgray>for sale/purchase globally for all players.</lgray>
+            - ''
+            - <lgray><lyellow><b>Manual Restock:</b></lyellow></lgray>
+            - '<lyellow>● <lgray>By Purchase: <green>Sell Stock ↑</green> | <red>Buy Stock ↓</red></lgray></lyellow>'
+            - '<lyellow>● <lgray>By Sale: <red>Sell Stock ↓</red> | <green>Buy Stock ↑</green></lgray></lyellow>'
+            - ''
+            - <lyellow>[▶]</lyellow> <lgray>Right-Click to <lyellow>wipe global stock data</lyellow>.</lgray>
+          Player:
+            Name: <lyellow><b>Player Limits</b></lyellow>
+            Lore:
+            - <lgray>Limits amount of the product available</lgray>
+            - <lgray>for sale/purchase per a player.</lgray>
+            - ''
+            - <lgray><lyellow><b>Manual Restock:</b></lyellow></lgray>
+            - <lgray>Manual restock for limits is <red>not possible</red>.</lgray>
+            - <lgray>Players have to wait restock time.</lgray>
+            - ''
+            - <lyellow>[▶]</lyellow> <lgray>Right-Click to <lyellow>wipe player limit data</lyellow>.</lgray>
+        Global:
+          BuyInitial:
+            Name: <lyellow><b>Initial Buy Amount</b></lyellow>
+            Lore:
+            - '<lyellow>● <lgray>Current: </lgray>%product_stock_global_buy_amount_initial%</lyellow>'
+            - ''
+            - <lgray>Sets initial product amount for purchases.</lgray>
+            - ''
+            - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>change</lyellow>.</lgray>
+            - <lyellow>[▶]</lyellow> <lgray>Right-Click to <lyellow>set unlimited</lyellow>.</lgray>
+          SellInitial:
+            Name: <lyellow><b>Initial Sell Amount</b></lyellow>
+            Lore:
+            - '<lyellow>● <lgray>Current: </lgray>%product_stock_global_sell_amount_initial%</lyellow>'
+            - ''
+            - <lgray>Sets initial product amount for sales.</lgray>
+            - ''
+            - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>change</lyellow>.</lgray>
+            - <lyellow>[▶]</lyellow> <lgray>Right-Click to <lyellow>set unlimited</lyellow>.</lgray>
+          BuyRestock:
+            Name: <lyellow><b>Buy Restock Time</b></lyellow>
+            Lore:
+            - '<lyellow>● <lgray>Current: </lgray>%product_stock_global_buy_restock_time%</lyellow>'
+            - ''
+            - <lgray>Sets how often product amount available</lgray>
+            - <lgray>for purchase will reset back</lgray>
+            - <lgray>to default (initial).</lgray>
+            - ''
+            - <lgray>When disabled <dgray>(-1)</dgray>, auto-restock</lgray>
+            - <lgray>will never happen!</lgray>
+            - ''
+            - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>change</lyellow>.</lgray>
+            - <lyellow>[▶]</lyellow> <lgray>Right-Click to <lyellow>disable</lyellow>.</lgray>
+          SellRestock:
+            Name: <lyellow><b>Sell Restock Time</b></lyellow>
+            Lore:
+            - '<lyellow>● <lgray>Current: </lgray>%product_stock_global_sell_restock_time%</lyellow>'
+            - ''
+            - <lgray>Sets how often product amount available</lgray>
+            - <lgray>for sale will reset back</lgray>
+            - <lgray>to default (initial).</lgray>
+            - ''
+            - <lgray>When disabled <dgray>(-1)</dgray>, auto-restock</lgray>
+            - <lgray>will never happen!</lgray>
+            - ''
+            - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>change</lyellow>.</lgray>
+            - <lyellow>[▶]</lyellow> <lgray>Right-Click to <lyellow>disable</lyellow>.</lgray>
+        Player:
+          BuyInitial:
+            Name: <lyellow><b>Initial Buy Amount</b></lyellow>
+            Lore:
+            - '<lyellow>● <lgray>Current: </lgray>%product_stock_player_buy_amount_initial%</lyellow>'
+            - ''
+            - <lgray>Sets initial product amount for purchases.</lgray>
+            - ''
+            - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>change</lyellow>.</lgray>
+            - <lyellow>[▶]</lyellow> <lgray>Right-Click to <lyellow>set unlimited</lyellow>.</lgray>
+          SellInitial:
+            Name: <lyellow><b>Initial Sell Amount</b></lyellow>
+            Lore:
+            - '<lyellow>● <lgray>Current: </lgray>%product_stock_player_sell_amount_initial%</lyellow>'
+            - ''
+            - <lgray>Sets initial product amount for sales.</lgray>
+            - ''
+            - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>change</lyellow>.</lgray>
+            - <lyellow>[▶]</lyellow> <lgray>Right-Click to <lyellow>set unlimited</lyellow>.</lgray>
+          BuyRestock:
+            Name: <lyellow><b>Buy Restock Time</b></lyellow>
+            Lore:
+            - '<lyellow>● <lgray>Current: </lgray>%product_stock_player_buy_restock_time%</lyellow>'
+            - ''
+            - <lgray>Sets how often product amount available</lgray>
+            - <lgray>for purchase will reset back</lgray>
+            - <lgray>to default (initial).</lgray>
+            - ''
+            - <lgray>When disabled <dgray>(-1)</dgray>, auto-restock</lgray>
+            - <lgray>will never happen!</lgray>
+            - ''
+            - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>change</lyellow>.</lgray>
+            - <lyellow>[▶]</lyellow> <lgray>Right-Click to <lyellow>disable</lyellow>.</lgray>
+          SellRestock:
+            Name: <lyellow><b>Sell Restock Time</b></lyellow>
+            Lore:
+            - '<lyellow>● <lgray>Current: </lgray>%product_stock_player_sell_restock_time%</lyellow>'
+            - ''
+            - <lgray>Sets how often product amount available</lgray>
+            - <lgray>for sale will reset back</lgray>
+            - <lgray>to default (initial).</lgray>
+            - ''
+            - <lgray>When disabled <dgray>(-1)</dgray>, auto-restock</lgray>
+            - <lgray>will never happen!</lgray>
+            - ''
+            - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>change</lyellow>.</lgray>
+            - <lyellow>[▶]</lyellow> <lgray>Right-Click to <lyellow>disable</lyellow>.</lgray>
+      Price:
+        Info:
+          Name: <lyellow><b>Price Info</b></lyellow>
+          Lore:
+          - '<lyellow>● <lgray>Buy Current: </lgray>%product_price_buy_formatted%</lyellow>'
+          - '<lyellow>● <lgray>Sell Current: </lgray>%product_price_sell_formatted%</lyellow>'
+          - ''
+          - <lgray><lyellow><b>Update:</b></lyellow></lgray>
+          - <lgray>Fetches and applies the price data</lgray>
+          - <lgray>from the database.</lgray>
+          - <lgray>If no data present or expired,</lgray>
+          - <lgray>creates a fresh one.</lgray>
+          - ''
+          - <lgray>In most cases won't change anything</lgray>
+          - <lgray>until you wipe it out.</lgray>
+          - ''
+          - <lgray><lyellow><b>Wipe:</b></lyellow></lgray>
+          - <lgray>Wipes out product price data</lgray>
+          - <lgray>from the database.</lgray>
+          - ''
+          - <lgray>Use <lyellow>update</lyellow> option to generate a new one.</lgray>
+          - ''
+          - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>update</lyellow>.</lgray>
+          - <lyellow>[▶]</lyellow> <lgray>Right-Click to <lyellow>wipe data</lyellow>.</lgray>
+        Type:
+          Name: <lyellow><b>Price Type</b></lyellow>
+          Lore:
+          - '<lyellow>● <lgray>Current: </lgray>%product_price_type%</lyellow>'
+          - ''
+          - <lgray>Sets product price type.</lgray>
+          - <lgray>Different types have different settings.</lgray>
+          - ''
+          - <lyellow>[▶]</lyellow> <lgray>Click to <lyellow>change</lyellow>.</lgray>
+        Currency:
+          Name: <lyellow><b>Currency</b></lyellow>
+          Lore:
+          - '<lyellow>● <lgray>Current: </lgray>%product_currency%</lyellow>'
+          - ''
+          - <lgray>Sets product currency.</lgray>
+          - ''
+          - <lyellow>[▶]</lyellow> <lgray>Click to <lyellow>change</lyellow>.</lgray>
+        DiscountAllowed:
+          Name: <lyellow><b>Discount Allowed</b></lyellow>
+          Lore:
+          - '<lyellow>● <lgray>Enabled: </lgray>%product_discount_allowed%</lyellow>'
+          - ''
+          - <lgray>Sets whether or not this product</lgray>
+          - <lgray>can be affected by shop's discounts.</lgray>
+          - ''
+          - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>toggle</lyellow>.</lgray>
+        Flat:
+          Buy:
+            Name: <lyellow><b>Buy Price</b></lyellow>
+            Lore:
+            - '<lyellow>● <lgray>Current: </lgray>%product_price_buy%</lyellow>'
+            - ''
+            - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>change</lyellow>.</lgray>
+            - <lyellow>[▶]</lyellow> <lgray>[Q / Drop] Key to <lyellow>disable</lyellow>.</lgray>
+          Sell:
+            Name: <lyellow><b>Sell Price</b></lyellow>
+            Lore:
+            - '<lyellow>● <lgray>Current: </lgray>%product_price_sell%</lyellow>'
+            - ''
+            - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>change</lyellow>.</lgray>
+            - <lyellow>[▶]</lyellow> <lgray>[Q / Drop] Key to <lyellow>disable</lyellow>.</lgray>
+        Float:
+          Buy:
+            Name: <lyellow><b>Buy Price Bounds</b></lyellow>
+            Lore:
+            - '<lyellow>● <lgray>Min: </lgray>%product_pricer_buy_min%</lyellow>'
+            - '<lyellow>● <lgray>Max: </lgray>%product_pricer_buy_max%</lyellow>'
+            - ''
+            - <lgray>Sets product buy price bounds.</lgray>
+            - <lgray>Final price will be within these values.</lgray>
+            - ''
+            - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>change</lyellow>.</lgray>
+            - <lyellow>[▶]</lyellow> <lgray>[Q / Drop] Key to <lyellow>disable</lyellow>.</lgray>
+          Sell:
+            Name: <lyellow><b>Sell Price Bounds</b></lyellow>
+            Lore:
+            - '<lyellow>● <lgray>Min: </lgray>%product_pricer_sell_min%</lyellow>'
+            - '<lyellow>● <lgray>Max: </lgray>%product_pricer_sell_max%</lyellow>'
+            - ''
+            - <lgray>Sets product sell price bounds.</lgray>
+            - <lgray>Final price will be within these values.</lgray>
+            - ''
+            - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>change</lyellow>.</lgray>
+            - <lyellow>[▶]</lyellow> <lgray>[Q / Drop] Key to <lyellow>disable</lyellow>.</lgray>
+          Decimals:
+            Name: <lyellow><b>Cut Decimals</b></lyellow>
+            Lore:
+            - '<lyellow>● <lgray>Enabled: </lgray>%product_pricer_float_round_decimals%</lyellow>'
+            - ''
+            - <lgray>Sets whether or not prices should</lgray>
+            - <lgray>generate as whole numbers.</lgray>
+            - ''
+            - <lyellow>[▶]</lyellow> <lgray>Click to <lyellow>toggle</lyellow>.</lgray>
+          RefreshDays:
+            Name: <lyellow><b>Refresh Days</b></lyellow>
+            Lore:
+            - <lgray>%product_pricer_float_refresh_days%</lgray>
+            - ''
+            - <lgray>Sets days allowed for price generation.</lgray>
+            - ''
+            - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>add day</lyellow>.</lgray>
+            - <lyellow>[▶]</lyellow> <lgray>Right-Click to <lyellow>remove all</lyellow>.</lgray>
+          RefreshTimes:
+            Name: <lyellow><b>Refresh Times</b></lyellow>
+            Lore:
+            - <lgray>%product_pricer_float_refresh_times%</lgray>
+            - ''
+            - <lgray>Sets times used for price generation.</lgray>
+            - ''
+            - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>add time</lyellow>.</lgray>
+            - <lyellow>[▶]</lyellow> <lgray>Right-Click to <lyellow>remove all</lyellow>.</lgray>
+        Dynamic:
+          Initial:
+            Name: <lyellow><b>Initial Price</b></lyellow>
+            Lore:
+            - '<lyellow>● <lgray>Buy: </lgray>%product_pricer_dynamic_initial_buy%</lyellow>'
+            - '<lyellow>● <lgray>Sell: </lgray>%product_pricer_dynamic_initial_sell%</lyellow>'
+            - ''
+            - <lgray>Sets initial product price.</lgray>
+            - <lgray>These values will be used as default/start ones.</lgray>
+            - ''
+            - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>change buy</lyellow>.</lgray>
+            - <lyellow>[▶]</lyellow> <lgray>Right-Click to <lyellow>change sell</lyellow>.</lgray>
+          Step:
+            Name: <lyellow><b>Price Step</b></lyellow>
+            Lore:
+            - '<lyellow>● <lgray>Buy: </lgray>%product_pricer_dynamic_step_buy%</lyellow>'
+            - '<lyellow>● <lgray>Sell: </lgray>%product_pricer_dynamic_step_sell%</lyellow>'
+            - ''
+            - <lgray>Step defines for how much price will</lgray>
+            - <lgray>grow up/down on each sale/purchase.</lgray>
+            - ''
+            - <lgray>Purchases = Price Up, Sales = Price Down</lgray>
+            - ''
+            - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>change buy</lyellow>.</lgray>
+            - <lyellow>[▶]</lyellow> <lgray>Right-Click to <lyellow>change sell</lyellow>.</lgray>
+        Players:
+          Initial:
+            Name: <lyellow><b>Initial Price</b></lyellow>
+            Lore:
+            - '<lyellow>● <lgray>Buy: </lgray>%product_pricer_dynamic_initial_buy%</lyellow>'
+            - '<lyellow>● <lgray>Sell: </lgray>%product_pricer_dynamic_initial_sell%</lyellow>'
+            - ''
+            - <lgray>Sets initial product price.</lgray>
+            - <lgray>These values will be used as default/start ones.</lgray>
+            - ''
+            - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>change buy</lyellow>.</lgray>
+            - <lyellow>[▶]</lyellow> <lgray>Right-Click to <lyellow>change sell</lyellow>.</lgray>
+          Adjust:
+            Name: <lyellow><b>Price Adjust</b></lyellow>
+            Lore:
+            - '<lyellow>● <lgray>Buy: </lgray>%product_pricer_players_adjust_amount_buy%</lyellow>'
+            - '<lyellow>● <lgray>Sell: </lgray>%product_pricer_players_adjust_amount_sell%</lyellow>'
+            - ''
+            - <lgray>Defines for how much price will</lgray>
+            - <lgray>be adjusted for each X online players.</lgray>
+            - ''
+            - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>change buy</lyellow>.</lgray>
+            - <lyellow>[▶]</lyellow> <lgray>Right-Click to <lyellow>change sell</lyellow>.</lgray>
+          Step:
+            Name: <lyellow><b>Adjust Step</b></lyellow>
+            Lore:
+            - '<lyellow>● <lgray>Current: </lgray>%product_pricer_players_adjust_step%</lyellow>'
+            - ''
+            - <lgray>Sets amount of online players</lgray>
+            - <lgray>to adjust the price for.</lgray>
+            - ''
+            - <lgray><lyellow><b>Examples:</b></lyellow></lgray>
+            - <lgray><lyellow>1</lyellow> = for <lyellow>every player</lyellow> online.</lgray>
+            - <lgray><lyellow>5</lyellow> = for <lyellow>every 5</lyellow> players (5, 10, 15, etc.)</lgray>
+            - ''
+            - <lyellow>[▶]</lyellow> <lgray>Click to <lyellow>change</lyellow>.</lgray>
+    Shop:
+      Create:
+        Name: <lyellow><b>New Shop</b></lyellow>
+        Lore:
+        - ''
+        - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>create Static Shop</lyellow>.</lgray>
+        - <lyellow>[▶]</lyellow> <lgray>Right-Click to <lyellow>create Rotating Shop</lyellow>.</lgray>
+      Object:
+        Name: <lyellow><b>%shop_name%</b></lyellow>
+        Lore:
+        - '<lyellow>● <lgray>Type: </lgray>%shop_type%</lyellow>'
+        - '<lyellow>● <lgray>Pages: </lgray>%shop_pages%</lyellow>'
+        - ''
+        - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>edit</lyellow>.</lgray>
+        - <lyellow>[▶]</lyellow> <lgray>Shift-Right to <lyellow>delete <red>(no undo)</red></lyellow>.</lgray>
+      DisplayName:
+        Name: <lyellow><b>Display Name</b></lyellow>
+        Lore:
+        - '<lyellow>● <lgray>Current: </lgray>%shop_name%</lyellow>'
+        - ''
+        - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>change</lyellow>.</lgray>
+      Description:
+        Name: <lyellow><b>Description</b></lyellow>
+        Lore:
+        - <lgray>%shop_description%</lgray>
+        - ''
+        - ''
+        - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>add line</lyellow>.</lgray>
+        - <lyellow>[▶]</lyellow> <lgray>Right-Click to <lyellow>remove all</lyellow>.</lgray>
+      Pages:
+        Name: <lyellow><b>Pages Amount</b></lyellow>
+        Lore:
+        - '<lyellow>● <lgray>Current: </lgray>%shop_pages%</lyellow>'
+        - ''
+        - <lgray>Amount of pages in the shop.</lgray>
+        - ''
+        - <lgray>Make sure that shop layout config</lgray>
+        - <lgray>contains page buttons.</lgray>
+        - ''
+        - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>+1 page</lyellow>.</lgray>
+        - <lyellow>[▶]</lyellow> <lgray>Right-Click to <lyellow>-1 page</lyellow>.</lgray>
+      Icon:
+        Name: <lyellow><b>Icon</b></lyellow>
+        Lore:
+        - <lyellow>[▶]</lyellow> <lgray>Drag & Drop to <lyellow>replace</lyellow>.</lgray>
+        - <lyellow>[▶]</lyellow> <lgray>Right-Click to <lyellow>get a copy</lyellow>.</lgray>
+      PermissionRequirement:
+        Name: <lyellow><b>Permission Requirement</b></lyellow>
+        Lore:
+        - '<lyellow>● <lgray>Enabled: </lgray>%shop_permission_required%</lyellow>'
+        - '<lyellow>● <lgray>Node: </lgray>%shop_permission_node%</lyellow>'
+        - ''
+        - <lgray>Sets whether or not permission</lgray>
+        - <lgray>is required to use this shop.</lgray>
+        - ''
+        - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>toggle</lyellow>.</lgray>
+      Transactions:
+        Name: <lyellow><b>Transactions</b></lyellow>
+        Lore:
+        - '<lyellow>● <lgray>Buying Enabled: </lgray>%shop_buy_allowed%</lyellow>'
+        - '<lyellow>● <lgray>Selling Enabled: </lgray>%shop_sell_allowed%</lyellow>'
+        - ''
+        - <lgray>Global rules allowing / disallowing</lgray>
+        - <lgray>selling and buying in this shop.</lgray>
+        - ''
+        - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>toggle buying</lyellow>.</lgray>
+        - <lyellow>[▶]</lyellow> <lgray>Right-Click to <lyellow>toggle selling</lyellow>.</lgray>
+      AttachedNPCs:
+        Name: <lyellow><b>Attached NPCs</b></lyellow>
+        Lore:
+        - <lgray>%shop_npc_ids%</lgray>
+        - ''
+        - <lgray>List of NPCs (id) attached to this shop</lgray>
+        - <lgray>to open it on interaction.</lgray>
+        - <lgray><lred>(Citizens required)</lred></lgray>
+        - ''
+        - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>add NPC</lyellow>.</lgray>
+        - <lyellow>[▶]</lyellow> <lgray>Right-Click to <lyellow>remove all</lyellow>.</lgray>
+      Layout:
+        Name: <lyellow><b>Layout</b></lyellow>
+        Lore:
+        - '<lyellow>● <lgray>Current: </lgray>%shop_layout%</lyellow>'
+        - ''
+        - <lgray>Sets GUI layout used in this shop.</lgray>
+        - ''
+        - <lgray>Create more layouts in <lyellow>/layouts/</lyellow></lgray>
+        - ''
+        - <lyellow>[▶]</lyellow> <lgray>Click to <lyellow>change</lyellow>.</lgray>
+      Discounts:
+        Name: <lyellow><b>Discounts</b></lyellow>
+        Lore:
+        - <lgray>Create and manage shop discounts here.</lgray>
+        - ''
+        - <lyellow>[▶]</lyellow> <lgray>Click to <lyellow>navigate</lyellow>.</lgray>
+      Products:
+        Name: <lyellow><b>Products</b></lyellow>
+        Lore:
+        - <lgray>Create and manage products here.</lgray>
+        - ''
+        - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>navigate</lyellow>.</lgray>
+        - <lyellow>[▶]</lyellow> <lgray>[Q / Drop] Key to <lyellow>reset & update all prices</lyellow>.</lgray>
+        - <lyellow>[▶]</lyellow> <lgray>[F / Swap] Key to <lyellow>reset all stocks & limits</lyellow>.</lgray>
+      Rotation:
+        Type:
+          Name: <lyellow><b>Rotation Type</b></lyellow>
+          Lore:
+          - '<lyellow>● <lgray>Current: </lgray>%shop_rotation_type%</lyellow>'
+          - ''
+          - <lgray><lyellow><b>Types:</b></lyellow></lgray>
+          - '<lyellow>● <lgray>INTERVAL: </lgray>Every X minutes.</lyellow>'
+          - '<lyellow>● <lgray>FIXED: </lgray>Strictly at specified times.</lyellow>'
+          - ''
+          - <lyellow>[▶]</lyellow> <lgray>Click to <lyellow>change</lyellow>.</lgray>
+        Interval:
+          Name: <lyellow><b>Rotation Interval</b></lyellow>
+          Lore:
+          - '<lyellow>● <lgray>Current: </lgray>%shop_rotation_interval%</lyellow>'
+          - ''
+          - <lgray>Sets how often shop products</lgray>
+          - <lgray>will be rotated (changed).</lgray>
+          - ''
+          - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>change</lyellow>.</lgray>
+          - <lyellow>[▶]</lyellow> <lgray>[Q / Drop] Key to <lyellow>force rotate</lyellow>.</lgray>
+        Times:
+          Name: <lyellow><b>Rotation Times</b></lyellow>
+          Lore:
+          - <lgray>Here you can set rotation</lgray>
+          - <lgray>times for each day of a week.</lgray>
+          - ''
+          - <lyellow>[▶]</lyellow> <lgray>Click to <lyellow>navigate</lyellow>.</lgray>
+        Products:
+          Name: <lyellow><b>Rotation Products</b></lyellow>
+          Lore:
+          - '<lyellow>● <lgray>Min: </lgray>%shop_rotation_min_products%</lyellow>'
+          - '<lyellow>● <lgray>Max: </lgray>%shop_rotation_max_products%</lyellow>'
+          - '<lyellow>● <lgray>Slots: </lgray>%shop_rotation_product_slots%</lyellow>'
+          - ''
+          - <lgray>Sets how many products</lgray>
+          - <lgray>will be used in rotations and</lgray>
+          - <lgray>slots where they will appear.</lgray>
+          - ''
+          - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>change min</lyellow>.</lgray>
+          - <lyellow>[▶]</lyellow> <lgray>Right-Click to <lyellow>change max</lyellow>.</lgray>
+          - <lyellow>[▶]</lyellow> <lgray>[Q / Drop] Key to <lyellow>change slots</lyellow>.</lgray>
+    Discount:
+      Create:
+        Name: <lyellow><b>New Discount</b></lyellow>
+        Lore: []
+      Object:
+        Name: <lyellow><b>Discount</b></lyellow>
+        Lore:
+        - '<lyellow>● <lgray>Amount: </lgray>%discount_amount%</lyellow>'
+        - '<lyellow>● <lgray>Days: </lgray>%discount_days%</lyellow>'
+        - '<lyellow>● <lgray>Times: </lgray>%discount_times%</lyellow>'
+        - ''
+        - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>edit</lyellow>.</lgray>
+        - <lyellow>[▶]</lyellow> <lgray>Shift-Right to <lyellow>delete <lred>(no undo)</lred></lyellow>.</lgray>
+      Amount:
+        Name: <lyellow><b>Amount</b></lyellow>
+        Lore:
+        - '<lyellow>● <lgray>Amount: </lgray>%discount_amount%%</lyellow>'
+        - ''
+        - <lgray>Sets the discount amount (in percent).</lgray>
+        - ''
+        - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>change</lyellow>.</lgray>
+      Duration:
+        Name: <lyellow><b>Duration</b></lyellow>
+        Lore:
+        - '<lyellow>● <lgray>Duration: </lgray>%discount_duration%</lyellow>'
+        - ''
+        - <lgray>Sets how long (in seconds) this</lgray>
+        - <lgray>discount will be active.</lgray>
+        - ''
+        - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>change</lyellow>.</lgray>
+      Days:
+        Name: <lyellow><b>Active Days</b></lyellow>
+        Lore:
+        - '<lyellow>● <lgray>Days: </lgray>%discount_days%</lyellow>'
+        - ''
+        - <lgray>A list of days, when this discount will have effect.</lgray>
+        - ''
+        - <lgray>At least one day and time are required!</lgray>
+        - ''
+        - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>add day</lyellow>.</lgray>
+        - <lyellow>[▶]</lyellow> <lgray>Right-Click to <lyellow>remove all</lyellow>.</lgray>
+      Times:
+        Name: <lyellow><b>Active Times</b></lyellow>
+        Lore:
+        - '<lyellow>● <lgray>Days: </lgray>%discount_times%</lyellow>'
+        - ''
+        - <lgray>A list of times, when this discount will be activated.</lgray>
+        - ''
+        - <lgray>At least one day and time are required!</lgray>
+        - ''
+        - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>add time</lyellow>.</lgray>
+        - <lyellow>[▶]</lyellow> <lgray>Right-Click to <lyellow>remove all</lyellow>.</lgray>
+  Shop:
+    Rotation:
+      Notify:
+      - <noprefix>
+      - ' '
+      - <lgray><lyellow>%amount%</lyellow> new items just appeared in the <lyellow>%shop_name%</lyellow> shop!</lgray>
+      - <lgray>Click <click:run_command:"/shop %shop_id%"><hover:show_text:'<lgray>Click to open shop!</lgray>'><lyellow><b>HERE</b></lyellow></hover></click> to open the shop!</lgray>
+      - ' '
+    Error:
+      BadWorld: <lred>You can't use shop in this world!</lred>
+      BadGamemode: <lred>You can't use shop in current gamemode!</lred>
+      InvalidLayout: '<lgray>Could not open shop <lred>%shop_name%</lred>: Invalid shop layout!</lgray>'
+      Invalid: <lred>Invalid shop!</lred>
+  Price:
+    AverageDynamics:
+      Up: <green>↑ %value%%</green>
+      Down: <red>↓ %value%%</red>
+  ShopType:
+    STATIC: Static
+    ROTATING: Rotating
+AuctionSortType:
+  NAME: Name
+  MATERIAL: Material
+  SELLER: Seller
+  NEWEST: Newest
+  OLDEST: Oldest
+  MOST_EXPENSIVE: Most Expensive
+  LEAST_EXPENSIVE: Least Expensive
+TradeType:
+  BUY: Buy
+  SELL: Sell
+PriceType:
+  FLAT: Flat
+  FLOAT: Float
+  DYNAMIC: Dynamic
+  PLAYER_AMOUNT: Player Amount
+ChestShop:
+  Command:
+    List:
+      Desc: Browse your own or other player's shops.
+      Usage: '[player]'
+    Create:
+      Desc: Creates shop of the chest that you're looking on.
+      Usage: '[type]'
+    Search:
+      Desc: Search for shops with specified item.
+      Usage: <material>
+    Remove:
+      Desc: Removes the shop from the chest that you're looking at.
+    Argument:
+      Name:
+        BuyPrice: buyPrice
+        SellPrice: sellPrice
+    Bank:
+      Desc: Open [player's] bank.
+    Browse:
+      Desc: Player shops GUI.
+    GiveItem:
+      Desc: Give shop creation item.
+      BadMaterial: <lred>Invalid shop type!</lred>
+      Done: <lgray>Given <lyellow>%name%</lyellow> to <lyellow>%player_display_name%</lyellow>.</lgray>
+    Open:
+      Desc: Open inventory of the target shop.
+  Shop:
+    Error:
+      NotOwner: '&cYou''re not the owner of this shop!'
+    Creation:
+      Info:
+        Done:
+        - <! type:"titles:20:60:20" sound:"BLOCK_NOTE_BLOCK_BELL" !>&e⋆ &7〈 &a&lShop Created! &7〉 &e⋆\n&2Shift-Click &7to enter in &aEdit Mode
+      Error:
+        AlreadyShop: <! prefix:"false" !><gradient:#36175E>&lCHESTSHOP</gradient:#9768D1> &8» &cThis chest is already shop!
+        NotEmpty: <! prefix:"false" !><gradient:#36175E>&lCHESTSHOP</gradient:#9768D1> &8» &cPlease remove all items from the chest first.
+        NotAChest: <! prefix:"false" !><gradient:#36175E>&lCHESTSHOP</gradient:#9768D1> &8» &cThis block is not a chest!
+        BadLocation: <! prefix:"false" !><gradient:#36175E>&lCHESTSHOP</gradient:#9768D1> &8» &cYou can't create shop here!
+        LimitReached: <! prefix:"false" !><gradient:#36175E>&lCHESTSHOP</gradient:#9768D1> &8» &cYou have reached the limit of shops! You can't create more.
+        BadArea: <! prefix:"false" !><gradient:#36175E>&lCHESTSHOP</gradient:#9768D1> &8» &cYou can create shops only inside your own claim!
+        NotEnoughFunds: <! prefix:"false" !><gradient:#36175E>&lCHESTSHOP</gradient:#9768D1> &8» &cYou don't have enough funds!
+        TypePermission: <! prefix:"false" !><gradient:#36175E>&lCHESTSHOP</gradient:#9768D1> &8» &cYou don't have permission to create this type shops!
+    Removal:
+      Info:
+        Done: <! type:"titles:20:60:20" sound:"ENTITY_GENERIC_EXPLODE" !>&e⋆ &7〈 &c&lShop Removed! &7〉 &e⋆
+      Error:
+        NotAShop: <! prefix:"false" !><gradient:#36175E>&lCHESTSHOP</gradient:#9768D1> &8» &cThis block is not a shop!
+        NotEmpty: <lred>Please withdraw items from shop storage to remove it.</lred>
+    Trade:
+      Buy:
+        Info:
+          User: <! prefix:"false" !><gradient:#36175E>&lCHESTSHOP</gradient:#9768D1> &8» &eYou bought &6x%amount% %item% &efor &6%price% &efrom &6%shop_name%&e shop owned by &6%shop_owner%&e.
+          Owner: <! prefix:"false" !><gradient:#36175E>&lCHESTSHOP</gradient:#9768D1> &8» &6%player% &ejust bought &6x%amount% %item% &efor &6%price% &efrom your &6%shop_name%&e shop.
+      Sell:
+        Info:
+          User: <! prefix:"false" !><gradient:#36175E>&lCHESTSHOP</gradient:#9768D1> &8» &eYou sold &6x%amount% %item% &efor &6%price% &eto &6%shop_name%&e shop owned by &6%shop_owner%&e.
+          Owner: <! prefix:"false" !><gradient:#36175E>&lCHESTSHOP</gradient:#9768D1> &8» &6%player% &ejust sold &6x%amount% %item% &efor &6%price% &eto your &6%shop_name%&e shop.
+    Bank:
+      Error:
+        InvalidCurrency:
+        - <! type:"titles:20:60:20" !>
+        - '&e⋆ &7〈 &cOperation Failed! &7〉 &e⋆'
+        - '&7Currency is invalid/not allowed!'
+      Deposit:
+        Success:
+        - <! type:"titles:20:60:20" !>
+        - '&e⋆ &7〈 &aSuccessful Deposit! &7〉 &e⋆'
+        - '&7You deposit &a%amount% &7to shop!'
+        Error:
+          NotEnough:
+          - <! type:"titles:20:60:20" !>
+          - '&e⋆ &7〈 &cUnable to Deposit! &7〉 &e⋆'
+          - '&7You don''t have enough funds!'
+      Withdraw:
+        Success:
+        - <! type:"titles:20:60:20" !>
+        - '&e⋆ &7〈 &aSuccessful Withdraw! &7〉 &e⋆'
+        - '&7You withdraw &a%amount% &7from shop!'
+        NotEnough:
+        - <! type:"titles:20:60:20" !>
+        - '&e⋆ &7〈 &cUnable to Withdraw! &7〉 &e⋆'
+        - '&7Bank don''t have enough funds!'
+    Errpr:
+      Currency:
+        Invalid: <! prefix:"false" !><gradient:#36175E>&lCHESTSHOP</gradient:#9768D1> &8» &cThis currency is invalid or is not allowed!
+    InfiniteStorage:
+      Deposit:
+        Success: <lgray>You deposit <lgreen>x%amount% %item%</lgreen> to shop storage!</lgray>
+        Error:
+          NotEnough: <lgray>You don't have enough items!</lgray>
+      Withdraw:
+        Success: <lgray>You withdraw <lgreen>x%amount% %item%</lgreen> from shop storage!</lgray>
+        NotEnough: <lgray>There is not enough items in storage!</lgray>
+  Product:
+    Error:
+      BadItem: <! prefix:"false" !><gradient:#36175E>&lCHESTSHOP</gradient:#9768D1> &8» This item can not be traded!
+  Editor:
+    Error:
+      ProductLeft: <! prefix:"false" !><gradient:#36175E>&lCHESTSHOP</gradient:#9768D1> &8» &cFirst you have to take all of this product from the chest!
+      Negative: <! prefix:"false" !><gradient:#36175E>&lCHESTSHOP</gradient:#9768D1> &8» &7Number must be positive!
+    Enter:
+      Name: '&aEnter shop name...'
+    Tip:
+      Product:
+        Currency:
+        - '&7'
+        - '&a&lSelect a Currency &7(Click)&b&l:'
+        - '&2▸ {json: ~showText: &7Click to select; ~runCommand: /%currency_id%;}&a%currency_name% &7(&f%currency_id%&7){end-json}'
+        - '&7'
+      Bank:
+        Exchange: '&7Enter currency and amount...'
+        Currency:
+        - '&7'
+        - '&b&lSelect a Currency &7(Click)&b&l:'
+        - '&2▸ {json: ~showText: &7Click to select; ~suggestCommand: %currency_id% ;}&a%currency_name% &7(&f%currency_id%&7){end-json}'
+        - '&7'
+        - '&b&lSome Tips:'
+        - '&2▸ &aUse &2''-1''&a to deposit/withdraw all.'
+        - '&7'
+        - '&b&lExample:'
+        - '&2▸ &avault 500'
+        - '&7'
+    Bank:
+      InvalidSyntax: '&7Wrong syntax! Use &c<currency> <amount>'
+  ShopList:
+    Info:
+      Switch: 'Global shop list: %state%&7.'
+  Notification:
+    ShopEarnings:
+    - <noprefix>
+    - ' '
+    - <lgreen><b>Shops Income:</b></lgreen>
+    - '<lgray>While you were offline your shops earned: <lgreen>%amount%</lgreen></lgray>'
+    - ' '
+  Search:
+    ItemPrompt:
+    - <output:"titles:20:-1:20"><sound:"block_lava_pop">
+    - <lyellow><b>Shop Search</b></lyellow>
+    - <lgray>Enter item <lyellow>name</lyellow> to search for.</lgray>
+  ShopType:
+    PLAYER: Player
+    ADMIN: Admin
+ChestShopType:
+  PLAYER: Player
+  ADMIN: Admin
+Auction:
+  Command:
+    Open:
+      Desc: Open auction.
+    Sell:
+      Desc: Add item on auction.
+      Usage: <price>
+      Error:
+        NoItem: <lred>You must hold an item to do that!</lred>
+    Expired:
+      Desc: List of expired listings.
+      Usage: '[player]'
+    History:
+      Desc: Your sales history.
+      Usage: '[player]'
+    Selling:
+      Desc: List of your current listings.
+      Usage: '[player]'
+    Unclaimed:
+      Desc: List of unclaimed rewards for your listings.
+      Usage: '[player]'
+    Argument:
+      Name:
+        Price: price
+  Listing:
+    Add:
+      Success:
+        Info: <! prefix:"false" !><gradient:#36175E>&lAUCTION</gradient:#9768D1> &8» &7You added &ax%listing_item_amount% %listing_item_name%&7 on auction for &a%listing_price%&7.
+        Announce: '&a%player_display_name% &7just put &ax%listing_item_amount% {json: ~showItem: %listing_item_value%;}&a%listing_item_name%{end-json} &7on auction for &e%listing_price%&7!'
+        Broadcast:
+        - <noprefix>
+        - ' '
+        - <lyellow><b>Auction:</b></lyellow>
+        - <lgray>Player <lyellow>%player_display_name%</lyellow> added <lyellow>x%listing_item_amount%</lyellow> <hover:show_item:'%listing_item_value%'><lyellow>%listing_item_name%</lyellow></hover> on the auction for <lyellow>%listing_price%</lyellow>.</lgray>
+        - ' '
+      Error:
+        BadItem: <! prefix:"false" !><gradient:#36175E>&lAUCTION</gradient:#9768D1> &8» &e%item% &ccan not be added on auction!
+        Limit: <! prefix:"false" !><gradient:#36175E>&lAUCTION</gradient:#9768D1> &8» &cYou can not add more than &e%amount% &cactive listings on auction!
+        Price:
+          Tax: '<! prefix:"false" !><gradient:#36175E>&lAUCTION</gradient:#9768D1> &8» &cYou can''t afford the &e%tax%% &cprice tax: &e%amount%&c!'
+          Currency:
+            Min: <! prefix:"false" !><gradient:#36175E>&lAUCTION</gradient:#9768D1> &8» &cListing price for &e%currency_name% currency&c can not be smaller than &e%amount%&c!
+            Max: <! prefix:"false" !><gradient:#36175E>&lAUCTION</gradient:#9768D1> &8» &cListing price for &e%currency_name% currency&c can not be greater than &e%amount%&c!
+          Negative: <! prefix:"false" !><gradient:#36175E>&lAUCTION</gradient:#9768D1> &8» &cListing price can not be negative!
+          Material:
+            Min: <! prefix:"false" !><gradient:#36175E>&lAUCTION</gradient:#9768D1> &8» &cListing price for &ex1 %item%&c can not be smaller than &e%amount%&c!
+            Max: <! prefix:"false" !><gradient:#36175E>&lAUCTION</gradient:#9768D1> &8» &cListing price for &ex1 %item%&c can not be greater than &e%amount%&c!
+        DisabledGamemode: <! prefix:"false" !><gradient:#36175E>&lAUCTION</gradient:#9768D1> &8» &cYou can't add items in this game mode!
+    Buy:
+      Success:
+        Info:
+        - <! type:"titles:20:60:20" sound:"ENTITY_PLAYER_LEVELUP" !>&e⋆ &7〈 &a&lSuccessfully bought! &7〉 &e⋆
+        - '&7You bought &f%listing_item_name% &7for &a%listing_seller% &8(&7x%listing_item_amount%&8)'
+      Error:
+        NotEnoughFunds:
+        - <! type:"titles:20:60:20" sound:"BLOCK_ANVIL_PLACE" !>&e⋆ &7〈 &cNot Enough Funds! &7〉 &e⋆
+        - '&7You need %listing_price%'
+  Notify:
+    Listing:
+      Unclaimed:
+      - <! prefix:"false" !>
+      - '&8&m-------------&8&l[ &e&lAuction Notification &8&l]&8&m-------------'
+      - '&7     You have &e%amount% unclaimed rewards&7 for your listings!'
+      - '&7                 {json: ~showText: &7Click to claim rewards!; ~runCommand: /ah unclaimed;}&a&lClick to Claim Now!{end-json}'
+      - '&8&m-----------------------------------------'
+      Expired:
+      - <! prefix:"false" !>
+      - '&8&m-------------&8&l[ &e&lAuction Notification &8&l]&8&m-------------'
+      - '&7     You have &e%amount% expired&7 listings!'
+      - '&7           {json: ~showText: &7Click to claim rewards!; ~runCommand: /ah expired;}&a&lClick to Take Now!{end-json}'
+      - '&8&m-----------------------------------------'
+      Claim: '&7You claimed &a%listing_price%&7 for &a%listing_item_name%&7!'
+  Error:
+    DisabledWorld: '&cAuction is disabled in this world!'
+  SortType:
+    NAME: Name
+    MATERIAL: Material
+    SELLER: Seller
+    NEWEST: Newest
+    OLDEST: Oldest
+    MOST_EXPENSIVE: Most Expensive
+    LEAST_EXPENSIVE: Least Expensive
+Days:
+  MONDAY: Monday
+  TUESDAY: Tuesday
+  WEDNESDAY: Wednesday
+  THURSDAY: Thursday
+  FRIDAY: Friday
+  SATURDAY: Saturday
+  SUNDAY: Sunday
