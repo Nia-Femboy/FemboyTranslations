@@ -1,0 +1,232 @@
+# --------------------------------------------------------------------------------------
+# Core in-game messages sent by ChatSentry can be modified here.
+
+# All lang entries support colorcodes (&[colorcode]) and hex values with "&#hexvalue" if you're running MC 1.16 or above. Easily find hex values with Google's color picker tool: https://www.google.com/search?q=color+picker
+
+# You can set ANY lang strings to "" to disable them. 
+# You can use '{PREFIX}' to insert the 'message-prefix' value any lang strings.
+# To insert line breaks, you can use '{NL}'.
+# --------------------------------------------------------------------------------------
+
+lang:
+
+  modules:
+
+    admin-notifier:
+      # For player names in block notify messages you can use:
+      # {PLAYER} - player username
+      # {PLAYER_DISPLAYNAME} - player display name with its original colors
+      # {PLAYER_DISPLAYNAME_STRIPPED} - player display name stripped of its original colors
+
+      # Below is the message sent to ops or players with the notify permission when ChatSentry blocks a message.
+      notify-msg: "&7(&b{VIOLATION_TYPE}&8 - &b{CONTEXT}&7) &c{PLAYER} &7typed: &8'&c&o{BLOCKED_CONTENT}&8' &7(Full message: &8'&c&o{ENTIRE_MESSAGE}&8'&7)"
+
+      # Under some circumstances some modules cannot display the exact content that was blocked. The message below will be used if the exact content cannot be displayed.
+      no-content-notify-msg: "&7(&b{VIOLATION_TYPE}&8 - &b{CONTEXT}&7) &c{PLAYER} &7typed: &8'&c&o{ENTIRE_MESSAGE}&8'"
+
+      # Under some circumstances some modules use custom formatted messages that doesn't apply to the usual format. The message below will be the format for the custom notifications.
+      custom-notify-msg: "&7(&b{VIOLATION_TYPE}&8 - &b{CONTEXT}&7) &7{NOTIFICATION}"
+
+      # The 3 below nodes are used instead of the above ones if network.enable is true in config.yml
+      network:
+        notify-msg: "&d{SERVER_NAME}: &7(&b{VIOLATION_TYPE}&8 - &b{CONTEXT}&7) &c{PLAYER} &7typed: &8'&c&o{BLOCKED_CONTENT}&8' &7(Full message: &8'&c&o{ENTIRE_MESSAGE}&8'&7)"
+        no-content-notify-msg: "&d{SERVER_NAME}: &7(&b{VIOLATION_TYPE}&8 - &b{CONTEXT}&7) &c{PLAYER} &7typed: &8'&c&o{ENTIRE_MESSAGE}&8'"
+        custom-notify-msg: "&d{SERVER_NAME}: &7(&b{VIOLATION_TYPE}&8 - &b{CONTEXT}&7) &7{NOTIFICATION}"
+
+      join-reminder: "{PREFIX} &bReminder: You currently have ChatSentry's violation notifications off. To turn them back on, type &d/kcs tvn"
+
+    anti-chat-flood:
+      trigger-repeated: "{PREFIX} &cAs to be mindful of others, please use less repeated letters/symbols in your messages to avoid chat flooding"
+      trigger-too-long: "{PREFIX} &cYour message was blocked because it floods chat; please refrain from sending large messages as to be mindful of others"
+
+    anti-command-prefix:
+      trigger: "{PREFIX} &7You are not permitted to use prefixed commands from that module. Your command was run without the prefix."
+
+    # Use actual new lines (- "text") instead of {NL}
+    anti-join-flood:
+      kick:
+      - "&fToo many players are trying to login right now."
+      - "&fPlease try again in a few minutes!"
+
+    # Use actual new lines (- "text") instead of {NL}
+    anti-relog-spam:
+      on-cooldown-kick:
+      - "&cYou're relogging too fast!"
+      - "&r"
+      - "&7Please wait &e{SECONDS} seconds &7before connecting again."
+      notification: "&7(&bAnti Relog Spam&7) &c{PLAYER} &7was disallowed logging in; relogged too fast (on &c{SECONDS}s &7cooldown)"
+
+    anti-parrot:
+      trigger: "{PREFIX} &cIn effort to reduce chat flooding, please don't copy others' messages"
+
+    anti-statue-spambot:
+      trigger: "{PREFIX} &cPlease move before using chat; this is to prevent spam bots!"
+
+    cap-limiter:
+      trigger: "{PREFIX} &cPlease be mindful of others in chat by using less CAPS in your messages!"
+
+    chat-cooldown:
+      trigger: "{PREFIX} &cToo speedy! Please wait a bit before chatting again"
+
+    command-spy:
+      # For player names in commandspy format you can use:
+      # {PLAYER} - player username
+      # {PLAYER_DISPLAYNAME} - player display name with its original colors
+      # {PLAYER_DISPLAYNAME_STRIPPED} - player display name stripped of its original colors
+      format: "&7{PLAYER}&8: &7&o{COMMAND}"
+
+    link-and-ad-blocker:
+      trigger: "{PREFIX} &cMessage blocked: '&4{BLOCKED_CONTENT}&c' is potentially a link or ip that is not allowed in chat"
+
+    spam-blocker:
+      trigger: "{PREFIX} &cIn effort to reduce chat flooding, please refrain from repeating the same (or similar) message again so quickly"
+      singular-message-spam-trigger: "{PREFIX} &cYour message was blocked because it was identified to contain spam-like content"
+
+    unicode-remover:
+      trigger: "{PREFIX} &cASCII lookalike unicode is strictly prohibited in chat"
+
+    word-and-phrase-filter:
+      trigger: "{PREFIX} &cYour message contained '&4{BLOCKED_CONTENT}&c' and was blocked. This kind of language/topics are unsuitable for this server; please read the &4/rules &cto ensure you follow them!"
+
+  misc:
+
+    message-prefix: " &8» "
+    no-permission: "{PREFIX} &cYou are not permitted to do that."
+
+    # Block message header & footer: sent before/after any block messages from modules.
+    block-message-header: "&8&m----------------------------------------------------"
+    block-message-footer: "&8&m----------------------------------------------------"
+
+  violation-types:
+
+    on-cooldown: "Cooldown"
+    link-or-ad-block: "Link/AD"
+    message-filter-block: "Filter"
+    spam-block: "Spam"
+    unicode-character-block: "Unicode"
+    cap-limiter-block: "Caps"
+    anti-parrot-block: "Parroting"
+    anti-chat-flood-block: "Chat Flood"
+    anti-statue-spambot-block: "Statue Spambot"
+    anti-join-flood-block: "Join Flood"
+    chat-executor-match: "Chat Executor"
+
+  contexts:
+
+    chat: "Chat"
+    command: "Command"
+    anvil: "Anvil"
+    book: "Book"
+    sign: "Sign"
+    join: "Join"
+    other: "Other"
+
+  commands:
+
+    lockdown:
+      toggled-on: "{PREFIX} &bServer lockdown is now only allowing &a{MODE} &bplayers to connect. Run /cslockdown to disable it."
+      toggled-off: "{PREFIX} &bServer lockdown &cdisabled&b: allowing &aall non-banned &bplayers to connect"
+      already-off: "{PREFIX} &bLockdown is already off. To turn it on, specify a mode after /cslockdown"
+      exempt-list: "{PREFIX} &bThe following usernames are explicitly exempt: &a{LIST}"
+      no-exempt: "{PREFIX} &bThere are no defined exempt players. To add one, use /cslockdown add <username>"
+      exemption-added: "{PREFIX} &bUsername &7'&a{USERNAME}&7' &bhas been added to the exemption list"
+      exemption-removed: "{PREFIX} &bUsername &7'&a{USERNAME}&7' &bhas been removed from the exemption list"
+      unknown-remove: "{PREFIX} &7'&a{USERNAME}&7' &bis already not exempt"
+      already-exempt: "{PREFIX} &7'&a{USERNAME}&7' &bis already exempt"
+
+    commandspy:
+      toggled-on: "{PREFIX} &bYour command spy notifications have been turned &a&lon&b."
+      toggled-off: "{PREFIX} &bYour command spy notifications have been turned &c&loff&b."
+
+    tvn:
+      toggled-on: "{PREFIX} &bYour violation notifications have been turned &a&lon&b."
+      toggled-off: "{PREFIX} &bYour violation notifications have been turned &c&loff&b."
+
+    clearchat:
+      chat-cleared: "{PREFIX} &bChat has been cleared by {PLAYER_DISPLAYNAME}&b."
+      bypass-notif: "&7&oYour chat wasn't cleared because you are exempt."
+
+    togglechat:
+      chat-toggled-on: "{PREFIX} &bChat has been &aenabled&b by {PLAYER_DISPLAYNAME}&b."
+      chat-toggled-off: "{PREFIX} &bChat has been &cdisabled&b by {PLAYER_DISPLAYNAME}&b."
+      chat-is-toggled: "&cFailed to send message: chat is currently disabled."
+
+    warnings:
+      # For player names in the below messages you can use:
+      # {PLAYER} - player username
+      # {PLAYER_DISPLAYNAME} - player display name with its original colors
+      # {PLAYER_DISPLAYNAME_STRIPPED} - player display name stripped of its original colors
+      # {CURRENT_WARNS} - current general warning count
+      # {MAX_WARNS} - maximum general warning count
+      been-warned: "{PREFIX} &cYou've received a warning from &4{PLAYER}&c. &7(&c&l{CURRENT_WARNS}&8/&4&l{MAX_WARNS}&7)"
+      warnings-were-pardoned: "{PREFIX} &bYour admin-given warnings have been cleared by &3{PLAYER}&b."
+      warning-was-pardoned: "{PREFIX} &bOne of your admin-given warnings has been pardoned by &3{PLAYER}&b. &7(&c&l{CURRENT_WARNS}&8/&4&l{MAX_WARNS}&7)"
+
+      # For player names in the below messages you can use:
+      # {WARNER} - warner player username
+      # {WARNER_DISPLAYNAME} - warner player display name with its original colors
+      # {WARNER_DISPLAYNAME_STRIPPED} - warner player display name stripped of its original colors
+      # {WARNED} - warned player username
+      # {WARNED_DISPLAYNAME} - warned player display name with its original colors
+      # {WARNED_DISPLAYNAME_STRIPPED} - warned player display name stripped of its original colors
+      # {CURRENT_WARNS} - current general warning count
+      # {MAX_WARNS} - maximum general warning count
+      warned-broadcast-message: "{PREFIX} &4{WARNED_DISPLAYNAME} &cwas warned by &4{WARNER_DISPLAYNAME}&c. &7(&c&l{CURRENT_WARNS}&8/&4&l{MAX_WARNS}&7)"
+
+      # For player names in the below messages you can use:
+      # {PLAYER} - player username
+      # {CURRENT_WARNS} - current general warning count
+      # {MAX_WARNS} - maximum general warning count
+      warned-player: "{PREFIX} &3{PLAYER} &bhas successfully been warned. &7(&c&l{CURRENT_WARNS}&8/&4&l{MAX_WARNS}&7)"
+      all-warnings-pardoned: "{PREFIX} &bSuccessfully cleared &3{PLAYER}&b's admin-given warnings."
+      pardoned-warning: "{PREFIX} &bSuccessfully pardoned one of &3{PLAYER}&b's admin-given warnings. &7(&c&l{CURRENT_WARNS}&8/&4&l{MAX_WARNS}&7)"
+
+      # For player names in the below messages you can use:
+      # {PLAYER} - player username
+      # {MODULE_NAME} - name of the module
+      cleared-module-warnings: "{PREFIX} &bSuccessfully cleared &3{PLAYER}&b's {MODULE_NAME} warnings."
+      cleared-all-warnings: "{PREFIX} &bSuccessfully cleared all &3{PLAYER}&b's warnings."
+      module-warnings-were-cleared: "{PREFIX} &bYour {MODULE_NAME} warnings have been cleared by &3{PLAYER}&b."
+
+      # For player names in the below message you can use:
+      # {PLAYER} - player username
+      all-warnings-were-cleared: "{PREFIX} &bAll your warnings have been pardoned by &3{PLAYER}&b."
+
+      # Command messages
+
+      warn:
+        usage: "{PREFIX} &cUsage: /cswarn <player>"
+        manual-warns-disabled: "{PREFIX} &cManual warnings are disabled."
+        invalid-player: "{PREFIX} &cInvalid player: '{INPUT}'. Note that the player must be online to warn them."
+        player-exempt: "{PREFIX} &c{INPUT} is exempt to warnings."
+        reached-max: "{PREFIX} &c{INPUT} has reached the maximum configured manual warnings and cannot be warned again."
+
+      warnings:
+        usage: "{PREFIX} &cUsage: /cswarnings {ARG} <player>"
+        cmw-usage: "{PREFIX} &cUsage: /cswarnings {ARG} <player> <'all' or module-name>"
+        detailed-usage: "&cInvalid command usage! Usage:"
+        pardon-note: "&7Note: Pardons only apply to warnings received via /cswarn"
+        couldnt-fetch: "{PREFIX} &cFailed to fetch UUID for '{INPUT}'. Either the account does not exist or you are being rate limited (requested too many UUIDs from Mojang too quickly)"
+        no-data: "{PREFIX} &aFound no active warnings."
+        no-modules: "{PREFIX} &cNo modules have warnings enabled in the auto punisher configuration."
+        no-warnings-found: "{PREFIX} No current warnings found for &3{INPUT}"
+        no-warnings-found-for-module: "{PREFIX} No {MODULE} warnings found for &3{INPUT}"
+        invalid-module: "{PREFIX} &cInvalid module name: '{INPUT}'. Remember to separate the name by dashes (-)."
+
+  lockdown:
+
+    # Kick message shown when only known players are allowed to join
+    only-known-allowed-message:
+    - "&6&lWe'll be back soon!"
+    - ""
+    - "&eThe server is currently only open to players who have played before"
+    - ""
+    - "&fPlease check back later, thank you for your patience!"
+
+    # Kick message shown when only exempt players are allowed to join
+    only-exempt-allowed-message:
+    - "&6&lWe'll be back soon!"
+    - ""
+    - "&eThe server is temporarily closed, please check back later"
+    - ""
+    - "&fThank you for your patience!"
