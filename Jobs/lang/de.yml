@@ -1,0 +1,92 @@
+prefix: ''
+job-info: '&f&l%name% &7(&f%level%&7) [&f%points%&7/&f%required%&7]'
+jobs-reset: '&eThere have been some jobs that have refresh.'
+cant-reset: '&cYou can''t refresh current jobs, because bungee mode is enabled.'
+jobs-sync: '&aSuccessfully synchronized all the jobs.'
+cant-sync: '&cYou can''t synchronize jobs, because bungee mode is disabled, or jobs
+  are already sync'
+admin-cmd:
+  main: '&aMain Admin Command'
+  reload: '&aPlugin reloaded'
+  could-not-find-user: '&cCould not find user with name %player%'
+  could-not-find-job: '&cCould not find job with name %job%'
+  user-data-deleted: '&aYou have successfully deleted %player%''s data.'
+  target-user-data-deleted: '&cYour job data has been wiped.'
+  gave-points: '&aSuccessfully gave points to selected user'
+  confirm: '&aYou need to confirm that action using this command once again'
+  jobs-reset: '&aJobs reset'
+  levelup: '&aSuccessfully leveled player''s job'
+
+jobs-time-format: # The time format used for saying how long until daily quests expire.
+  with-months-weeks: '%dmo %dw %dd %dh %dm %ds'
+  with-weeks-days: '%dw %dd %dh %dm %ds'
+  with-days-hours: '%dd %dh %dm %ds'
+  with-hours-minutes: '%dh %dm %ds'
+  with-minutes-seconds: '%dm %ds'
+  with-seconds: '%ds'
+
+job-join:
+  only-premium: ' &8» &cᴅᴇʀ ᴀᴜꜱɢᴇᴡÄʜʟᴛᴇ ᴊᴏʙ ɪꜱᴛ ɴᴜʀ ꜰÜʀ &f'
+  limit: ' &8» &cᴅᴜ ʜᴀꜱᴛ ᴅᴀꜱ ᴊᴏʙ ʟɪᴍɪᴛ ᴇʀʀᴇɪᴄʜᴛ ᴜɴᴅ ᴋᴀɴɴꜱᴛ ᴅᴀʜᴇʀ ʜɪᴇʀ ɴɪᴄʜᴛ ʙᴇɪᴛʀᴇᴛᴇɴ. ᴅᴇɪɴ ʟɪᴍɪᴛ: &d%limit%'
+  already-in: ' &8» &7ᴅᴜ ʙɪꜱᴛ ᴅɪᴇꜱᴇɴ ᴊᴏʙ ʙᴇʀᴇɪᴛꜱ &aʙᴇɪɢᴇᴛʀᴇᴛᴇɴ.'
+  joined: ' &8» &7ᴅᴜ ʙɪꜱᴛ ᴅᴇɴ ᴀᴜꜱɢᴇᴡÄʜʟᴛᴇɴ ᴊᴏʙ &aʙᴇɪɢᴇᴛʀᴇᴛᴇɴ'
+  points: ' &8» &cᴅᴜ ʜᴀꜱᴛ ɴɪᴄʜᴛ ɢᴇɴÜɢᴇɴᴅ ᴘᴜɴᴋᴛᴇ. &d%points% &cᴘᴜɴᴋᴛᴇ ᴜᴍ ᴅᴇɴ ᴊᴏʙ ʙᴇɪᴢᴜᴛʀᴇᴛᴇɴ!'
+  no-permission: ' &8» &cᴅᴜ ᴋᴀɴɴꜱᴛ ᴅɪᴇꜱᴇᴍ ᴊᴏʙ ɴɪᴄʜᴛ ʙᴇɪᴛʀᴇᴛᴇɴ!'
+
+job-leave:
+  already-left: ' &8» &7ᴅᴜ ʜᴀꜱᴛ ᴅɪᴇꜱᴇɴ ᴊᴏʙ ʙᴇʀᴇɪᴛꜱ &cᴠᴇʀʟᴀꜱꜱᴇɴ.'
+  left: ' &8» &7ᴅᴜ ʜᴀꜱᴛ ᴅᴇɴ ᴀᴜꜱɢᴇᴡÄʜʟᴛᴇɴ ᴊᴏʙ &cᴠᴇʀʟᴀꜱꜱᴇɴ'
+
+progress-bar:
+  complete-color: '&a'
+  incomplete-color: '&c'
+  symbol: '|'
+
+job-active:
+  active: '&aᴊᴀ'
+  not-active: '&cɴᴇɪɴ'
+
+job-action:
+  join: '&fᴋʟɪᴄᴋᴇ ᴜᴍ ᴅᴇᴍ ᴊᴏʙ &aʙᴇɪᴢᴜᴛʀᴇᴛᴇɴ'
+  leave: '&fᴋʟɪᴄᴋᴇ ᴜᴍ ᴅᴇᴍ ᴊᴏʙ ᴢᴜ &cᴠᴇʀʟᴀꜱꜱᴇɴ'
+  premium: '&cᴅɪᴇꜱᴇʀ ᴊᴏʙ ɪꜱᴛ ɴᴜʀ ꜰÜʀ &f'
+  points: '&7ᴇʀꜰᴏʀᴅᴇʀʟɪᴄʜᴇ ᴘᴜɴᴋᴛᴇ: &c%points%'
+  permission: '&cᴅᴜ ᴠᴇʀꜰÜɢꜱᴛ ɴɪᴄʜᴛ ᴅɪᴇ ᴇʀꜰᴏʀᴅᴇʀʟɪᴄʜᴇ ʙᴇʀᴇᴄʜᴛɪɢᴜɴɢ'
+
+leaderboard-command:
+  points-leaderboard:
+  - '&7&m=====&r&7[ &2Points Leaderboard &7]&m====='
+  - '&7>> &b1. &r&a%advancedjobs_top_points_name_1% &7- &2%advancedjobs_top_points_value_1%'
+  - '&7>> &b2. &r&a%advancedjobs_top_points_name_2% &7- &2%advancedjobs_top_points_value_2%'
+  - '&7>> &b3. &r&a%advancedjobs_top_points_name_3% &7- &2%advancedjobs_top_points_value_3%'
+  - '&7>> &b4. &r&a%advancedjobs_top_points_name_4% &7- &2%advancedjobs_top_points_value_4%'
+  - '&7>> &b5. &r&a%advancedjobs_top_points_name_5% &7- &2%advancedjobs_top_points_value_5%'
+  - '&7>> ...'
+  - '&7>> &aYour score: &2%advancedjobs_top_points_value_me% &7(&2&b%advancedjobs_top_points_place_me%&r&7)'
+  levels-leaderboard:
+  - '&7&m=====&r&7[ &2Level Leaderboard in %job_name% &7]&m====='
+  - '&7>> &b1. &r&a%advancedjobs_top_level_name_1_%job%% &7- &2%advancedjobs_top_level_value_1_%job%%'
+  - '&7>> &b2. &r&a%advancedjobs_top_level_name_2_%job%% &7- &2%advancedjobs_top_level_value_2_%job%%'
+  - '&7>> &b3. &r&a%advancedjobs_top_level_name_3_%job%% &7- &2%advancedjobs_top_level_value_3_%job%%'
+  - '&7>> &b4. &r&a%advancedjobs_top_level_name_4_%job%% &7- &2%advancedjobs_top_level_value_4_%job%%'
+  - '&7>> &b5. &r&a%advancedjobs_top_level_name_5_%job%% &7- &2%advancedjobs_top_level_value_5_%job%%'
+  - '&7>> ...'
+  - '&7>> &aYour score: &2%advancedjobs_top_level_value_me_%job%% &7(&2&b%advancedjobs_top_level_place_me_%job%%&r&7)'
+
+quests:
+  # The base message will be used for all quests unless another message is set.
+  base-message-progressed: ' &8» &7ᴅᴜ ʙɪꜱᴛ ɪᴍ ᴊᴏʙ ꜰᴏʀᴛɢᴇꜱᴄʜʀɪᴛᴛᴇɴ &f%job_name% &7( &d%progress%&7 / &5%required_progress%&7 )'
+  base-message-completed: ' &8» &7ᴅᴜ ʜᴀꜱᴛ ᴅᴇɴ ᴊᴏʙ &d%job_name% &7ᴀʙɢᴇꜱᴄʜʟᴏꜱꜱᴇɴ!'
+  
+  boss-bar-message-progressed: '&7ᴅᴜ ʙɪꜱᴛ ɪᴍ ᴊᴏʙ ꜰᴏʀᴛɢᴇꜱᴄʜʀɪᴛᴛᴇɴ &f%job_name% &7( &d%progress%&7 / &5%required_progress%&7 )'
+  boss-bar-message-completed: '&7ᴅᴜ ʜᴀꜱᴛ ᴅᴇɴ ᴊᴏʙ &d%job_name% &7ᴀʙɢᴇꜱᴄʜʟᴏꜱꜱᴇɴ!'
+  
+  # The message set below will overwrite the one set as the base message.
+  # <quest name>-progressed: "<Your  message>"
+  # <quest-name>-completed: "<Your Message>"
+  # These are here as examples, and you can make as many as necessary.
+  askyblock_createisland-progressed: '&eQuests >> &7Custom ASkyblock progression message
+    :D. &8(&e%progress%&7/&8%required_progress%&8)'
+  askyblock_createisland-completed: '&eQuests >> &7You completed the ASkyblock island
+    quest!'
+last-config-update: 1.3.4
