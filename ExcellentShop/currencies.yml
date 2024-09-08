@@ -1,0 +1,107 @@
+Custom_Item:
+  game_points:
+    Name: Points
+    Format: '&c%price% &4Points'
+    Icon:
+      Material: AMETHYST_SHARD
+      Name: '&fPoints'
+    Item:
+      Material: AIR
+    Enabled: true
+  exp:
+    Name: Experience
+    Format: '&d%price% &5experiences'
+    Icon:
+      Material: EXPERIENCE_BOTTLE
+      Name: '&fExperience'
+    Item:
+      Material: AIR
+    Enabled: true
+  vault:
+    Name: Money
+    Format: '&2$&f%price%'
+    Icon:
+      Material: SUNFLOWER
+      Name: '&fMoney'
+    Item:
+      Material: AIR
+    Enabled: true
+  player_points:
+    Name: Points
+    Format: '&c%price% &4Points'
+    Icon:
+      Material: AMETHYST_SHARD
+      Name: '&fPoints'
+    Item:
+      Material: AIR
+    Enabled: true
+  elitemobs:
+    Name: Points
+    Format: '&c%price% &4Points'
+    Icon:
+      Material: AMETHYST_SHARD
+      Name: '&fPoints'
+    Item:
+      Material: AIR
+    Enabled: true
+  gold:
+    Name: Gold
+    Format: '&ex%price% gold'
+    Icon:
+      Material: GOLD_INGOT
+    Item:
+      Material: GOLD_INGOT
+    Enabled: true
+  coal:
+    Name: Coal
+    Format: '&8x%price% coal'
+    Icon:
+      Material: COAL
+    Item:
+      Material: COAL
+    Enabled: true
+  netherite:
+    Name: NETHERITE
+    Format: '&4x%price% netherite'
+    Icon:
+      Material: NETHERITE_INGOT
+    Item:
+      Material: NETHERITE_INGOT
+    Enabled: true
+  iron:
+    Name: Iron
+    Format: '&7x%price% iron'
+    Icon:
+      Material: IRON_INGOT
+    Item:
+      Material: IRON_INGOT
+    Enabled: true
+  redstone:
+    Name: Redstone
+    Format: '&cx%price% redstone'
+    Icon:
+      Material: REDSTONE
+    Item:
+      Material: REDSTONE
+    Enabled: true
+  diamond:
+    Name: Diamond
+    Format: '&bx%price% diamond'
+    Icon:
+      Material: DIAMOND
+    Item:
+      Material: DIAMOND
+    Enabled: true
+Currencies:
+  exp:
+    Enabled: true
+    Name: XP
+    Format: '%price% %name%'
+    Icon:
+      Material: EXPERIENCE_BOTTLE
+  vault:
+    Enabled: true
+    Name: Money
+    Format: $%price%
+    Icon:
+      Material: GOLD_NUGGET
