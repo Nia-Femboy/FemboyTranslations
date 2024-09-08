@@ -1,0 +1,77 @@
+Title: <gradient:#36175E>&lCHESTSHOP</gradient:#9768D1> &8| &7Shop Bank
+Size: 27
+Inventory_Type: CHEST
+Use_Mini_Message: false
+
+Currency:
+  Slots: 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17
+  Name: ' &7› &7Currency: &f%currency_name%'
+  Lore:
+  - '#515251&m                                           '
+  - '#62f752Details:'
+  - ' &8▪ #ddeceeBank Balance: #ee9aff%bank_balance%'
+  - ' &8▪ #ddeceeYour Balance: #ee9aff%player_balance%'
+  - ''
+  - '#62f752Actions:'
+  - ' &8▪ #ddeceeLeft-Click: #ee9affDeposit'
+  - ' &8▪ #ddeceeRight-Click: #ee9affWithdraw'
+  - ' &8▪ #ddecee[Q/Drop] Key: #ee9affDeposit All'
+  - ' &8▪ #ddecee[F/Swap] Key: #ee9affWithdraw All'
+  - '#515251&m                                           '
+# ==================== GUI CONTENT ====================
+# You can freely edit items in this section as you wish (add, remove, modify items).
+# The following values are available as button Types:
+# CLOSE
+# PAGE_NEXT
+# PAGE_PREVIOUS
+# RETURN
+# ==================== ITEM OPTIONS ====================
+# > Item: Item to display. Please check: https://github.com/nulli0n/nightcore-spigot/wiki/ItemStack-Options
+# > Priority: Button priority. Better values will override other item(s) in the same slot(s).
+# > Slots: Button slots. From [0] to [Size - 1]. Split with commas.
+# > Click_Commands: Execute custom commands on click. PlaceholderAPI available here.
+#     Available click types: LEFT, RIGHT, SHIFT_LEFT, SHIFT_RIGHT, DROP_KEY, SWAP_KEY, NUMBER_1, NUMBER_2, NUMBER_3, NUMBER_4, NUMBER_5, NUMBER_6, NUMBER_7, NUMBER_8, NUMBER_9
+#     Use prefix 'player:' to run command by a player.
+#     Click_Commands:
+#       LEFT:
+#       - say Hello
+#       - give %player_name% diamond 1
+#       - player: menu open shops
+# ==================================================
+Content:
+  return:
+    Priority: 5
+    Slots: 22
+    Type: RETURN
+    Item:
+      Material: RED_DYE
+      Name: '&f↳ &cRetrun &f↲'
+  
+  page_next:
+    Priority: 5
+    Slots: 23
+    Type: PAGE_NEXT
+    Item:
+      Material: PLAYER_HEAD
+      Name: '&fNext page &e→'
+      SkinURL: f726d288a74e8ac924c58c93f5b35cacd6946a6ccfdbda85fe8acb9e3eecebdb
+  
+  page_previous:
+    Priority: 5
+    Slots: 21
+    Type: PAGE_PREVIOUS
+    Item:
+      Material: PLAYER_HEAD
+      Name: '&e← &fPrevious page'
+      SkinURL: 2eff7559102aa8ff9712976b62292ee45e0793c46f668916868207f399effab
+Settings:
+  # GUI title.
+  Title: <black>Shop Bank</black>
+  # GUI size. Must be multiply of 9.
+  # Useful for 'CHEST' Inventory Type only.
+  Size: 18
+  # GUI type.
+  # https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/event/inventory/InventoryType.html
+  Inventory_Type: CHEST
+  # Sets GUI auto-refresh interval (in seconds). Set this to 0 to disable.
+  Auto_Refresh: 0

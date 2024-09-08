@@ -1,0 +1,79 @@
+Settings:
+  # GUI title.
+  Title: <black>Display Settings</black>
+  # GUI size. Must be multiply of 9.
+  # Useful for 'CHEST' Inventory Type only.
+  Size: 36
+  # GUI type.
+  # https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/event/inventory/InventoryType.html
+  Inventory_Type: CHEST
+  # Sets GUI auto-refresh interval (in seconds). Set this to 0 to disable.
+  Auto_Refresh: 0
+# ==================== GUI CONTENT ====================
+# You can freely edit items in this section as you wish (add, remove, modify items).
+# The following values are available as button Types:
+# CLOSE
+# HOLOGRAM_TOGGLE
+# RETURN
+# SHOWCASE_CHANGE
+# SHOWCASE_TOGGLE
+# ==================== ITEM OPTIONS ====================
+# > Item: Item to display. Please check: https://github.com/nulli0n/nightcore-spigot/wiki/ItemStack-Options
+# > Priority: Button priority. Better values will override other item(s) in the same slot(s).
+# > Slots: Button slots. From [0] to [Size - 1]. Split with commas.
+# > Click_Commands: Execute custom commands on click. PlaceholderAPI available here.
+#     Available click types: LEFT, RIGHT, SHIFT_LEFT, SHIFT_RIGHT, DROP_KEY, SWAP_KEY, NUMBER_1, NUMBER_2, NUMBER_3, NUMBER_4, NUMBER_5, NUMBER_6, NUMBER_7, NUMBER_8, NUMBER_9
+#     Use prefix 'player:' to run command by a player.
+#     Click_Commands:
+#       LEFT:
+#       - say Hello
+#       - give %player_name% diamond 1
+#       - player: menu open shops
+# ==================================================
+Content:
+  return:
+    Priority: 10
+    Item:
+      Material: PLAYER_HEAD
+      SkinURL: be9ae7a4be65fcbaee65181389a2f7d47e2e326db59ea3eb789a92c85ea46
+      Name: <lgray><b>Return</b></lgray>
+    Slots: '31'
+    Type: return
+  toggle_hologram:
+    Priority: 10
+    Item:
+      Material: ARMOR_STAND
+      Name: <lyellow><b>Toggle Hologram</b></lyellow>
+      Lore:
+      - '<lyellow>▪ <lgray>Enabled: </lgray>%shop_hologram_enabled%</lyellow>'
+      - ''
+      - <lgray>Enables holographic text above shop.</lgray>
+      - ''
+      - <lyellow>[▶]</lyellow><lgray> Click to <lyellow>toggle</lyellow>.</lgray>
+    Slots: '11'
+    Type: hologram_toggle
+  toggle_showcase:
+    Priority: 10
+    Item:
+      Material: BEACON
+      Name: <lyellow><b>Toggle Showcase</b></lyellow>
+      Lore:
+      - '<lyellow>▪ <lgray>Enabled: </lgray>%shop_showcase_enabled%</lyellow>'
+      - ''
+      - <lgray>Enables product showcase.</lgray>
+      - ''
+      - <lyellow>[▶]</lyellow><lgray> Click to <lyellow>toggle</lyellow>.</lgray>
+    Slots: '13'
+    Type: showcase_toggle
+  showcase_model:
+    Priority: 10
+    Item:
+      Material: WHITE_STAINED_GLASS
+      Name: <lyellow><b>Showcase Model</b></lyellow>
+      Lore:
+      - <lgray>Select a showcase for your shop!</lgray>
+      - ''
+      - <lyellow>[▶]</lyellow><lgray> Left-Click to <lyellow>navigate</lyellow>.</lgray>
+      - <lyellow>[▶]</lyellow><lgray> Right-Click to <lyellow>reset</lyellow>.</lgray>
+    Slots: '15'
+    Type: showcase_change

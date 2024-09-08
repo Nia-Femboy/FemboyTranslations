@@ -1,0 +1,79 @@
+Title: <gradient:#36175E>&lCHESTSHOP</gradient:#9768D1> &8| &7Shop Products
+Size: 27
+Inventory_Type: CHEST
+Use_Mini_Message: false
+
+Products:
+  Slots: 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17
+  Free:
+    Material: GREEN_TERRACOTTA
+    Name: ' &7› &aFree Slot'
+    Lore:
+    - '#515251&m                                           '
+    - ' &f&l✶ &aDrag & drop item here to add'
+    - '     &ait to your shop.'
+    - '#515251&m                                           '
+  Locked:
+    Material: RED_TERRACOTTA
+    Name: ' &7› &cLocked Slot'
+    Lore:
+    - '#515251&m                                           '
+    - ' &f&l✶ &aPurchase ranks at our store'
+    - '     &ato unlock more perks and slots!'
+    - ''
+    - ' &f> &ahttp://store.mycraft.com/'
+    - '#515251&m                                           '
+  Product:
+    Name: ' &7› &f%product_preview_name%'
+    Lore:
+    - '%product_preview_lore%'
+    - '#515251&m                                           '
+    - ''
+    - '#62f752Details:'
+    - ' &8▪ #ddeceeCurrency: #ee9aff%product_currency%'
+    - ' &8▪ #ddeceePrice Type: #ee9aff%product_price_type%'
+    - ' &8▪ #ddeceeBuy Price: #ee9aff%product_price_buy_formatted%'
+    - ' &8▪ #ddeceeSell Price: #ee9aff%product_price_sell_formatted%'
+    - ''
+    - '#62f752Actions:'
+    - ' &8▪ #ddeceeLeft-Click: #ee9affChange Currency'
+    - ' &8▪ #ddeceeRight-Click: #ee9affChange Price'
+    - ' &8▪ #ddeceeShift-Right: #ee9affDelete'
+    - '#515251&m                                           '
+# ==================== GUI CONTENT ====================
+# You can freely edit items in this section as you wish (add, remove, modify items).
+# The following values are available as button Types:
+# CLOSE
+# RETURN
+# ==================== ITEM OPTIONS ====================
+# > Item: Item to display. Please check: https://github.com/nulli0n/nightcore-spigot/wiki/ItemStack-Options
+# > Priority: Button priority. Better values will override other item(s) in the same slot(s).
+# > Slots: Button slots. From [0] to [Size - 1]. Split with commas.
+# > Click_Commands: Execute custom commands on click. PlaceholderAPI available here.
+#     Available click types: LEFT, RIGHT, SHIFT_LEFT, SHIFT_RIGHT, DROP_KEY, SWAP_KEY, NUMBER_1, NUMBER_2, NUMBER_3, NUMBER_4, NUMBER_5, NUMBER_6, NUMBER_7, NUMBER_8, NUMBER_9
+#     Use prefix 'player:' to run command by a player.
+#     Click_Commands:
+#       LEFT:
+#       - say Hello
+#       - give %player_name% diamond 1
+#       - player: menu open shops
+# ==================================================
+Content:
+  return:
+    Priority: 5
+    Slots: 22
+    Type: RETURN
+    Item:
+      Material: RED_DYE
+      Name: '&f↳ &cRetrun &f↲'
+Settings:
+  # GUI title.
+  Title: <black>Shop Products</black>
+  # GUI size. Must be multiply of 9.
+  # Useful for 'CHEST' Inventory Type only.
+  Size: 18
+  # GUI type.
+  # https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/event/inventory/InventoryType.html
+  Inventory_Type: CHEST
+  # Sets GUI auto-refresh interval (in seconds). Set this to 0 to disable.
+  Auto_Refresh: 0

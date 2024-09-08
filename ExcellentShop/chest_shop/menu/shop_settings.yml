@@ -1,0 +1,163 @@
+Title: <gradient:#36175E>&lCHESTSHOP</gradient:#9768D1> &8| &7Shop Settings
+Size: 45
+Inventory_Type: CHEST
+Use_Mini_Message: false
+# ==================== GUI CONTENT ====================
+# You can freely edit items in this section as you wish (add, remove, modify items).
+# The following values are available as button Types:
+# CLOSE
+# SHOP_BANK
+# SHOP_CHANGE_NAME
+# SHOP_CHANGE_PRODUCTS
+# SHOP_CHANGE_TRANSACTIONS
+# SHOP_CHANGE_TYPE
+# SHOP_DELETE
+# SHOP_DISPLAY
+# SHOP_STORAGE
+# ==================== ITEM OPTIONS ====================
+# > Item: Item to display. Please check: https://github.com/nulli0n/nightcore-spigot/wiki/ItemStack-Options
+# > Priority: Button priority. Better values will override other item(s) in the same slot(s).
+# > Slots: Button slots. From [0] to [Size - 1]. Split with commas.
+# > Click_Commands: Execute custom commands on click. PlaceholderAPI available here.
+#     Available click types: LEFT, RIGHT, SHIFT_LEFT, SHIFT_RIGHT, DROP_KEY, SWAP_KEY, NUMBER_1, NUMBER_2, NUMBER_3, NUMBER_4, NUMBER_5, NUMBER_6, NUMBER_7, NUMBER_8, NUMBER_9
+#     Use prefix 'player:' to run command by a player.
+#     Click_Commands:
+#       LEFT:
+#       - say Hello
+#       - give %player_name% diamond 1
+#       - player: menu open shops
+# ==================================================
+Content:
+  return:
+    Priority: 5
+    Slots: 0,1,2,3,4,5,6,7,8,36,37,38,39,41,42,43,44
+    Item:
+      Material: MAGENTA_STAINED_GLASS_PANE
+      Name: '&r'
+  SHOP_CHANGE_NAME:
+    Item:
+      Material: PLAYER_HEAD
+      Name: ' &f› &c&lShop Name'
+      Lore:
+      - '#515251&m                                                    '
+      - ' &8▪ #ddeceeCurrent: #ee9aff%shop_name%'
+      - ''
+      - ' &f&l✶ &aShop name to be displayed in'
+      - '     &aGUI and showcase.'
+      - ''
+      - '#62f752Actions:'
+      - ' &8▪ #ddeceeLeft-Click: #ee9affChange'
+      - '#515251&m                                                    '
+      SkinURL: f5a19af0e61ca42532c0599fa0a391753df6b71f9fa4a177f1aa9b1d81fe6ee2
+    Type: SHOP_CHANGE_NAME
+    Slots: 20
+    Priority: 5
+  
+  SHOP_CHANGE_TYPE:
+    Item:
+      Material: PLAYER_HEAD
+      Name: ' &f› &c&lShop Type'
+      Lore:
+      - '#515251&m                                                    '
+      - ' &8▪ #ddeceeCurrent: #ee9aff%shop_type%'
+      - ''
+      - ' &f&l✶ &aSetting shop as admin shop will'
+      - '     &amake it to have unlimited funds and items.'
+      - ''
+      - '#ff9a9a[!]#ddecee Make sure you have #ff9a9apermission#ddecee to use it.'
+      - ''
+      - '#62f752Actions:'
+      - ' &8▪ #ddeceeLeft-Click: #ee9affToggle'
+      - '#515251&m                                                    '
+      SkinURL: bda911437b4ecfaa3c1894162217c01b68a55c89bb2f4d4927345ce5c794
+    Type: SHOP_CHANGE_TYPE
+    Slots: 21
+    Priority: 5
+  
+  SHOP_CHANGE_TRANSACTIONS:
+    Item:
+      Material: PLAYER_HEAD
+      Name: ' &f› &c&lTrade Mode'
+      Lore:
+      - '#515251&m                                                    '
+      - '#ee9aff▪ #ddeceeBuying: #ee9aff%shop_buy_allowed%'
+      - '#ee9aff▪ #ddeceeSelling: #ee9aff%shop_sell_allowed%'
+      - ''
+      - ' &f&l✶ &aEnable/disable certain operations in the shop.'
+      - ''
+      - '#62f752Actions:'
+      - ' &8▪ #ddeceeLeft-Click: #ee9affToggle Buying'
+      - ' &8▪ #ddeceeRight-Click: #ee9affToggle Selling'
+      - '#515251&m                                                    '
+      SkinURL: 1839848553cabed977e8d5cc976d44cba2eaaefe1da446187e852edee16b870e
+    Type: SHOP_CHANGE_TRANSACTIONS
+    Slots: 22
+    Priority: 5
+  
+  SHOP_CHANGE_PRODUCTS:
+    Item:
+      Material: PLAYER_HEAD
+      Name: ' &f› &c&lShop Products'
+      Lore:
+      - '#515251&m                                                    '
+      - ' &f&l✶ &aHere you can #ee9affcreate#ddecee and #ee9affmanage'
+      - '     &aproducts of your shop.'
+      - ''
+      - '#62f752Actions:'
+      - ' &8▪ #ddeceeLeft-Click: #ee9affOpen'
+      - '#515251&m                                                    '
+      SkinURL: 900d28ff7b543dd088d004b1b1f95b38d444ea0461ff5ae3c68d76c0c16e2527
+    Type: SHOP_CHANGE_PRODUCTS
+    Slots: 23
+    Priority: 5
+  
+  SHOP_BANK:
+    Item:
+      Material: PLAYER_HEAD
+      Name: ' &f› &c&lShop Bank'
+      Lore:
+      - '#515251&m                                                    '
+      - ' &8▪ #ddeceeBalance: #ee9aff%shop_bank_balance%'
+      - ''
+      - ' &f&l✶ &aBank is used to store funds of your shop.'
+      - '     &aShop will again funds from sales,'
+      - '     &aand spend them for purchases.'
+      - ''
+      - '#62f752Actions:'
+      - ' &8▪ #ddeceeLeft-Click: #ee9affOpen'
+      - '#515251&m                                                    '
+      SkinURL: b889cfcbacbe598e8a1cd8610b49fcb62644e8cba9d4911d121134506d8ea1b7
+    Type: SHOP_BANK
+    Slots: 24
+    Priority: 5
+  
+  SHOP_DELETE:
+    Item:
+      Material: PLAYER_HEAD
+      Name: ' &f› &c&lDelete Shop'
+      Lore:
+      - '#515251&m                                                    '
+      - ' &f&l✶ &aPermanently deletes the shop.'
+      - ''
+      - '#ff9a9a&lNOTE:'
+      - '#ddeceeYou have to remove all items'
+      - '#ddeceefrom the container first.'
+      - ''
+      - '#9af7ff&lActions:'
+      - ' &8▪ #ddeceeShift-Right: #ee9affDelete'
+      - '#515251&m                                                    '
+      SkinURL: b465f80bf02b408885987b00957ca5e9eb874c3fa88305099597a333a336ee15
+    Type: SHOP_DELETE
+    Slots: 40
+    Priority: 5
+Settings:
+  # GUI title.
+  Title: <black>%shop_name%</black>
+  # GUI size. Must be multiply of 9.
+  # Useful for 'CHEST' Inventory Type only.
+  Size: 9
+  # GUI type.
+  # https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/event/inventory/InventoryType.html
+  Inventory_Type: CHEST
+  # Sets GUI auto-refresh interval (in seconds). Set this to 0 to disable.
+  Auto_Refresh: 0

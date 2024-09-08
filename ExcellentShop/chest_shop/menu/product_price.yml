@@ -1,0 +1,245 @@
+Title: <gradient:#36175E>&lCHESTSHOP</gradient:#9768D1> &8| &7Price Settings
+Size: 27
+Inventory_Type: CHEST
+Use_Mini_Message: false
+
+Format:
+  Lore:
+    Price:
+      BUY:
+        FLAT:
+        - '#515251&m                                                    '
+        - ' &8▪ #ddeceeCurrent: #ee9aff%product_price_buy%'
+        - ''
+        - ' &f&l✶ #ddeceePrice for players to #fffc9apurchase#ddecee this item.'
+        - ''
+        - '#62f752Actions:'
+        - ' &8▪ #ddeceeLeft-Click: #ee9affChange'
+        - '#ff9a9a▪ #ddeceeRight-Click: #ff9a9aDisable'
+        - '#515251&m                                                    '
+        FLOAT:
+        - '#515251&m                                                    '
+        - '#fffc9a▪ #ddeceeMinimal: #fffc9a%product_pricer_buy_min%'
+        - '#fffc9a▪ #ddeceeMaximal: #fffc9a%product_pricer_buy_max%'
+        - ''
+        - ' &f&l✶ #ddeceeRange of values to generate'
+        - '    #ddeceepurchase price from.'
+        - ''
+        - '#62f752Actions:'
+        - ' &8▪ #ddeceeLeft-Click: #ee9affChange Min'
+        - ' &8▪ #ddeceeRight-Click: #ee9affChange Max'
+        - '#515251&m                                                    '
+        DYNAMIC:
+        - '#515251&m                                                    '
+        - '#fffc9a▪ #ddeceeMinimal: #fffc9a%product_pricer_buy_min%'
+        - '#fffc9a▪ #ddeceeMaximal: #fffc9a%product_pricer_buy_max%'
+        - ''
+        - ' &f&l✶ #ddeceeRange of values to limit'
+        - '    #ddeceemin. and max. purchase price.'
+        - '    #ddecee(it will never exceed these values)'
+        - ''
+        - '#62f752Actions:'
+        - ' &8▪ #ddeceeLeft-Click: #ee9affChange Min'
+        - ' &8▪ #ddeceeRight-Click: #ee9affChange Max'
+        - '#515251&m                                                    '
+      SELL:
+        FLAT:
+        - '#515251&m                                                    '
+        - ' &8▪ #ddeceeCurrent: #ee9aff%product_price_sell%'
+        - ''
+        - ' &f&l✶ #ddeceePrice for players to #fffc9asell#ddecee this item.'
+        - ''
+        - '#62f752Actions:'
+        - ' &8▪ #ddeceeLeft-Click: #ee9affChange'
+        - '#ff9a9a▪ #ddeceeRight-Click: #ff9a9aDisable'
+        - '#515251&m                                                    '
+        FLOAT:
+        - '#515251&m                                                    '
+        - '#fffc9a▪ #ddeceeMinimal: #fffc9a%product_pricer_sell_min%'
+        - '#fffc9a▪ #ddeceeMaximal: #fffc9a%product_pricer_sell_max%'
+        - ''
+        - ' &f&l✶ #ddeceeRange of values to generate'
+        - '    #ddeceesell price from.'
+        - ''
+        - '#62f752Actions:'
+        - ' &8▪ #ddeceeLeft-Click: #ee9affChange Min'
+        - ' &8▪ #ddeceeRight-Click: #ee9affChange Max'
+        - '#515251&m                                                    '
+        DYNAMIC:
+        - '#515251&m                                                    '
+        - '#fffc9a▪ #ddeceeMinimal: #fffc9a%product_pricer_sell_min%'
+        - '#fffc9a▪ #ddeceeMaximal: #fffc9a%product_pricer_sell_max%'
+        - ''
+        - ' &f&l✶ #ddeceeRange of values to limit'
+        - '    #ddeceemin. and max. sell price.'
+        - '    #ddecee(it will never exceed these values)'
+        - ''
+        - '#62f752Actions:'
+        - ' &8▪ #ddeceeLeft-Click: #ee9affChange Min'
+        - ' &8▪ #ddeceeRight-Click: #ee9affChange Max'
+        - '#515251&m                                                    '
+# ==================== GUI CONTENT ====================
+# You can freely edit items in this section as you wish (add, remove, modify items).
+# The following values are available as button Types:
+# CLOSE
+# PRODUCT_CHANGE_CURRENCY
+# PRODUCT_CHANGE_PRICE_BUY
+# PRODUCT_CHANGE_PRICE_INITIAL
+# PRODUCT_CHANGE_PRICE_PLAYER_ADJUST
+# PRODUCT_CHANGE_PRICE_PLAYER_INITIAL
+# PRODUCT_CHANGE_PRICE_PLAYER_STEP
+# PRODUCT_CHANGE_PRICE_REFRESH
+# PRODUCT_CHANGE_PRICE_SELL
+# PRODUCT_CHANGE_PRICE_STEP
+# PRODUCT_CHANGE_PRICE_TYPE
+# RETURN
+# ==================== ITEM OPTIONS ====================
+# > Item: Item to display. Please check: https://github.com/nulli0n/nightcore-spigot/wiki/ItemStack-Options
+# > Priority: Button priority. Better values will override other item(s) in the same slot(s).
+# > Slots: Button slots. From [0] to [Size - 1]. Split with commas.
+# > Click_Commands: Execute custom commands on click. PlaceholderAPI available here.
+#     Available click types: LEFT, RIGHT, SHIFT_LEFT, SHIFT_RIGHT, DROP_KEY, SWAP_KEY, NUMBER_1, NUMBER_2, NUMBER_3, NUMBER_4, NUMBER_5, NUMBER_6, NUMBER_7, NUMBER_8, NUMBER_9
+#     Use prefix 'player:' to run command by a player.
+#     Click_Commands:
+#       LEFT:
+#       - say Hello
+#       - give %player_name% diamond 1
+#       - player: menu open shops
+# ==================================================
+Content:
+  return:
+    Priority: 5
+    Slots: 22
+    Type: RETURN
+    Item:
+      Material: RED_DYE
+      Name: '&f↳ &cRetrun &f↲'
+  
+  PRODUCT_CHANGE_PRICE_TYPE:
+    Priority: 5
+    Slots: 4
+    Type: PRODUCT_CHANGE_PRICE_TYPE
+    Item:
+      Material: PLAYER_HEAD
+      Name: ' &f› &c&lPrice Type'
+      Lore:
+      - '#515251&m                                                    '
+      - ' &8▪ #ddeceeCurrent: #fffc9a%product_price_type%'
+      - ''
+      - ' &f&l✶ #ddeceeDepends on a price type, this menu'
+      - '    #ddeceewill have different settings.'
+      - ''
+      - '#ff9a9a[!]#ddecee Previous settings will be #ff9a9alost#ddecee!'
+      - '#ff9a9a[!]#ddecee Make sure you have #ff9a9apermission#ddecee to do that.'
+      - ''
+      - '#ee9aff&lActions:'
+      - ' &8▪ #ddeceeLeft-Click: #ee9affToggle'
+      - '#515251&m                                                    '
+      SkinURL: 6b9299b724c5d34ac93ede75601dfeb0bda578d70b8f4d7f82d7676f0c6c114a
+  
+  PRODUCT_CHANGE_PRICE_BUY:
+    Priority: 5
+    Slots: 10
+    Type: PRODUCT_CHANGE_PRICE_BUY
+    Item:
+      Material: PLAYER_HEAD
+      Name: ' &f› &c&lBuy Price'
+      Lore:
+      - '%price_buy%'
+      SkinURL: bf6b85f626444dbd5bddf7a521fe52748fe43564e03fbd35b6b5e797de942d
+  
+  PRODUCT_CHANGE_PRICE_SELL:
+    Priority: 5
+    Slots: 11
+    Type: PRODUCT_CHANGE_PRICE_SELL
+    Item:
+      Material: PLAYER_HEAD
+      Name: ' &f› &c&lSell Price'
+      Lore:
+      - '%price_sell%'
+      SkinURL: a9dbed522e8de1a681dddd37854ee4267efc48b59917f9a9acb420d6fdb9
+  
+  PRODUCT_CHANGE_PRICE_FLOAT_REFRESH:
+    Priority: 5
+    Slots: 15
+    Type: PRODUCT_CHANGE_PRICE_REFRESH
+    Item:
+      Material: PLAYER_HEAD
+      Name: ' &f› &c&lRefresh Settings'
+      Lore:
+      - '#515251&m                                                    '
+      - '#fffc9a▪ #ddeceeDays: #fffc9a%product_pricer_float_refresh_days%'
+      - '#fffc9a▪ #ddeceeTimes:'
+      - '#fffc9a%product_pricer_float_refresh_times%'
+      - ''
+      - ' &f&l✶ #ddeceeSets, when the product price'
+      - '    #ddeceewill be refreshed. Until that, the'
+      - '    #ddeceeprevious generated price will be used.'
+      - ''
+      - '#ff9a9a&lNOTE:'
+      - ' &f&l✶ #ddeceeYou have to provide at least #ff9a9aONE'
+      - '    #ddeceeday and time for the'
+      - '    #ddeceefloat price feature to work.'
+      - ''
+      - '#ee9aff&lActions:'
+      - ' &8▪ #ddeceeLeft-Click: #ee9affAdd Day'
+      - ' &8▪ #ddeceeShift-Left: #ee9affClear Days'
+      - ' &8▪ #ddeceeRight-Click: #ee9affAdd Time'
+      - ' &8▪ #ddeceeShift-Right: #ee9affClear Times'
+      - '#515251&m                                                    '
+      SkinURL: d2d99342be67156cef48b50a97192989222d569b446092899cc23347542e71aa
+  
+  PRODUCT_CHANGE_PRICE_DYNAMIC_INITIAL:
+    Priority: 5
+    Slots: 15
+    Type: PRODUCT_CHANGE_PRICE_INITIAL
+    Item:
+      Material: PLAYER_HEAD
+      Name: ' &f› &c&lInitial Price'
+      Lore:
+      - '#515251&m                                                    '
+      - ' &f&l✶ <gradient:#36175E>PURCHASE PRICE:</gradient:#9768D1> %product_pricer_dynamic_initial_buy%'
+      - ' &f&l✶ <gradient:#36175E>SELLING PRICE:</gradient:#9768D1> %product_pricer_dynamic_initial_sell%'
+      - ''
+      - ' &f&l✶ #ddeceeSets initial price for the product.'
+      - '    #ddeceeThese values will be used as #fffc9adefault'
+      - '    #ddeceeones, and to calculate #fffc9afurther#ddecee price.'
+      - ''
+      - '#ee9aff&lActions:'
+      - ' &8▪ #ddeceeLeft-Click: #ee9affChange Buy'
+      - ' &8▪ #ddeceeRight-Click: #ee9affChange Sell'
+      - '#515251&m                                                    '
+      SkinURL: 824f769c9450f22e484e089ca02e324fe37b18f4c18ef296021871ba4ad0c396
+  
+  PRODUCT_CHANGE_PRICE_DYNAMIC_STEP:
+    Priority: 5
+    Slots: 16
+    Type: PRODUCT_CHANGE_PRICE_STEP
+    Item:
+      Material: PLAYER_HEAD
+      Name: ' &f› &c&lPrice Step'
+      Lore:
+      - '#515251&m                                                    '
+      - ' &f&l✶ <gradient:#36175E>PURCHASE PRICE:</gradient:#9768D1> %product_pricer_dynamic_step_buy%'
+      - ' &f&l✶ <gradient:#36175E>SELLING PRICE:</gradient:#9768D1> %product_pricer_dynamic_step_sell%'
+      - ''
+      - ' &f&l✶ #ddeceePrice will be #a5ff9aincreased#ddecee by #a5ff9a%product_pricer_dynamic_step_buy%#ddecee on each'
+      - '     #ddeceepurchase and #ff9a9adecreased#ddecee by #ff9a9a%product_pricer_dynamic_step_sell%'
+      - '     #ddeceeon each sale.'
+      - ''
+      - '#ee9aff&lActions:'
+      - ' &8▪ #ddeceeLeft-Click: #ee9affChange Buy'
+      - ' &8▪ #ddeceeRight-Click: #ee9affChange Sell'
+      - '#515251&m                                                    '
+      SkinURL: 3e4f2f9698c3f186fe44cc63d2f3c4f9a241223acf0581775d9cecd7075
+Settings:
+  # GUI title.
+  Title: <black>Price Settings</black>
+  # GUI size. Must be multiply of 9.
+  # Useful for 'CHEST' Inventory Type only.
+  Size: 27
+  # GUI type.
+  # https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/event/inventory/InventoryType.html
+  Inventory_Type: CHEST
+  # Sets GUI auto-refresh interval (in seconds). Set this to 0 to disable.
+  Auto_Refresh: 0
