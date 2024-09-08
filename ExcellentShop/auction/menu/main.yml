@@ -1,0 +1,269 @@
+Title: <gradient:#36175E>&lAUCTION</gradient:#9768D1> &8| &7Global auctions
+Size: 54
+
+Items:
+  Name: ' &7› &f%listing_item_name%'
+  Lore:
+  - '%lore_format%'
+  Slots: 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44
+
+Lore_Format:
+  OWNER:
+  - '%listing_item_lore%'
+  - '#515251&m                                            '
+  - '&7'
+  - ' &f&l✶ <gradient:#36175E>PURCHASE PRICE:</gradient:#9768D1> &f%listing_price%'
+  - ' &f&l✶ <gradient:#36175E>EXPIRES IN:</gradient:#9768D1> &f%listing_expires_in%'
+  - '&7'
+  - '  &f⇨ &cThis is your listing!'
+  - '  &f⇨ &aClick &eShift-Right &ato &6remove listing&a!'
+  - '#515251&m                                            '
+  PLAYER:
+  - '%listing_item_lore%'
+  - '#515251&m                                            '
+  - '&7'
+  - ' &f&l✶ <gradient:#36175E>PURCHASE PRICE:</gradient:#9768D1> &f%listing_price%'
+  - ' &f&l✶ <gradient:#36175E>SELLER:</gradient:#9768D1> &f%listing_seller%'
+  - ' &f&l✶ <gradient:#36175E>EXPIRES IN:</gradient:#9768D1> &f%listing_expires_in%'
+  - '&7'
+  - '  &f⇨ &aClick left to &2buy&a!'
+  - '#515251&m                                            '
+  ADMIN:
+  - '%listing_item_lore%'
+  - '#515251&m                                            '
+  - '&7'
+  - ' &f&l✶ <gradient:#36175E>PURCHASE PRICE:</gradient:#9768D1> &f%listing_price%'
+  - ' &f&l✶ <gradient:#36175E>SELLER:</gradient:#9768D1> &f%listing_seller%'
+  - ' &f&l✶ <gradient:#36175E>ADDED:</gradient:#9768D1> &f%listing_date_creation%'
+  - ' &f&l✶ <gradient:#36175E>EXPIRES IN:</gradient:#9768D1> &f%listing_expires_in%'
+  - '&7'
+  - '  &f⇨ &aClick left to &2buy&a!'
+  - '  &f⇨ &aClick &eShift-Right &ato &6remove listing&a!'
+  - '#515251&m                                            '
+  # Sets preview action format for container listings.
+  # Use placeholder '%action_preview%' in listing lore format to insert it.
+  Action_Preview:
+  - <lgray><lgreen>[▶]</lgreen> Right-Click to <lgreen>preview</lgreen>.</lgray>
+  List:
+    Selected: <lgreen>✔ %name%</lgreen>
+    Unselected: <lgray>   %name%</lgray>
+# ==================== GUI CONTENT ====================
+# You can freely edit items in this section as you wish (add, remove, modify items).
+# The following values are available as button Types:
+# CATEGORY_FILTER
+# CLOSE
+# CURRENCY_FILTER
+# EXPIRED_LISTINGS
+# LISTING_ORDER
+# OWN_LISTINGS
+# PAGE_NEXT
+# PAGE_PREVIOUS
+# RETURN
+# SALES_HISTORY
+# UNCLAIMED_ITEMS
+# ==================== ITEM OPTIONS ====================
+# > Item: Item to display. Please check: https://github.com/nulli0n/nightcore-spigot/wiki/ItemStack-Options
+# > Priority: Button priority. Better values will override other item(s) in the same slot(s).
+# > Slots: Button slots. From [0] to [Size - 1]. Split with commas.
+# > Click_Commands: Execute custom commands on click. PlaceholderAPI available here.
+#     Available click types: LEFT, RIGHT, SHIFT_LEFT, SHIFT_RIGHT, DROP_KEY, SWAP_KEY, NUMBER_1, NUMBER_2, NUMBER_3, NUMBER_4, NUMBER_5, NUMBER_6, NUMBER_7, NUMBER_8, NUMBER_9
+#     Use prefix 'player:' to run command by a player.
+#     Click_Commands:
+#       LEFT:
+#       - say Hello
+#       - give %player_name% diamond 1
+#       - player: menu open shops
+# ==================================================
+Content:
+  category:
+    Type: CATEGORY_FILTER
+    Slots: 45
+    Item:
+      Material: COMPASS
+      Name: '&b☄ &8| <gradient:#36175E>ITEM CATEGORIES</gradient:#9768D1>'
+      Lore:
+      - '#515251&m                                            '
+      - ' &f&l✶ &aSelect listing categories you'
+      - '     &awant to browse here.'
+      - '&7'
+      - ' &7➜ #87ab39Current: &f%categories%'
+      - '&7'
+      - '  &f⇨ &eClick left to &2select&e!'
+      - '  &f⇨ &6Click right to &4reset&6!'
+      - '#515251&m                                            '
+    Priority: 5
+  
+  currencies:
+    Type: CURRENCY_FILTER
+    Slots: 46
+    Item:
+      Material: EMERALD
+      Name: '&4✎ &8| <gradient:#36175E>CURRENCIES</gradient:#9768D1>'
+      Lore:
+      - '#515251&m                                            '
+      - ' &f&l✶ &aSelect listing currencies you'
+      - '     &awant to browse here.'
+      - '&7'
+      - ' &7➜ #87ab39Current: &f%currencies%'
+      - '&7'
+      - '  &f⇨ &eClick left to &2select&e!'
+      - '  &f⇨ &6Click right to &4reset&6!'
+      - '#515251&m                                            '
+    Priority: 5
+  
+  expired:
+    Type: EXPIRED_LISTINGS
+    Slots: 48
+    Item:
+      Material: HOPPER
+      Name: '&f⌚ &8| <gradient:#36175E>EXPIRED AUCTIONS</gradient:#9768D1>'
+      Lore:
+      - '#515251&m                                            '
+      - ' &f&l✶ &aA list of expired items that'
+      - '     &ahave not been sold to anyone.'
+      - '&7'
+      - ' &7➜ &7You have #87ab39%expired_amount% expired &7items.'
+      - '&7'
+      - '&4☠ &cDon''t forget to &etake these items'
+      - '   &cback, otherwise they can be'
+      - '   &4deleted&c!'
+      - '&7'
+      - '  &f⇨ &6Click left to &4see items&6!'
+      - '#515251&m                                            '
+    Priority: 5
+  
+  my_items:
+    Type: OWN_LISTINGS
+    Slots: 49
+    Item:
+      Material: BOOK
+      Name: '&f⌚ &8| <gradient:#36175E>YOUR AUCTIONS</gradient:#9768D1>'
+      Lore:
+      - '#515251&m                                            '
+      - ' &f&l✶ &aItems you''re selling now.'
+      - '&7'
+      - '  &f⇨ &6Click left to &4see items&6!'
+      - '#515251&m                                            '
+    Priority: 5
+  
+  history:
+    Type: SALES_HISTORY
+    Slots: 50
+    Item:
+      Material: WRITABLE_BOOK
+      Name: '&e⌛ &8| <gradient:#36175E>SALES HISTORY</gradient:#9768D1>'
+      Lore:
+      - '#515251&m                                            '
+      - ' &f&l✶ &aA list of all items you'
+      - '     &ahave sold on auction.'
+      - '&7'
+      - '  &f⇨ &6Click left to &4see items&6!'
+      - '#515251&m                                            '
+    Priority: 5
+  
+  unclaimed:
+    Type: UNCLAIMED_ITEMS
+    Slots: 52
+    Item:
+      Material: GOLD_NUGGET
+      Name: '&2€ &8| <gradient:#36175E>SOLD & UNCALIMED AUCTIONS</gradient:#9768D1>'
+      Lore:
+      - '#515251&m                                            '
+      - ' &f&l✶ &aA list of items you have sold,'
+      - '     &abut didn''t claim the reward.'
+      - '&7'
+      - ' &7➜ &7You have #87ab39%unclaimed_amount% unclaimed &7items.'
+      - '&7'
+      - '&4☠ &cDon''t forget to &eclaim your'
+      - '   &erewards&c, &cotherwise they can'
+      - '   &cbe &4deleted&c!'
+      - '&7'
+      - '  &f⇨ &6Click left to &4see rewards&6!'
+      - '#515251&m                                            '
+    Priority: 5
+  
+  sort:
+    Type: LISTING_ORDER
+    Slots: 53
+    Item:
+      Material: NAME_TAG
+      Name: '&6Δ &8| <gradient:#36175E>ITEMS ORDER</gradient:#9768D1>'
+      Lore:
+      - '#515251&m                                            '
+      - ' &f&l✶ &aItems are displayed:'
+      - '   &7- &f%listing_order%'
+      - '&7'
+      - '  &f⇨ &6Click left to &4toggle&6!'
+      - '#515251&m                                            '
+    Priority: 5
+  border:
+    Slots: 0,1,2,3,4,5,6,7,8,47,51
+    Item:
+      Material: MAGENTA_STAINED_GLASS_PANE
+      Name: '&7'
+  
+  page_next:
+    Slots: 47
+    Type: PAGE_NEXT
+    Item:
+      Material: PLAYER_HEAD
+      Name: '&fNext page &e→'
+      SkinURL: f726d288a74e8ac924c58c93f5b35cacd6946a6ccfdbda85fe8acb9e3eecebdb
+    Priority: 5
+  
+  page_previous:
+    Slots: 51
+    Type: PAGE_PREVIOUS
+    Item:
+      Material: PLAYER_HEAD
+      Name: '&e← &fPrevious page'
+      SkinURL: 2eff7559102aa8ff9712976b62292ee45e0793c46f668916868207f399effab
+    Priority: 5
+  
+  info:
+    Type: NONE
+    Slots: 4
+    Item:
+      Material: LECTERN
+      Name: '&c✎ &8| <gradient:#36175E>INFORMATION</gradient:#9768D1>'
+      Lore:
+      - '#515251&m                                                    '
+      - '&r'
+      - ' &f&l✶ <gradient:#36175E>Selling Items:</gradient:#9768D1> &7Put your items up'
+      - '     &7for sale with the command:'
+      - '     &f/auction sell &8<&7price&8>'
+      - '&7'
+      - ' &f&l✶ <gradient:#36175E>Item Expire:</gradient:#9768D1> &7When you put an'
+      - '     &7item to auction, it will have'
+      - '     &6%expire% &7to be sold before'
+      - '     &7it will be removed from the'
+      - '     &7auction.'
+      - '&7'
+      - ' &f&l✶ <gradient:#36175E>Taxes:</gradient:#9768D1> &7You will have to pay'
+      - '     &6%tax%% &7of the item price o'
+      - '     &7be able to put in on auction.'
+      - '&7'
+      - '#515251&m                                                    '
+      Enchants:
+        fortune: 1
+      Item_Flags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+      - HIDE_UNBREAKABLE
+      - HIDE_DESTROYS
+      - HIDE_PLACED_ON
+      - HIDE_POTION_EFFECTS
+      - HIDE_DYE
+Use_Mini_Message: false
+Inventory_Type: CHEST
+Settings:
+  # GUI title.
+  Title: <black>Auction House</black>
+  # GUI size. Must be multiply of 9.
+  # Useful for 'CHEST' Inventory Type only.
+  Size: 54
+  # GUI type.
+  # https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/event/inventory/InventoryType.html
+  Inventory_Type: CHEST
+  # Sets GUI auto-refresh interval (in seconds). Set this to 0 to disable.
+  Auto_Refresh: 1

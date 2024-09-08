@@ -1,0 +1,57 @@
+Title: <gradient:#36175E>&lAUCTION</gradient:#9768D1> &8| &7Confirmation
+Size: 9
+
+Item_Slot: 4
+# ==================== GUI CONTENT ====================
+# You can freely edit items in this section as you wish (add, remove, modify items).
+# The following values are available as button Types:
+# CLOSE
+# CONFIRMATION_ACCEPT
+# CONFIRMATION_DECLINE
+# ==================== ITEM OPTIONS ====================
+# > Item: Item to display. Please check: https://github.com/nulli0n/nightcore-spigot/wiki/ItemStack-Options
+# > Priority: Button priority. Better values will override other item(s) in the same slot(s).
+# > Slots: Button slots. From [0] to [Size - 1]. Split with commas.
+# > Click_Commands: Execute custom commands on click. PlaceholderAPI available here.
+#     Available click types: LEFT, RIGHT, SHIFT_LEFT, SHIFT_RIGHT, DROP_KEY, SWAP_KEY, NUMBER_1, NUMBER_2, NUMBER_3, NUMBER_4, NUMBER_5, NUMBER_6, NUMBER_7, NUMBER_8, NUMBER_9
+#     Use prefix 'player:' to run command by a player.
+#     Click_Commands:
+#       LEFT:
+#       - say Hello
+#       - give %player_name% diamond 1
+#       - player: menu open shops
+# ==================================================
+Content:
+  accept:
+    Type: CONFIRMATION_ACCEPT
+    Slots: 5,6,7,8
+    Item:
+      Material: LIME_DYE
+      Name: '&f↳ &aConfirm & Purchase'
+      Lore:
+      - '#515251&m                                            '
+      - ' &f&l✶ <gradient:#36175E>PURCHASE PRICE:</gradient:#9768D1> &f%listing_price%'
+      - ' &f&l✶ <gradient:#36175E>SELLER:</gradient:#9768D1> &f%listing_seller%'
+      - '#515251&m                                            '
+    Priority: 5
+  
+  decline:
+    Type: RED_DYE
+    Slots: 0,1,2,3
+    Item:
+      Material: RED_DYE
+      Name: '&f↳ &cBack to Auctions'
+    Priority: 5
+Inventory_Type: CHEST
+Use_Mini_Message: false
+Settings:
+  # GUI title.
+  Title: <black>Confirm Purchase</black>
+  # GUI size. Must be multiply of 9.
+  # Useful for 'CHEST' Inventory Type only.
+  Size: 9
+  # GUI type.
+  # https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/event/inventory/InventoryType.html
+  Inventory_Type: CHEST
+  # Sets GUI auto-refresh interval (in seconds). Set this to 0 to disable.
+  Auto_Refresh: 0
