@@ -1,0 +1,44 @@
+baltop_refresh: 300
+
+messages:
+  not_found:
+    text: "&7ᴅᴇʀ ꜱᴘɪᴇʟᴇʀ ᴡᴜʀᴅᴇ ɴɪᴄʜᴛ ɢᴇꜰᴜɴᴅᴇɴ!"
+    sound: entity_villager_no
+  balance:
+    self:
+      text: "&7ᴀᴋᴛᴜᴇʟʟ ʜᴀꜱᴛ ᴅᴜ &a{bal}"
+      sound: entity_experience_orb_pickup
+    someone:
+      text: "&b{target} &7ʜᴀᴛ &a{targetAmount}"
+      sound: entity_experience_orb_pickup
+  pay:
+    usage:
+      text: "&7ʙᴇɴᴜᴛᴢᴜɴɢ: &b/ᴘᴀʏ <ᴘʟᴀʏᴇʀ> <ᴀᴍᴏᴜɴᴛ>"
+      sound: entity_villager_no
+    error:
+      text: "&7ᴅᴜ ᴍᴜꜱꜱᴛ ᴇɪɴᴇɴ ɢÜʟᴛɪɢᴇɴ ᴡᴇʀᴛ ᴀɴɢᴇʙᴇɴ!"
+      sound: entity_villager_no
+    insufficient:
+      text: "&7ɴɪᴄʜᴛ ɢᴇɴÜɢᴇɴᴅ ɢᴇʟᴅ"
+      sound: entity_villager_no
+    sender:
+      text: "&7ᴅᴜ ʜᴀꜱᴛ &a{amount} &7ᴢᴜ &b{receiver} &7ɢᴇꜱᴇɴᴅᴇᴛ"
+      sound: entity_experience_orb_pickup
+    receiver:
+      text: "&7ᴅᴜ ʜᴀꜱᴛ &a{amount} &7ᴠᴏɴ &b{sender} &7ᴇʀʜᴀʟᴛᴇɴ"
+      sound: entity_experience_orb_pickup
+  baltop:
+    player:
+      title: "&b{playerName}"
+      lore:
+        - "&f&lᴍᴏɴᴇʏ‣ &a{balance}"
+gui:
+  template: "example.yml" # The template from ClickableHeads Templates folder
+  items: {}
+    #balance:
+      #position: 15
+      #material: "GOLD_INGOT"
+      #name: "&e&lMONEY"
+      #lore:
+        #- "&fCurrent money: &a{balance}"
+  title: "&d&lꜱᴇɪᴛᴇ &5{currentPage} &7ᴠᴏɴ &d{totalPages}"
